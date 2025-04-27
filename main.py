@@ -66,12 +66,13 @@ def make_xml(domstring,docname):
 def update_dictionary(comp_base,comp_update):
     for x in comp_update:
         for y in comp_update[x]:
-            #print(x,y)
+            print(x,y)
             try:
                 up_val = comp_base[x][y]
                 comp_update[x][y] = up_val
             except:
                 pass
+    return comp_update
 
 tree_update = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\AIOSC25_drop1_dataModel.xml").getroot()
 tree_base = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\Nokia_AIOSC24_SCF_NIDD4.0_v17.xml").getroot()
@@ -86,5 +87,5 @@ print(comp_base)
 print("\n\n\nupdate file :\n\n")
 print(comp_update)
 
-comp_finalfile = convert_dict_xml(comp_update)
+comp_finalfile = convert_dict_xml(update_dictionary(comp_base,comp_update))
 make_xml(comp_finalfile,input("please enter file name to be created : "))
