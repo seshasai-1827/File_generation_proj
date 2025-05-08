@@ -16,9 +16,15 @@
 #parse through the old version file if tag is found in the new one then tranfer the parmeter values
 #for the second phse if the parameter names have been changed then edit the old versions parameter names then perform same operation 
 
+#TO DO
+#need to add initial 3 parts
+#the id and operation have been hardcoded, needs to be update based
 import xml.etree.ElementTree as ET
 from xml.dom.minidom import parseString
 import dicttoxml
+from collections import OrderedDict
+from xml.dom import minidom
+
 
 def make_name(st):
     l = st.split('/',3)
@@ -27,46 +33,71 @@ def make_name(st):
     return l[-1]
 
 
-def simplify_xml(root,ns):
-    base = {}
-    base_list = root.findall(".//ns:managedObject",ns)
+def simplify_xml(root, ns):
+    base = OrderedDict()
+    base_list = root.findall(".//ns:managedObject", ns)
     for element in base_list:
-        class_base =  element.attrib['class']
-        distName = element.attrib['distName']#this is unique ig
+        class_base = element.attrib['class']
+        distName = element.attrib['distName']
         key = make_name(distName)
-        if key == False:
+        if key is False:
             continue
-
-        base[key] = {}
-        '''if class_base not in base.keys():
-            base[class_base] = {}
-    
-        base[class_base][distName] = {}'''
-        for parameters in element.findall("ns:p",ns):
-            #print(parameters.attrib['name'],parameters.text)
+        base[key] = OrderedDict()
+        base[key]['_class'] = class_base
+        base[key]['_distName'] = distName
+        for parameters in element.findall("ns:p", ns):
             if parameters.text:
-                #base[class_base][distName][parameters.attrib['name']] = parameters.text
                 base[key][parameters.attrib['name']] = parameters.text
-    #print(base)
-    xml = dicttoxml.dicttoxml(base)
-    dom = parseString(xml)
-    return base,dom
-
-def convert_dict_xml(dictionary):
-    xml = dicttoxml.dicttoxml(dictionary)
-    dom = parseString(xml)
-    return dom
+    return base
 
 
-def make_xml(domstring,docname):  
+
+def build_full_xml(data_dict):
+    NS_URI = "raml21.xsd"
+    ET.register_namespace('', NS_URI)
+    version = input("enter version string : ")
+    root = ET.Element("raml", {
+        'version': '2.1',
+        'xmlns': NS_URI
+    })
+
+    cmData = ET.SubElement(root,"cmData", {
+        'type': 'plan',
+        'scope': 'all',
+        'name': 'AIOSC-1-PnP-ProfileD-Basic-Integration-Planfile.xml'
+    })
+
+    for key, params in data_dict.items():
+        class_attr = params.pop('_class', 'UNKNOWN')
+        dist_attr = params.pop('_distName', f"UNSPECIFIED/{key}")
+
+        mo = ET.SubElement(cmData, "managedObject", {
+            'class': class_attr,
+            'version': version,
+            'distName': dist_attr,
+            'id': "10400",
+            'operation' : "create",
+        })
+
+        for pname, val in params.items():
+            p = ET.SubElement(mo, "p", {'name': pname})
+            p.text = val
+
+    return ET.ElementTree(root)
+
+def make_xml(etree, docname):
+    rough_string = ET.tostring(etree.getroot(), encoding="utf-8")
+    reparsed = minidom.parseString(rough_string)
+    pretty_xml = reparsed.toprettyxml(indent="  ")
+
     with open(f"{docname}.xml", "w", encoding="utf-8") as f:
-        f.write(domstring.toprettyxml())
-        print("output file generated")
+        f.write(pretty_xml)
+
+    print("XML file generated successfully.")
 
 def update_dictionary(comp_base,comp_update):
     for x in comp_update:
         for y in comp_update[x]:
-            print(x,y)
             try:
                 up_val = comp_base[x][y]
                 comp_update[x][y] = up_val
@@ -79,13 +110,9 @@ tree_base = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\Nokia_A
 
 ns = {'ns':'raml21.xsd'}
 
-comp_base,comp_basefile = simplify_xml(tree_base,ns)
-comp_update,comp_updatefile = simplify_xml(tree_update,ns)
+comp_base = simplify_xml(tree_base,ns)
+comp_update = simplify_xml(tree_update,ns)
 
-print("base file : \n\n")
-print(comp_base)
-print("\n\n\nupdate file :\n\n")
-print(comp_update)
 
-comp_finalfile = convert_dict_xml(update_dictionary(comp_base,comp_update))
+comp_finalfile = build_full_xml(update_dictionary(comp_base,comp_update))
 make_xml(comp_finalfile,input("please enter file name to be created : "))
