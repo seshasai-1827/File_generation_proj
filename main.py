@@ -19,6 +19,8 @@
 #TO DO
 #need to add initial 3 parts
 #the id and operation have been hardcoded, needs to be update based
+
+
 import xml.etree.ElementTree as ET
 from xml.dom.minidom import parseString
 import dicttoxml
@@ -37,52 +39,85 @@ def simplify_xml(root, ns):
     base = OrderedDict()
     base_list = root.findall(".//ns:managedObject", ns)
     for element in base_list:
-        class_base = element.attrib['class']
         distName = element.attrib['distName']
         key = make_name(distName)
-        if key is False:
+        if not key:
             continue
         base[key] = OrderedDict()
-        base[key]['_class'] = class_base
+        base[key]['_class'] = element.attrib.get('class', 'UNKNOWN')
         base[key]['_distName'] = distName
+        base[key]['_version'] = element.attrib.get('version', 'UNKNOWN')
+        base[key]['_id'] = element.attrib.get('id', '10400')
+        base[key]['_operation'] = element.attrib.get('operation', 'create')
         for parameters in element.findall("ns:p", ns):
             if parameters.text:
                 base[key][parameters.attrib['name']] = parameters.text
     return base
 
 
-
 def build_full_xml(data_dict):
     NS_URI = "raml21.xsd"
     ET.register_namespace('', NS_URI)
-    version = input("enter version string : ")
     root = ET.Element("raml", {
         'version': '2.1',
         'xmlns': NS_URI
     })
-
-    cmData = ET.SubElement(root,"cmData", {
+    cmData = ET.SubElement(root, "cmData", {
         'type': 'plan',
         'scope': 'all',
         'name': 'AIOSC-1-PnP-ProfileD-Basic-Integration-Planfile.xml'
     })
+   #adding first 3 managed objects by hardcoding...
+    aiosc = ET.SubElement(cmData, "managedObject", {
+    'class': "com.nokia.aiosc:AIOSC",
+    'version': "AIOSC24_00_400",
+    'distName': "PLMN-PLMN/AIOSC-6000039",
+    'operation': "create"
+    })
+    ET.SubElement(aiosc, "p", {'name': "name"}).text = "PLMN-PLMN/AIOSC-6000039"
+    ET.SubElement(aiosc, "p", {'name': "AutoConnHWID"}).text = "LBNKIASRC243920029"
+    ET.SubElement(aiosc, "p", {'name': "$maintenanceRegionId"}).text = "PNP"
+    ET.SubElement(aiosc, "p", {'name': "$maintenanceRegionCId"}).text = "1"
+    ET.SubElement(aiosc, "p", {'name': "SparaPara2_CP"}).text = "1"
+    ET.SubElement(aiosc, "p", {'name': "SparePara1_CP"}).text = "1"
 
+    
+    integrate = ET.SubElement(cmData, "managedObject", {
+        'class': "com.nokia.integrate:INTEGRATE",
+        'version': "INT_01",
+        'distName': "PLMN-PLMN/AIOSC-6000039/INTEGRATE-1",
+        'id': "104000",
+        'operation': "create"
+    })
+    ET.SubElement(integrate, "p", {'name': "plannedSWReleaseVersion"}).text = "AIOSC24_01_400_35.aio.sig0"
+    ET.SubElement(integrate, "p", {'name': "systemReleaseVersion"}).text = "AIOSC24"
+    ET.SubElement(integrate, "p", {'name': "ipVersion"}).text = "0"
+
+    device = ET.SubElement(cmData,"managedObject",{
+        'class' : "com.nokia.aiosc:Device",
+        'version': "INT_01",
+        'distName' : "PLMN-PLMN/AIOSC-6000039",
+        'operation' : "create" 
+    })
+
+    p  = ET.SubElement(device,"p",{'name':"UserLabel"})
+    p.text = "AIOSC"
     for key, params in data_dict.items():
         class_attr = params.pop('_class', 'UNKNOWN')
         dist_attr = params.pop('_distName', f"UNSPECIFIED/{key}")
-
+        version = params.pop('_version', 'UNKNOWN')
+        mo_id = params.pop('_id', '10400')
+        operation = params.pop('_operation', 'create')
         mo = ET.SubElement(cmData, "managedObject", {
             'class': class_attr,
             'version': version,
             'distName': dist_attr,
-            'id': "10400",
-            'operation' : "create",
+            'id': mo_id,
+            'operation': operation
         })
-
         for pname, val in params.items():
             p = ET.SubElement(mo, "p", {'name': pname})
             p.text = val
-
     return ET.ElementTree(root)
 
 def make_xml(etree, docname):
@@ -95,16 +130,22 @@ def make_xml(etree, docname):
 
     print("XML file generated successfully.")
 
-def update_dictionary(comp_base,comp_update):
+def update_dictionary(comp_base, comp_update, rename_dict):
     for x in comp_update:
+        v = rename_dict.get(x, x) 
         for y in comp_update[x]:
+            param_rename = rename_dict.get(y, y) 
             try:
-                up_val = comp_base[x][y]
-                comp_update[x][y] = up_val
-            except:
+                up_val = comp_base[v][param_rename]
+                comp_update[x][y] = up_val  
+            except KeyError:
                 pass
+
     return comp_update
 
+rename_dict = {
+    "SparePara1": "UPlaneVLANID"  
+}
 tree_update = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\AIOSC25_drop1_dataModel.xml").getroot()
 tree_base = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\Nokia_AIOSC24_SCF_NIDD4.0_v17.xml").getroot()
 
@@ -112,7 +153,8 @@ ns = {'ns':'raml21.xsd'}
 
 comp_base = simplify_xml(tree_base,ns)
 comp_update = simplify_xml(tree_update,ns)
+#print(comp_update)
+#print(comp_base)
 
-
-comp_finalfile = build_full_xml(update_dictionary(comp_base,comp_update))
+comp_finalfile = build_full_xml(update_dictionary(comp_base,comp_update,rename_dict))
 make_xml(comp_finalfile,input("please enter file name to be created : "))
