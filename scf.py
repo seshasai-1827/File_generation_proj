@@ -75,6 +75,41 @@ def build_full_xml(data_dict):
         'scope': 'all',
         'name': 'AIOSC-1-PnP-ProfileD-Basic-Integration-Planfile.xml'
     })
+   #adding first 3 managed objects by hardcoding...
+    aiosc = ET.SubElement(cmData, "managedObject", {
+    'class': "com.nokia.aiosc:AIOSC",
+    'version': "AIOSC24_00_400",
+    'distName': "PLMN-PLMN/AIOSC-6000039",
+    'operation': "create"
+    })
+    ET.SubElement(aiosc, "p", {'name': "name"}).text = "PLMN-PLMN/AIOSC-6000039"
+    ET.SubElement(aiosc, "p", {'name': "AutoConnHWID"}).text = "LBNKIASRC243920029"
+    ET.SubElement(aiosc, "p", {'name': "$maintenanceRegionId"}).text = "PNP"
+    ET.SubElement(aiosc, "p", {'name': "$maintenanceRegionCId"}).text = "1"
+    ET.SubElement(aiosc, "p", {'name': "SparaPara2_CP"}).text = "1"
+    ET.SubElement(aiosc, "p", {'name': "SparePara1_CP"}).text = "1"
+
+    
+    integrate = ET.SubElement(cmData, "managedObject", {
+        'class': "com.nokia.integrate:INTEGRATE",
+        'version': "INT_01",
+        'distName': "PLMN-PLMN/AIOSC-6000039/INTEGRATE-1",
+        'id': "104000",
+        'operation': "create"
+    })
+    ET.SubElement(integrate, "p", {'name': "plannedSWReleaseVersion"}).text = "AIOSC24_01_400_35.aio.sig0"
+    ET.SubElement(integrate, "p", {'name': "systemReleaseVersion"}).text = "AIOSC24"
+    ET.SubElement(integrate, "p", {'name': "ipVersion"}).text = "0"
+
+    device = ET.SubElement(cmData,"managedObject",{
+        'class' : "com.nokia.aiosc:Device",
+        'version': "INT_01",
+        'distName' : "PLMN-PLMN/AIOSC-6000039",
+        'operation' : "create" 
+    })
+
+    p  = ET.SubElement(device,"p",{'name':"UserLabel"})
+    p.text = "AIOSC"
     for key, params in data_dict.items():
         class_attr = params.pop('_class', 'UNKNOWN')
         dist_attr = params.pop('_distName', f"UNSPECIFIED/{key}")
@@ -102,8 +137,8 @@ def make_xml(etree, docname):
     print(f"XML file '{docname}.xml' generated successfully.")
 
 if __name__ == "__main__":
-    path_2024 = r"C:\Users\DELL-P5540\Downloads\Nokia_AIOSC24_SCF_NIDD4.0_v17 (1).xml"
-    path_2025 = r"C:\Users\DELL-P5540\Downloads\AIOSC25_drop1_dataModel (1).xml"
+    path_2024 = r"Nokia_AIOSC24_SCF_NIDD4.0_v17.xml"
+    path_2025 = r"AIOSC25_drop1_dataModel.xml"
     tree_base = ET.parse(path_2024).getroot()
     tree_update = ET.parse(path_2025).getroot()
     ns = {'ns': 'raml21.xsd'}
