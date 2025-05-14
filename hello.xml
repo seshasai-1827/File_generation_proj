@@ -17,7 +17,7 @@
     <managedObject class="com.nokia.aiosc:Device" version="INT_01" distName="PLMN-PLMN/AIOSC-6000039" operation="create">
       <p name="UserLabel">AIOSC</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DeviceInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/DeviceInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DeviceInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/DeviceInfo-1" id="-1" operation="create">
       <p name="AdditionalHardwareVersion">AIOSC</p>
       <p name="AdditionalSoftwareVersion">AIO</p>
       <p name="Description">StrandMount</p>
@@ -30,23 +30,23 @@
       <p name="SerialNumber">LBNKIASRC243920029</p>
       <p name="SoftwareVersion">AIOSC24_01_400_35.aio.sig0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Ethernet" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Ethernet-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Ethernet" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Ethernet-1" id="-1" operation="create">
       <p name="SparaPara2_CP">x</p>
       <p name="SparePara1_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:VLANTermination" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Ethernet-1/VLANTermination-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:VLANTermination" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Ethernet-1/VLANTermination-1" id="-1" operation="create">
       <p name="CPlaneVLANID">1</p>
       <p name="Enable">false</p>
       <p name="SparePara1">1</p>
       <p name="UPlaneVLANID">1</p>
       <p name="VLANID">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:FAP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:FAP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1" id="-1" operation="create">
       <p name="FAP_CP">x</p>
       <p name="SparaPara2_CP">x</p>
       <p name="SparePara1_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:GPS" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1/GPS-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:GPS" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1/GPS-1" id="-1" operation="create">
       <p name="AdministrativeState">unlocked</p>
       <p name="AssistedGnssEnabled">false</p>
       <p name="AuthorisedLocationRadius">5000</p>
@@ -94,7 +94,7 @@
       <p name="XtraServerCertificate">http</p>
       <p name="testId">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:AGPSServerConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1/GPS-1/AGPSServerConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:AGPSServerConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1/GPS-1/AGPSServerConfig-1" id="-1" operation="create">
       <p name="AGPSLocationSource">expected</p>
       <p name="AGPSSparePara1">x</p>
       <p name="AGPSSparePara2">x</p>
@@ -113,18 +113,18 @@
       <p name="ServerURL">https</p>
       <p name="UserLabel">AGPS</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ContinuousGPSStatus" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1/GPS-1/ContinuousGPSStatus-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ContinuousGPSStatus" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1/GPS-1/ContinuousGPSStatus-1" id="-1" operation="create">
       <p name="Elevation">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:XtraServerAddress" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1/GPS-1/XtraServerAddress-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:XtraServerAddress" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1/GPS-1/XtraServerAddress-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="XtraServerAddr">https</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PerfMgmt" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1/PerfMgmt-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PerfMgmt" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1/PerfMgmt-1" id="-1" operation="create">
       <p name="UserLabel">Perf</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Config" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FAP-1/PerfMgmt-1/Config-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Config" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FAP-1/PerfMgmt-1/Config-1" id="-1" operation="create">
       <p name="AdministrativeStaten">unlocked</p>
       <p name="DefaultSamplingNumbern">15</p>
       <p name="Enable">full</p>
@@ -141,7 +141,7 @@
       <p name="SilentConnectionTimeout">540</p>
       <p name="SuspectFlag">true</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:FaultMgmt" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:FaultMgmt" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FaultMgmt-1" id="-1" operation="create">
       <p name="FaultMgmt_CP">x</p>
       <p name="SparaPara2_CP">x</p>
       <p name="SparePara1_CP">x</p>
@@ -161,12 +161,12 @@
       <p name="ServiceProvider">Cutomer</p>
       <p name="ServiceUser">NokiaUser</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/FaultMgmt-1/SupportedAlarm-1" id="-1" operation="create">
       <p name="FaultIdn">securityViolation</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:GatewayInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/GatewayInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:GatewayInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/GatewayInfo-1" id="-1" operation="create">
       <p name="AcsUrl">x</p>
       <p name="GatewayInfo_CP">x</p>
       <p name="ManufacturerOUI">001D4C</p>
@@ -174,12 +174,12 @@
       <p name="ProvisioningCode">123</p>
       <p name="SerialNumber">xyz</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:IP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/IP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:IP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/IP-1" id="-1" operation="create">
       <p name="EnableDualStackOnBHIntf">false</p>
       <p name="SparaPara2_CP">x</p>
       <p name="SparePara1_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Interface" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/IP-1/Interface-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Interface" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/IP-1/Interface-1" id="-1" operation="create">
       <p name="SparaPara2_CP">x</p>
       <p name="SparePara1_CP">1</p>
     </managedObject>
@@ -188,15 +188,15 @@
       <p name="SparePara1">x</p>
       <p name="SubnetMask">1.1.1.1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:IPv6Address" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/IP-1/Interface-1/IPv6Address-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:IPv6Address" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/IP-1/Interface-1/IPv6Address-1" id="-1" operation="create">
       <p name="IPAddress">::</p>
       <p name="SparePara1">x</p>
       <p name="SparePara2">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:TWAMPReflector" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/IP-1/Interface-1/TWAMPReflector-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:TWAMPReflector" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/IP-1/Interface-1/TWAMPReflector-1" id="-1" operation="create">
       <p name="SparePara3">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ManagementServer" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/ManagementServer-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ManagementServer" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/ManagementServer-1" id="-1" operation="create">
       <p name="ConnectionRequestPassword">Nokia123</p>
       <p name="ConnectionRequestURL">http://1.1.1.1</p>
       <p name="ConnectionRequestUsername">NokiaUser</p>
@@ -208,23 +208,23 @@
       <p name="URL">http://[2a00:8a00:a000:1023::a63:71d8]:8080/</p>
       <p name="Username">NokiaUser</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Services" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Services" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1" id="-1" operation="create">
       <p name="SparePara1_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:FAPService" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:FAPService" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1" id="-1" operation="create">
       <p name="BSRNumberOfEntries">1</p>
       <p name="FAPService_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1" id="-1" operation="create">
       <p name="SparePara1_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NR" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NR" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1" id="-1" operation="create">
       <p name="SparePara1_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1" id="-1" operation="create">
       <p name="SpareParaCU">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRCellCU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRCellCU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1" id="-1" operation="create">
       <p name="CellIndex">0</p>
       <p name="CellLocalId">1</p>
       <p name="CellTraceActivation">activated</p>
@@ -265,35 +265,35 @@
       <p name="UeInactivityTriggerMessage">2</p>
       <p name="UeinactivityTimerSec">s10</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellAlarm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/CellAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellAlarm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/CellAlarm-1" id="-1" operation="create">
       <p name="SpareParam1">123</p>
       <p name="ThresholdCount">0</p>
       <p name="ThresholdLevel">0</p>
       <p name="ThresholdTimeInterval">600</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellTraceStart" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/CellTraceStart-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellTraceStart" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/CellTraceStart-1" id="-1" operation="create">
       <p name="Interfacen">AllInterfaces</p>
       <p name="SparePara1">x</p>
       <p name="TraceDepth">CellTraceDepthMaximum</p>
       <p name="TraceId">1139</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CipheringAlgorithm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/CipheringAlgorithm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CipheringAlgorithm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/CipheringAlgorithm-1" id="-1" operation="create">
       <p name="CipheringalgorithmValue">NEA2</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DrxConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DrxConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1" id="-1" operation="create">
       <p name="DrxConfig_CP">1</p>
     </managedObject>
     <managedObject class="com.nokia.aiosc:DrxConfigAnrSpecific" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigAnrSpecific-1" id="-1" operation="create">
       <p name="DrxConfigAnrSpecific_CP">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DrxConfigDataSpecific" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigDataSpecific-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DrxConfigDataSpecific" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigDataSpecific-1" id="-1" operation="create">
       <p name="LongDrxCycleLengthn">ms320</p>
       <p name="ShortDrxCycleLengthn">ms8</p>
       <p name="ShortDrxCycleTimer">4</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DrxConfigInterRatAnrSpecific" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigInterRatAnrSpecific-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DrxConfigInterRatAnrSpecific" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigInterRatAnrSpecific-1" id="-1" operation="create">
       <p name="Enabled">true</p>
       <p name="SparePara1">x</p>
     </managedObject>
@@ -350,11 +350,11 @@
       <p name="MultiBandInfoListEutraValue">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EmergencyAreaId" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EmergencyAreaId-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EmergencyAreaId" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EmergencyAreaId-1" id="-1" operation="create">
       <p name="EmergencyAreaIdValue">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EutraQosCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EutraQosCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EutraQosCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EutraQosCfg-1" id="-1" operation="create">
       <p name="BucketSizeDuration">ms150</p>
       <p name="DlPdcpDuplication">false</p>
       <p name="EnableUlOutOfOrderDelivery">false</p>
@@ -370,10 +370,10 @@
       <p name="UlDataSplitThresholdInBytesn">b100</p>
       <p name="UlPdcpDuplication">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:IntegrityProtAlgorithm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/IntegrityProtAlgorithm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:IntegrityProtAlgorithm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/IntegrityProtAlgorithm-1" id="-1" operation="create">
       <p name="IntegrityProtAlgorithmValuen">NIA2</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MeasObject" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MeasObject" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1" id="-1" operation="create">
       <p name="MeasObjt_CP">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
@@ -387,7 +387,7 @@
       <p name="SparePara1">x</p>
       <p name="WidebandRSRQMeas">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MeasObjectNr" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MeasObjectNr" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1" id="-1" operation="create">
       <p name="DeriveSsbIndexFromCell">true</p>
       <p name="Enable">true</p>
       <p name="NumCsiRsResourcesToAverage">16</p>
@@ -396,19 +396,19 @@
       <p name="RefFreqCsiRs">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:AbsThreshCsiRsConsolidation" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshCsiRsConsolidation-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:AbsThreshCsiRsConsolidation" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshCsiRsConsolidation-1" id="-1" operation="create">
       <p name="SpareParam1">x</p>
       <p name="ThresholdRsrp">1</p>
       <p name="ThresholdRsrq">1</p>
       <p name="ThresholdSinr">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:AbsThreshSsBlocksConsolidation" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshSsBlocksConsolidation-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:AbsThreshSsBlocksConsolidation" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshSsBlocksConsolidation-1" id="-1" operation="create">
       <p name="SpareParam1">x</p>
       <p name="ThresholdRsrpn">1</p>
       <p name="ThresholdRsrq">1</p>
       <p name="ThresholdSinr">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellIndividualOffsetVS" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/CellIndividualOffsetVS-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellIndividualOffsetVS" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/CellIndividualOffsetVS-1" id="-1" operation="create">
       <p name="RsrpOffsetCsiRsN">DB0</p>
       <p name="RsrpOffsetSsbn">DB0</p>
       <p name="RsrqOffsetCsiRsn">DB0</p>
@@ -417,7 +417,7 @@
       <p name="SinrOffsetSsbn">DB0</p>
       <p name="SpareParam1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:OffsetMOVS" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/OffsetMOVS-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:OffsetMOVS" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/OffsetMOVS-1" id="-1" operation="create">
       <p name="RsrpOffsetCsiRsn">DB0</p>
       <p name="RsrpOffsetSsbn">DB0</p>
       <p name="RsrqOffsetCsiRs">DB0</p>
@@ -426,7 +426,7 @@
       <p name="SinrOffsetSsbn">DB0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRCellRelation" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRCellRelation" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1" id="-1" operation="create">
       <p name="AdjacentNRCellRef">255</p>
       <p name="DirectForwardingPathAvailability">true</p>
       <p name="Id">x</p>
@@ -438,7 +438,7 @@
       <p name="SparePara2">0</p>
       <p name="SparePara3">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellIndividualOffset" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1/CellIndividualOffset-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellIndividualOffset" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1/CellIndividualOffset-1" id="-1" operation="create">
       <p name="RsrpOffsetCsiRsn">DB0</p>
       <p name="RsrpOffsetSsbn">DB0</p>
       <p name="RsrqOffsetCsiRsn">DB0</p>
@@ -447,7 +447,7 @@
       <p name="SinrOffsetSsbn">DB0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRFreqRelation" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRFreqRelation" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1" id="-1" operation="create">
       <p name="BlackListEntryIdleModeNumberOfEntries">1</p>
       <p name="BlackListEntryNumberOfEntries">0</p>
       <p name="CellReselectionPriority">3</p>
@@ -478,7 +478,7 @@
       <p name="BlackListEntryIdleModeValue">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:OffsetMO" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/OffsetMO-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:OffsetMO" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/OffsetMO-1" id="-1" operation="create">
       <p name="RsrpOffsetCsiRsn">DB0</p>
       <p name="RsrpOffsetSsbn">DB0</p>
       <p name="RsrqOffsetCsiRsn">DB0</p>
@@ -487,7 +487,7 @@
       <p name="SinrOffsetSsbn">DB0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRFrequency" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRFrequency" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1" id="-1" operation="create">
       <p name="AbsoluteFrequencySSB">631968</p>
       <p name="FreqBandIndicatorNR">78</p>
       <p name="Id">1</p>
@@ -498,17 +498,17 @@
       <p name="SparePara1">x</p>
       <p name="UserLabel">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MultiFrequencyBandListNR" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/MultiFrequencyBandListNR-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MultiFrequencyBandListNR" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/MultiFrequencyBandListNR-1" id="-1" operation="create">
       <p name="MultiFrequencyBandListNRValue">78</p>
       <p name="MultiFrequencyBandListNR_CP">x</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SSBMtc" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/SSBMtc-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SSBMtc" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/SSBMtc-1" id="-1" operation="create">
       <p name="Duration">sf5</p>
       <p name="Offset">0</p>
       <p name="Periodicity">sf20</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NrQosCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NrQosCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NrQosCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NrQosCfg-1" id="-1" operation="create">
       <p name="ConfigIndex">0</p>
       <p name="DlPdcpDuplication">false</p>
       <p name="EnableUlOutOfOrderDelivery">false</p>
@@ -528,21 +528,21 @@
       <p name="SparePara1">x</p>
       <p name="UlPdcpDuplication">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PlmnInfoList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/PlmnInfoList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PlmnInfoList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/PlmnInfoList-1" id="-1" operation="create">
       <p name="Id">1</p>
       <p name="MCC">001</p>
       <p name="MNC">01</p>
       <p name="SNSSAINumberOfEntries">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SNSSAI" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/PlmnInfoList-1/SNSSAI-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SNSSAI" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/PlmnInfoList-1/SNSSAI-1" id="-1" operation="create">
       <p name="SDn">13714341</p>
       <p name="SSTn">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:QuantityConfigInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:QuantityConfigInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1" id="-1" operation="create">
       <p name="QuantityConfigNRNumberOfEntries">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:QuantityConfigEUTRA" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigEUTRA-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:QuantityConfigEUTRA" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigEUTRA-1" id="-1" operation="create">
       <p name="FilterCoefficientRSRP">FC4</p>
       <p name="FilterCoefficientRSRQ">FC4</p>
       <p name="FilterCoefficientRSSINR">FC4</p>
@@ -551,17 +551,17 @@
       <p name="QuantityConfigRefId">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:QuantityConfigCell" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:QuantityConfigCell" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="SparePara2">123</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CsiRSFilterConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/CsiRSFilterConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CsiRSFilterConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/CsiRSFilterConfig-1" id="-1" operation="create">
       <p name="FilterCoefficientRSRP">FC4</p>
       <p name="FilterCoefficientRSRQ">FC4</p>
       <p name="FilterCoefficientRSSINR">FC4</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SsbFilterConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/SsbFilterConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SsbFilterConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/SsbFilterConfig-1" id="-1" operation="create">
       <p name="FilterCoefficientRSRPn">FC0</p>
       <p name="FilterCoefficientRSRQn">FC0</p>
       <p name="FilterCoefficientRSSINRn">FC0</p>
@@ -580,28 +580,28 @@
       <p name="FilterCoefficientRSRQn">FC4</p>
       <p name="FilterCoefficientRSSINRn">FC4</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:RRMPolicyRatio2" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/RRMPolicyRatio2-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:RRMPolicyRatio2" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/RRMPolicyRatio2-1" id="-1" operation="create">
       <p name="SNSSAINumberOfEntries">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ReportConfigInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ReportConfigInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1" id="-1" operation="create">
       <p name="ReportConfigTypeN">REPORT_CONFIG_NR</p>
       <p name="SparePara1">x</p>
       <p name="SparePara2">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ReportCfgNr" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ReportCfgNr" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1" id="-1" operation="create">
       <p name="ReportCfgNr_CP">0</p>
       <p name="ReportTypen">EVENT_TRIGGERED</p>
       <p name="SparaPara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EventTrigger" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EventTrigger" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1" id="-1" operation="create">
       <p name="EventTrigger_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EventTriggerConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EventTriggerConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1" id="-1" operation="create">
       <p name="EventReportListNumberOfEntries">1</p>
       <p name="EventTriggerConfig_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EventReportList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EventReportList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1" id="-1" operation="create">
       <p name="EventReportList_CP">x</p>
       <p name="EventTriggerConfigType">HO</p>
       <p name="IncludeBeamMeasurements">false</p>
@@ -613,10 +613,10 @@
       <p name="RsTypen">SSB</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Event" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Event" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1" id="-1" operation="create">
       <p name="Event_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:A1EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A1EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:A1EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A1EventInfo-1" id="-1" operation="create">
       <p name="Hysteresis">3</p>
       <p name="MeasTriggerThreshold">71</p>
       <p name="MeasTriggerTypen">Rsrp</p>
@@ -624,7 +624,7 @@
       <p name="SpareParam1">123</p>
       <p name="TimeToTriggern">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:A2EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A2EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:A2EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A2EventInfo-1" id="-1" operation="create">
       <p name="Hysteresisn">3</p>
       <p name="MeasTriggerThreshold">66</p>
       <p name="MeasTriggerTypen">Rsrp</p>
@@ -632,7 +632,7 @@
       <p name="SparaParam1">123</p>
       <p name="TimeToTriggern">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:A3EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:A3EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1" id="-1" operation="create">
       <p name="AnrA3AggressiveThreshOffset">-20</p>
       <p name="AnrA3NormalThresholdOffset">-5</p>
       <p name="AnrIntraAggressivePeriod">60</p>
@@ -645,7 +645,7 @@
       <p name="SparePara1">x</p>
       <p name="TimeToTrigger">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:A4EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:A4EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1" id="-1" operation="create">
       <p name="AnrA4AggressiveThreshold">26</p>
       <p name="AnrA4NormalThreshold">40</p>
       <p name="AnrInterAggressivePeriod">60</p>
@@ -657,7 +657,7 @@
       <p name="SparePara1">x</p>
       <p name="TimeToTrigger">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:A5EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A5EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:A5EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A5EventInfo-1" id="-1" operation="create">
       <p name="EventA5UseWhiteCellList">false</p>
       <p name="Hysteresis">3</p>
       <p name="MeasTriggerThreshold">60</p>
@@ -667,7 +667,7 @@
       <p name="ReportOnLeave">false</p>
       <p name="TimeToTriggern">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:A6EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A6EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:A6EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A6EventInfo-1" id="-1" operation="create">
       <p name="EventA6UseWhiteCellList">false</p>
       <p name="Hysteresis">3</p>
       <p name="MeasTriggerOffsetType">RsrpOffset</p>
@@ -676,23 +676,23 @@
       <p name="SpareParam1">123</p>
       <p name="TimeToTriggern">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EventreportQuantityCell" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/EventreportQuantityCell-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EventreportQuantityCell" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/EventreportQuantityCell-1" id="-1" operation="create">
       <p name="EventreportQuantityCell_CP">1</p>
       <p name="Rsrp">true</p>
       <p name="Rsrq">false</p>
       <p name="Sinr">true</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ReportQuantityRSIndexes" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/ReportQuantityRSIndexes-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ReportQuantityRSIndexes" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/ReportQuantityRSIndexes-1" id="-1" operation="create">
       <p name="Rsrp">true</p>
       <p name="Rsrq">false</p>
       <p name="Sinr">true</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PeriodicalReport" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PeriodicalReport" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1" id="-1" operation="create">
       <p name="PeriodicalReport_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PeriodicalReportConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1/PeriodicalReportConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PeriodicalReportConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1/PeriodicalReportConfig-1" id="-1" operation="create">
       <p name="IncludeBeamMeasurements">false</p>
       <p name="MaxNrofRSIndexesToReport">1</p>
       <p name="MaxReportCells">8</p>
@@ -701,32 +701,32 @@
       <p name="RsTypen">SSB</p>
       <p name="UseWhiteCellList">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PeriodreportQuantityCell" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1/PeriodicalReportConfig-1/PeriodreportQuantityCell-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PeriodreportQuantityCell" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1/PeriodicalReportConfig-1/PeriodreportQuantityCell-1" id="-1" operation="create">
       <p name="Rsrp">true</p>
       <p name="Rsrq">false</p>
       <p name="Sinr">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ReportQuantityRSIndPeriodic" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1/PeriodicalReportConfig-1/ReportQuantityRSIndPeriodic-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ReportQuantityRSIndPeriodic" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/PeriodicalReport-1/PeriodicalReportConfig-1/ReportQuantityRSIndPeriodic-1" id="-1" operation="create">
       <p name="Rsrp">true</p>
       <p name="Rsrq">false</p>
       <p name="Sinr">false</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ReportConfigInterRAT" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ReportConfigInterRAT" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1" id="-1" operation="create">
       <p name="ReportType">EVENT_TRIGGERED</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EventTriggerConfigInterRAT" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EventTriggerConfigInterRAT" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1" id="-1" operation="create">
       <p name="EventTriggerConfigInterRAT_CP">1</p>
       <p name="MaxReportCells">1</p>
       <p name="ReportAmount">R1</p>
       <p name="ReportInterval">MIN30</p>
       <p name="RsType">SSB</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EventIRAT" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1/EventIRAT-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EventIRAT" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1/EventIRAT-1" id="-1" operation="create">
       <p name="EventIRAT_CP">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:B1EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1/EventIRAT-1/B1EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:B1EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1/EventIRAT-1/B1EventInfo-1" id="-1" operation="create">
       <p name="Hysteresis">30</p>
       <p name="MeasTriggerEutraThreshold">3</p>
       <p name="MeasTriggerEutraType">Rsrp</p>
@@ -734,7 +734,7 @@
       <p name="SpareParam1">x</p>
       <p name="TimeToTrigger">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:B2EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1/EventIRAT-1/B2EventInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:B2EventInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/EventTriggerConfigInterRAT-1/EventIRAT-1/B2EventInfo-1" id="-1" operation="create">
       <p name="MeasTriggerEutraThreshold">3</p>
       <p name="MeasTriggerEutraType">Rsrp</p>
       <p name="MeasTriggerThreshold">0</p>
@@ -744,20 +744,20 @@
       <p name="SpareParam1">x</p>
       <p name="TimeToTrigger">MS40</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PeriodicReportIRAT" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/PeriodicReportIRAT-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PeriodicReportIRAT" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1/PeriodicReportIRAT-1" id="-1" operation="create">
       <p name="MaxReportCells">1</p>
       <p name="ReportAmount">R1</p>
       <p name="ReportInterval">MIN30</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SiConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SiConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SiConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SiConfig-1" id="-1" operation="create">
       <p name="SiConfigValue">SIB2</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Sib2ConfigInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Sib2ConfigInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1" id="-1" operation="create">
       <p name="SIB2Enabled">true</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellReselectionInfoCommon" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellReselectionInfoCommon" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1" id="-1" operation="create">
       <p name="NCellChangeHigh">7</p>
       <p name="NCellChangeMedium">5</p>
       <p name="NrofSSBlocksToAverage">2</p>
@@ -769,13 +769,13 @@
       <p name="TEvaluationn">60</p>
       <p name="THystNormaln">60</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:AbsThreshSsBlocksConsolSib2" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1/AbsThreshSsBlocksConsolSib2-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:AbsThreshSsBlocksConsolSib2" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1/AbsThreshSsBlocksConsolSib2-1" id="-1" operation="create">
       <p name="SpareParam1">x</p>
       <p name="ThresholdRsrp">58</p>
       <p name="ThresholdRsrq">57</p>
       <p name="ThresholdSinr">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellReselectionServingFreqInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionServingFreqInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellReselectionServingFreqInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionServingFreqInfo-1" id="-1" operation="create">
       <p name="CellReselectionPriority">7</p>
       <p name="CellReselectionSubPriority">odot8</p>
       <p name="SNonIntraSearchP">5</p>
@@ -783,12 +783,12 @@
       <p name="SparePara1">x</p>
       <p name="ThreshServingLowP">4</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ThreshServingLowQ" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionServingFreqInfo-1/ThreshServingLowQ-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ThreshServingLowQ" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionServingFreqInfo-1/ThreshServingLowQ-1" id="-1" operation="create">
       <p name="ReselectionThresholdQValue">6</p>
       <p name="SparePara1">x</p>
       <p name="ThreshServingLowQ_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:IntraFreqCellReselectionInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:IntraFreqCellReselectionInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1" id="-1" operation="create">
       <p name="DeriveSsbIdxFromCell">true</p>
       <p name="Duration">3</p>
       <p name="EndSymbol">2</p>
@@ -805,42 +805,42 @@
       <p name="SsbPositions">1101</p>
       <p name="TReselectionNr">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:FrequencyBands" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:FrequencyBands" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1" id="-1" operation="create">
       <p name="FrequencyBands_CP">x</p>
       <p name="NrMultiBandInfosNumberOfEntries">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NrMultiBandInfos" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1/NrMultiBandInfos-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NrMultiBandInfos" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1/NrMultiBandInfos-1" id="-1" operation="create">
       <p name="NrMultiBandInfoIndex">1</p>
       <p name="NrNsPmaxsNumberOfEntries">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NrNsPmaxs" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1/NrMultiBandInfos-1/NrNsPmaxs-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NrNsPmaxs" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1/NrMultiBandInfos-1/NrNsPmaxs-1" id="-1" operation="create">
       <p name="AdditionalSpectrumEmission">3</p>
       <p name="NrNsPmaxIndex">1</p>
       <p name="PMax">3</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SIntraSearchQ" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SIntraSearchQ-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SIntraSearchQ" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SIntraSearchQ-1" id="-1" operation="create">
       <p name="ReselectionThresholdQValue">5</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SpeedScaleFactors" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SpeedScaleFactors-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SpeedScaleFactors" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SpeedScaleFactors-1" id="-1" operation="create">
       <p name="SfHighn">oDot75</p>
       <p name="SfMediumn">oDot5</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SrbCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SrbCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SrbCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SrbCfg-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="SrbId">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SrbCfgInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SrbCfg-1/SrbCfgInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SrbCfgInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SrbCfg-1/SrbCfgInfo-1" id="-1" operation="create">
       <p name="ReorderingTimerMs">40</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1" id="-1" operation="create">
       <p name="NumberOfCells">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRCellDU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRCellDU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1" id="-1" operation="create">
       <p name="AdministrativeStaten">unlocked</p>
       <p name="ArfcnDl">637248</p>
       <p name="ArfcnSUL">207941</p>
@@ -883,11 +883,11 @@
       <p name="SsbPeriodicityn">MS20</p>
       <p name="TciInDci">disabled</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:BWP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/BWP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:BWP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/BWP-1" id="-1" operation="create">
       <p name="BWPValue">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellPfsCfgInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CellPfsCfgInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellPfsCfgInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CellPfsCfgInfo-1" id="-1" operation="create">
       <p name="FairnessCoeff">0</p>
       <p name="GbrServedRateCoeff">0</p>
       <p name="Nr5qiCoeff">0</p>
@@ -900,7 +900,7 @@
       <p name="TptCoEff">0</p>
       <p name="UePfsCoeff">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CfgCmn" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CfgCmn-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CfgCmn" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CfgCmn-1" id="-1" operation="create">
       <p name="NumDlSlot">3</p>
       <p name="NumDlSlotP2">4</p>
       <p name="NumDlSymbol">4</p>
@@ -912,7 +912,7 @@
       <p name="P2Pres">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CsiRsCfgInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CsiRsCfgInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CsiRsCfgInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CsiRsCfgInfo-1" id="-1" operation="create">
       <p name="AperCsiEnable">false</p>
       <p name="AperCsiScellEnable">false</p>
       <p name="CdmType">CSI_RS_CDM_TYPE_FD_CDM2</p>
@@ -935,37 +935,37 @@
       <p name="SecondSymPres">false</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CsiImElementPattern" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CsiRsCfgInfo-1/CsiImElementPattern-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CsiImElementPattern" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CsiRsCfgInfo-1/CsiImElementPattern-1" id="-1" operation="create">
       <p name="CsiImPatternTypen">CSI_IM_PATTERN1</p>
       <p name="CsiImSubcarrierLocationn">CSI_IM_SC_LOCATION_S4</p>
       <p name="CsiImSymbolLocation">13</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DlCfgCmn" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DlCfgCmn" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1" id="-1" operation="create">
       <p name="CmnCoresetAggrLvln">AGGR_LEVEL_8</p>
       <p name="DlBwpCfgNumberOfEntries">1</p>
       <p name="NumCceRsvdForCmnPdcch">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DlBwpCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlBwpCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DlBwpCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlBwpCfg-1" id="-1" operation="create">
       <p name="CyclicPrefixn">extended</p>
       <p name="MuN">KHz30</p>
       <p name="ResourceAllocCfg">1</p>
       <p name="SparePara1">x</p>
       <p name="StartRb">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CntrlResourceSetSearchSpaceCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlBwpCfg-1/CntrlResourceSetSearchSpaceCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CntrlResourceSetSearchSpaceCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlBwpCfg-1/CntrlResourceSetSearchSpaceCfg-1" id="-1" operation="create">
       <p name="AvgAggregationLvl">2</p>
       <p name="IsCandidatesPerAggrLvlConfigurable">false</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DlFreqInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DlFreqInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1" id="-1" operation="create">
       <p name="AbsArfcnSsb">631968</p>
       <p name="MultiBandInfoNumberOfEntries">2</p>
       <p name="SparePara1">x</p>
       <p name="SubCarrierCfgNumberOfEntries">2</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MultiBandInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MultiBandInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1" id="-1" operation="create">
       <p name="NrFreqBand">78</p>
       <p name="NrNsPmaxValNumberOfEntries">0</p>
       <p name="SparePara1">x</p>
@@ -979,7 +979,7 @@
       <p name="SparePara2">x</p>
       <p name="SubCarrierSpacingn">KHz30</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DmrsDlCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsDlCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DmrsDlCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsDlCfg-1" id="-1" operation="create">
       <p name="DmrsAdditionalPosDln">pos1</p>
       <p name="DmrsTypeDln">type1</p>
       <p name="MaxLenDln">len1</p>
@@ -987,24 +987,24 @@
       <p name="ScramblingID1Dl">83</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DmrsUlCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DmrsUlCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1" id="-1" operation="create">
       <p name="DmrsAdditionalPosUln">pos2</p>
       <p name="DmrsTypeUln">type1</p>
       <p name="MaxLenUln">len1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:TransPrecodingDisabledUl" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingDisabledUl-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:TransPrecodingDisabledUl" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingDisabledUl-1" id="-1" operation="create">
       <p name="ScramblingID0">83</p>
       <p name="ScramblingID1">83</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:TransPrecodingEnabledUl" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingEnabledUl-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:TransPrecodingEnabledUl" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingEnabledUl-1" id="-1" operation="create">
       <p name="NPUSCHId">83</p>
       <p name="SeqGrpHoppingn">disabled</p>
       <p name="SeqHoppingn">enabled</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DrxInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DrxInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DrxInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DrxInfo-1" id="-1" operation="create">
       <p name="DrxInactivityTmrn">MS80</p>
       <p name="DrxOnDurationTmrInMSn">MS8</p>
       <p name="DrxRetxTmrDln">Slot16</p>
@@ -1015,13 +1015,13 @@
       <p name="IsDrxOnDurationTmrTypen">drxonDurationTmrMs</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DuCellAlarm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DuCellAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DuCellAlarm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DuCellAlarm-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="ThresholdCount">0</p>
       <p name="ThresholdLevel">0</p>
       <p name="ThresholdTimeInterval">600</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:L1CfgInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:L1CfgInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1" id="-1" operation="create">
       <p name="NCarrierAggregationLvl">0</p>
       <p name="NDlBw">60</p>
       <p name="NDlCarrierK0">1</p>
@@ -1030,13 +1030,13 @@
       <p name="SparePara1">x</p>
       <p name="TxPwrDbm">240</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MibParams" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/MibParams-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MibParams" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/MibParams-1" id="-1" operation="create">
       <p name="CellBarredn">notBarred</p>
       <p name="IntraFreqReselection">allowed</p>
       <p name="SpareParam1">x</p>
       <p name="SubCarrierSpacingCommon">scs30or120</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PrachCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/PrachCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PrachCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/PrachCfg-1" id="-1" operation="create">
       <p name="HighSpeedFlag">false</p>
       <p name="L1PrachCfgInfoRootSeqIdx">0</p>
       <p name="PrachFreqOffset">0</p>
@@ -1046,36 +1046,36 @@
       <p name="PrachSubcSpacingn">30KHz</p>
       <p name="ZeroCorrelationZoneCfg">6</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Sib1Params" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Sib1Params" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1" id="-1" operation="create">
       <p name="ECallOverIMSSupport">false</p>
       <p name="ImsEmergncySupport">false</p>
       <p name="RepetitionPeriodicity">ms20</p>
       <p name="SparaPara1">x</p>
       <p name="UseFullResumeId">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellAccessInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellAccessInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1" id="-1" operation="create">
       <p name="CellAccessInfoSpareParam">0</p>
       <p name="PLMNIdentityListNumberOfEntries">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PLMNIdentityList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1/PLMNIdentityList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PLMNIdentityList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1/PLMNIdentityList-1" id="-1" operation="create">
       <p name="CellReservedOperatorUsen">notReserved</p>
       <p name="PLMNIdentityInfoIndex">1</p>
       <p name="Ranac">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellSelectionInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellSelectionInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellSelectionInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellSelectionInfo-1" id="-1" operation="create">
       <p name="QQualMin">-30</p>
       <p name="QRxLevMin">-55</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ConnEstFailureControl" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/ConnEstFailureControl-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ConnEstFailureControl" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/ConnEstFailureControl-1" id="-1" operation="create">
       <p name="ConnEstFailCountn">n4</p>
       <p name="ConnEstFailOffset">15</p>
       <p name="ConnEstFailOffsetValidityn">s900</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UeTmr" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/UeTmr-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UeTmr" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/UeTmr-1" id="-1" operation="create">
       <p name="N310n">N20</p>
       <p name="N311n">N1</p>
       <p name="T300">MS1000</p>
@@ -1085,7 +1085,7 @@
       <p name="T311n">MS1000</p>
       <p name="T319n">MS1000</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:LtenrCoTraficPatternType" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/LtenrCoTraficPatternType-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:LtenrCoTraficPatternType" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/LtenrCoTraficPatternType-1" id="-1" operation="create">
       <p name="ActivateSfn">2</p>
       <p name="BitWidthSize">10</p>
       <p name="DlTrafficPattern">830</p>
@@ -1096,7 +1096,7 @@
       <p name="SharingType">UL_AND_DL_SHARING</p>
       <p name="UlTrafficPattern">830</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MacCfgCmn" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MacCfgCmn" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1" id="-1" operation="create">
       <p name="BcchMcs">9</p>
       <p name="CbType1SpN1N2Typen">CB_TYPE1_SINGLE_PANEL_RSTRCN_2_1</p>
       <p name="CyclicPrefixType">NORMAL</p>
@@ -1155,7 +1155,7 @@
       <p name="VonrUlLaStepdown">99</p>
       <p name="VonrUlLaStepup">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DlMuMimoConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/DlMuMimoConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DlMuMimoConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/DlMuMimoConfig-1" id="-1" operation="create">
       <p name="DlMuMimoDeltaPRBThreshold">25</p>
       <p name="IsDlMuMimoEnabled">false</p>
       <p name="MaxDlMuMimoPairPerTti">1</p>
@@ -1169,7 +1169,7 @@
       <p name="SparePara1">x</p>
       <p name="SparePara2">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PdcpDuplicationConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/PdcpDuplicationConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PdcpDuplicationConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/PdcpDuplicationConfig-1" id="-1" operation="create">
       <p name="DlPdcpDupActCount">10</p>
       <p name="DlPdcpDupDeactCount">10</p>
       <p name="ThresholdDlCqi">5</p>
@@ -1177,7 +1177,7 @@
       <p name="UlPdcpDupActCount">10</p>
       <p name="UlPdcpDupDeactCount">10</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PhrCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/PhrCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PhrCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/PhrCfg-1" id="-1" operation="create">
       <p name="IsPhrEnable">true</p>
       <p name="PhrModeOtherCg">false</p>
       <p name="PhrPeriodicTimern">SF20</p>
@@ -1185,7 +1185,7 @@
       <p name="PhrTxPwrChangeFactorn">DB3</p>
       <p name="PhrType2OtherCell">false</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MeasGap" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MeasGap-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MeasGap" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MeasGap-1" id="-1" operation="create">
       <p name="MeasGapLengthn">ms6</p>
       <p name="MeasGapRepPeriodicityn">ms80</p>
       <p name="MeasGapTimingAdvance">ms0</p>
@@ -1241,20 +1241,20 @@
       <p name="NumUlPrb">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PCCHcfgInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/PCCHcfgInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PCCHcfgInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/PCCHcfgInfo-1" id="-1" operation="create">
       <p name="DefaultPagCyclen">rf64</p>
       <p name="NumPagFramesInPagCyclen">ONE_T</p>
       <p name="NumPagingOccassionPerPagFramen">four</p>
       <p name="PagingFrameOffset">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:RlcCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:RlcCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1" id="-1" operation="create">
       <p name="Dscpenable">false</p>
       <p name="EutraQosGrpNumberOfEntries">1</p>
       <p name="NrQfiGrpNumberOfEntries">4</p>
       <p name="NrSrbGrpNumberOfEntries">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EutraQosGrp" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1/EutraQosGrp-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EutraQosGrp" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1/EutraQosGrp-1" id="-1" operation="create">
       <p name="BucketSizeDurationn">ms150</p>
       <p name="Dscp">0</p>
       <p name="MaxRetxThreshold">tmr32</p>
@@ -1272,7 +1272,7 @@
       <p name="StatusProhibitTmrn">ms10</p>
       <p name="UlLcPriority">4</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NrQfiGrp" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1/NrQfiGrp-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NrQfiGrp" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1/NrQfiGrp-1" id="-1" operation="create">
       <p name="BucketSizeDuration">ms150</p>
       <p name="Dscp">120</p>
       <p name="Fiveqi">9</p>
@@ -1292,17 +1292,17 @@
       <p name="StatusProhibitTmrn">ms5</p>
       <p name="UlLcPriority">4</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MacParams" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1/NrQfiGrp-1/MacParams-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MacParams" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1/NrQfiGrp-1/MacParams-1" id="-1" operation="create">
       <p name="SRMaxTransmission">SR_MAX_TRANSMISSION_N16</p>
       <p name="SRProhibitTimer">SR_PROHIBIT_TIMER_MS32</p>
       <p name="SpareParam1">123</p>
       <p name="TPeriodicBsr">PERIODIC_BSR_SF10</p>
       <p name="TRetxBsr">RETX_BSR_SF80</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SNSSAIList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SNSSAIList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SNSSAIList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SNSSAIList-1" id="-1" operation="create">
       <p name="SNSSAIList_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SiSchedInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SiSchedInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SiSchedInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SiSchedInfo-1" id="-1" operation="create">
       <p name="SiWindowLengthn">s40</p>
       <p name="Sib2Periodcityn">rf128</p>
       <p name="Sib3Periodicityn">rf256</p>
@@ -1315,17 +1315,17 @@
       <p name="SibsNumberOfEntries">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Sibs" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SiSchedInfo-1/Sibs-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Sibs" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SiSchedInfo-1/Sibs-1" id="-1" operation="create">
       <p name="SibType">DU_SIB_TYPE_2</p>
       <p name="SparePara1">x</p>
       <p name="ValueTag">2</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UlCfgCmn" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UlCfgCmn" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1" id="-1" operation="create">
       <p name="AddnlUlCoresetEnable">false</p>
       <p name="CsiUlBwpRpPeriodicity">CSI_RS_RES_PRDCTY_SLOT160</p>
       <p name="UlBwpCfgNumberOfEntries">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UlBwpCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UlBwpCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1" id="-1" operation="create">
       <p name="CsiPeriodicity">csiPeriodicity_slots160</p>
       <p name="CyclicPrefixn">extended</p>
       <p name="DistributePucchInBwpEdges">0</p>
@@ -1349,13 +1349,13 @@
       <p name="SrPeriodicityn">sl80</p>
       <p name="StartRb">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CyclicShift" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/CyclicShift-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CyclicShift" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/CyclicShift-1" id="-1" operation="create">
       <p name="HarqcyclicShiftBitmap">65</p>
       <p name="NumOfHarqCyclicShift">2</p>
       <p name="NumOfSrCyclicShift">1</p>
       <p name="SrcyclicShiftBitmap">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PucchPwrCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/PucchPwrCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PucchPwrCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/PucchPwrCfg-1" id="-1" operation="create">
       <p name="DeltaFpucchF0">0</p>
       <p name="DeltaFpucchF1">0</p>
       <p name="DeltaFpucchF2">0</p>
@@ -1364,7 +1364,7 @@
       <p name="P0PucchVal">0</p>
       <p name="P0nominal">-80</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PuschPwrCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/PuschPwrCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PuschPwrCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/PuschPwrCfg-1" id="-1" operation="create">
       <p name="Alphan">ALL</p>
       <p name="DeltaMcsEnabled">true</p>
       <p name="IsAccumulated">True</p>
@@ -1373,7 +1373,7 @@
       <p name="P0">0</p>
       <p name="P0nominal">-76</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:RachCfgInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:RachCfgInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1" id="-1" operation="create">
       <p name="CbPreamblePerSsb">4</p>
       <p name="ContentResolutionTmr">sf40</p>
       <p name="MaxMsg3Tx">1</p>
@@ -1387,14 +1387,14 @@
       <p name="SsbsPerRach">SSB_ONE</p>
       <p name="TotalNumOfRachPreamble">64</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:GrpBPreambleCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1/GrpBPreambleCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:GrpBPreambleCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1/GrpBPreambleCfg-1" id="-1" operation="create">
       <p name="DeltaMsg3SizeGroupB">128</p>
       <p name="GrpBPreambleCfg_CP">x</p>
       <p name="MessagePowerOffsetGroupBn">db0</p>
       <p name="Msg3SizeGrpAn">b56</p>
       <p name="NumOfRachPreambleGrpA">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:RachGenCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1/RachGenCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:RachGenCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1/RachGenCfg-1" id="-1" operation="create">
       <p name="Msg1Fdm">1</p>
       <p name="Msg1FreqStart">0</p>
       <p name="PrachCfgIdx">76</p>
@@ -1404,7 +1404,7 @@
       <p name="RachRspWindown">sl80</p>
       <p name="ZeroCorrelationZoneCfg">12</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SrsCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/SrsCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SrsCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/SrsCfg-1" id="-1" operation="create">
       <p name="Ktc">2</p>
       <p name="MaxSrsUePerSlot">1</p>
       <p name="NumSrsSym">1</p>
@@ -1412,7 +1412,7 @@
       <p name="SequenceId">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UciOnPusch" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/UciOnPusch-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UciOnPusch" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/UciOnPusch-1" id="-1" operation="create">
       <p name="AlphaScaling">0</p>
       <p name="AvoidPuschBasedOnUciType">avoidNone</p>
       <p name="SemiStaticBetaOffsetAckIdx1">0</p>
@@ -1420,13 +1420,13 @@
       <p name="SemiStaticBetaOffsetAckIdx3">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UlFreqInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UlFreqInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1" id="-1" operation="create">
       <p name="FreqShft7p5khz">7P5KHZ_DISBL</p>
       <p name="MultiBandInfoNumberOfEntries">1</p>
       <p name="PMax">23</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:MultiBandInfoUl" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:MultiBandInfoUl" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1" id="-1" operation="create">
       <p name="NrFreqBand">257</p>
       <p name="NrNsPmaxValNumberOfEntries">0</p>
       <p name="SpareParam1">x</p>
@@ -1435,11 +1435,11 @@
       <p name="AdditionalSpectrumEmission">0</p>
       <p name="PMax">10</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UlTargetCqi" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlTargetCqi-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UlTargetCqi" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlTargetCqi-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="TargetCqi">15</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:UlCfgGrant" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgGrant-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:UlCfgGrant" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgGrant-1" id="-1" operation="create">
       <p name="IsUlCgType1Enabled">false</p>
       <p name="MaxNrOfULCGConfigPerUE">1</p>
       <p name="MaxNrOfULCGUESupported">16</p>
@@ -1451,7 +1451,7 @@
     <managedObject class="com.nokia.aiosc:UrllcCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UrllcCfg-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:X_Nokia_BSR" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:X_Nokia_BSR" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1" id="-1" operation="create">
       <p name="ActivateCertificateRenewal">true</p>
       <p name="ActiveCriticalAlarms">0</p>
       <p name="AdditionalNRBandwidthLicensing">0</p>
@@ -1707,10 +1707,10 @@
       <p name="UserLabel">StrandMount</p>
       <p name="VirtualHBSRHostAddressHighPriority">1.1.1.1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:BusyHourLoggerForSU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/BusyHourLoggerForSU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:BusyHourLoggerForSU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/BusyHourLoggerForSU-1" id="-1" operation="create">
       <p name="BusyHour">200</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CertificateEnrollment" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/CertificateEnrollment-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CertificateEnrollment" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/CertificateEnrollment-1" id="-1" operation="create">
       <p name="CertificateStatus">notApplicable</p>
       <p name="EnableHitlessRenewal">true</p>
       <p name="EnrollmentSeGW">bootstrapMultiTunnel</p>
@@ -1719,7 +1719,7 @@
       <p name="RenewalWindow">15</p>
       <p name="UserLabel">Strand</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CMPv2ServerList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/CertificateEnrollment-1/CMPv2ServerList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CMPv2ServerList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/CertificateEnrollment-1/CMPv2ServerList-1" id="-1" operation="create">
       <p name="RecipientName">Strand</p>
       <p name="SignatureHashAlgorithm">SHA1</p>
       <p name="SparePara1">x</p>
@@ -1731,15 +1731,15 @@
     <managedObject class="com.nokia.aiosc:GsmNatLocLockFrequency" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/GsmNatLocLockFrequency-1" id="-1" operation="create">
       <p name="GsmNatLocLockFrequency_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:HgNB" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:HgNB" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="SparePara2">x</p>
       <p name="SparePara3">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:RF" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/RF-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:RF" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/RF-1" id="-1" operation="create">
       <p name="RFBand">band78</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:XCU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:XCU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1" id="-1" operation="create">
       <p name="AssociationMaxRetrans">3</p>
       <p name="CACAdmissionEnable">false</p>
       <p name="DPciConfigurationControl">True</p>
@@ -1829,7 +1829,7 @@
       <p name="XncServerLocalIpAddress">x</p>
       <p name="XnuPreferredIPType">IPv6</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:AnrParam" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:AnrParam" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1" id="-1" operation="create">
       <p name="AnrProcedureGuardTimer">1440</p>
       <p name="AutoNrNbrremoval">false</p>
       <p name="ClearPersistence">false</p>
@@ -1852,13 +1852,13 @@
       <p name="UeAnrPeriodicTimerOffset">3000</p>
       <p name="UlThroughputThreshold">10</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DrxConfigAnrSpecificX" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1/DrxConfigAnrSpecificX-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DrxConfigAnrSpecificX" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1/DrxConfigAnrSpecificX-1" id="-1" operation="create">
       <p name="LongDrxCycleLength">ms640</p>
       <p name="ShortDrxCycleLength">ms5</p>
       <p name="ShortDrxCycleTimer">2</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CellTrace" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CellTrace" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1" id="-1" operation="create">
       <p name="AddressOrURIOfTCE">http://[2a00:8a03:190::6:6]:50020</p>
       <p name="PortOfTCE">50020</p>
       <p name="SourceIdn">1</p>
@@ -1867,14 +1867,14 @@
       <p name="TraceReportingFormat">STREAMING_BASED</p>
       <p name="VendorName">NOKIA</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:CuAlarm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CuAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:CuAlarm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CuAlarm-1" id="-1" operation="create">
       <p name="AlarmId">ALARM_ALL_AMF_COMM_DOWN</p>
       <p name="AlarmName">x</p>
       <p name="ThresholdCount">0</p>
       <p name="ThresholdLevel">0</p>
       <p name="ThresholdTimeInterval">600</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DuId" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/DuId-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DuId" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/DuId-1" id="-1" operation="create">
       <p name="DuIdValue">1</p>
     </managedObject>
     <managedObject class="com.nokia.aiosc:EPF1U" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1" id="-1" operation="create">
@@ -1883,7 +1883,7 @@
       <p name="ObjectClass">x</p>
       <p name="ObjectInstance">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPNGC" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGC-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPNGC" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGC-1" id="-1" operation="create">
       <p name="AMFPointer">011111</p>
       <p name="AMFRegionid">1111111</p>
       <p name="AMFSetid">111111101</p>
@@ -1895,55 +1895,55 @@
       <p name="ObjectInstance">0</p>
       <p name="RemoteAddress">fc01:a135:216::3</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NgcAlarm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGC-1/NgcAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NgcAlarm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGC-1/NgcAlarm-1" id="-1" operation="create">
       <p name="AlarmId">ALARM_AMF_COMM_DOWN</p>
       <p name="AlarmName">x</p>
       <p name="ThresholdCount">5</p>
       <p name="ThresholdLevel">0</p>
       <p name="ThresholdTimeInterval">600</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPNGU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPNGU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGU-1" id="-1" operation="create">
       <p name="EPNGU_CP">x</p>
       <p name="Id">1</p>
       <p name="LocalIpAddress">2a00:8a03:190::6:1e</p>
       <p name="ObjectClass">EP_NgU</p>
       <p name="ObjectInstance">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPS1U" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPS1U-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPS1U" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPS1U-1" id="-1" operation="create">
       <p name="EPS1U_CP">1</p>
       <p name="Id">1</p>
       <p name="LocalIpAddress">10.168.5.1</p>
       <p name="ObjectClass">EP_S1U</p>
       <p name="ObjectInstance">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPX2U" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPX2U-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPX2U" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPX2U-1" id="-1" operation="create">
       <p name="EPX2U_CP">x</p>
       <p name="Id">1</p>
       <p name="LocalIpAddress">10.168.5.1</p>
       <p name="ObjectClass">EP_X2U</p>
       <p name="ObjectInstance">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPXNU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPXNU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPXNU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPXNU-1" id="-1" operation="create">
       <p name="Id">123</p>
       <p name="LocalIpAddress">10.168.5.1</p>
       <p name="ObjectClass">EP_XnU</p>
       <p name="ObjectInstance">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EutraCuUpConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraCuUpConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EutraCuUpConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraCuUpConfig-1" id="-1" operation="create">
       <p name="PdcpConfigInfoNumberOfEntries">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PdcpConfigInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraCuUpConfig-1/PdcpConfigInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PdcpConfigInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraCuUpConfig-1/PdcpConfigInfo-1" id="-1" operation="create">
       <p name="DlDataSplitPrimaryPath">SECONDARY_CELL_GROUP</p>
       <p name="DlDataSplitThresholdInBytes">b100</p>
       <p name="Qci">9</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EutraQosPrioritizationInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraQosPrioritizationInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EutraQosPrioritizationInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraQosPrioritizationInfo-1" id="-1" operation="create">
       <p name="Dscp">152</p>
       <p name="Qci">0</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EutraRedirectionInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraRedirectionInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EutraRedirectionInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraRedirectionInfo-1" id="-1" operation="create">
       <p name="Bandwidth">bw5</p>
       <p name="CnType">epc</p>
       <p name="Earfcn">65535</p>
@@ -2028,23 +2028,23 @@
     <managedObject class="com.nokia.aiosc:NumFreqBandsUl" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1/NumFreqBandsUl-1" id="-1" operation="create">
       <p name="NrFreqBandInd">48</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:FullIrnti" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/FullIrnti-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:FullIrnti" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/FullIrnti-1" id="-1" operation="create">
       <p name="NumBitsGnbId">1</p>
       <p name="NumBitsPlmnIndex">4</p>
       <p name="NumBitsUeContext">20</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NrQosPrioritizationInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/NrQosPrioritizationInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NrQosPrioritizationInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/NrQosPrioritizationInfo-1" id="-1" operation="create">
       <p name="Dscpn">46</p>
       <p name="FiveQi">9</p>
       <p name="X2WhiteListId">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PathMgmtCfg" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/PathMgmtCfg-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PathMgmtCfg" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/PathMgmtCfg-1" id="-1" operation="create">
       <p name="EchoIntervalInSec">65535</p>
       <p name="EchoN3Requests">5</p>
       <p name="EchoT3ResponseInSec">60</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Platform" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/Platform-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Platform" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/Platform-1" id="-1" operation="create">
       <p name="InnerSecureLocalIpAddress">3</p>
       <p name="IsIPSecEnabled">false</p>
       <p name="Tunnel1IPAddressV4">0.0.0.0</p>
@@ -2054,27 +2054,27 @@
       <p name="Tunnel3IPAddressV4">0.0.0.0</p>
       <p name="Tunnel3IPAddressV6">2a00:8a03:190::6:616</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PriorityAndPciForRRCEstabCause" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/PriorityAndPciForRRCEstabCause-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PriorityAndPciForRRCEstabCause" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/PriorityAndPciForRRCEstabCause-1" id="-1" operation="create">
       <p name="EstablishmentCause">moData</p>
       <p name="PreemptionCapability">false</p>
       <p name="Priority">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:ShortIrnti" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ShortIrnti-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:ShortIrnti" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ShortIrnti-1" id="-1" operation="create">
       <p name="NumBitsCellIndex">4</p>
       <p name="NumBitsUeContext">20</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:TimerConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:TimerConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1" id="-1" operation="create">
       <p name="HandoverBarringTimer">0</p>
       <p name="ReportCgiGuardTimer">4000</p>
       <p name="SparePara1">x</p>
       <p name="SparePara_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:E2AP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/E2AP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:E2AP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/E2AP-1" id="-1" operation="create">
       <p name="MsgMaxRetryCount">3</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:F1AP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/F1AP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:F1AP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/F1AP-1" id="-1" operation="create">
       <p name="MsgMaxRetryCount">3</p>
       <p name="NonUeAssocGuardTimerMS">5000</p>
       <p name="SparePara1">x</p>
@@ -2082,34 +2082,34 @@
       <p name="TimeToWaitInSec">5</p>
       <p name="UeAssocGuardTimerMS">3000</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NGAP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/NGAP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NGAP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/NGAP-1" id="-1" operation="create">
       <p name="MsgMaxRetryCount">3</p>
       <p name="TNgRelocOverallTimer">3000</p>
       <p name="TNgRelocPrepTimer">3000</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:X2AP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/X2AP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:X2AP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/X2AP-1" id="-1" operation="create">
       <p name="NonUeAssocGuardTimerMS">5000</p>
       <p name="TDcOverallTimerMS">5000</p>
       <p name="TimeToWaitInSec">5</p>
       <p name="UeAssocGuardTimerMS">3000</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:XNAP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/XNAP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:XNAP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/XNAP-1" id="-1" operation="create">
       <p name="MsgMaxRetryCount">3</p>
       <p name="TNgRelocOverallTimer">3000</p>
       <p name="TNgRelocPrepTimer">3000</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:X2BlackList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/X2BlackList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:X2BlackList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/X2BlackList-1" id="-1" operation="create">
       <p name="X2BlackListValue">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:X2WhiteList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/X2WhiteList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:X2WhiteList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/X2WhiteList-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="X2WhiteListValue">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:XncClientLocalIpAddress" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/XncClientLocalIpAddress-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:XncClientLocalIpAddress" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/XncClientLocalIpAddress-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
       <p name="XncClientLocalIpAddressValue">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:XDU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:XDU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1" id="-1" operation="create">
       <p name="BWVsPCCCaThr">10Mbps</p>
       <p name="CASupportedforNSA">false</p>
       <p name="CsiRsL3MeasEnabled">false</p>
@@ -2144,26 +2144,26 @@
     <managedObject class="com.nokia.aiosc:CarrierAggregation" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/CarrierAggregation-1" id="-1" operation="create">
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPF1C" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/EPF1C-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPF1C" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/EPF1C-1" id="-1" operation="create">
       <p name="Id">1</p>
       <p name="LocalIpAddress">127.0.0.3</p>
       <p name="ObjectClass">EP_F1C</p>
       <p name="ObjectInstance">0</p>
       <p name="RemoteAddress">127.0.0.2</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:EPF1UXDU" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/EPF1UXDU-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:EPF1UXDU" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/EPF1UXDU-1" id="-1" operation="create">
       <p name="EPF1U_CP">1</p>
       <p name="Id">1</p>
       <p name="LocalIpAddress">127.0.0.1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:F1CAlarm" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/F1CAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:F1CAlarm" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/F1CAlarm-1" id="-1" operation="create">
       <p name="AlarmName">x</p>
       <p name="SparePara1">x</p>
       <p name="ThresholdCount">0</p>
       <p name="ThresholdLevel">0</p>
       <p name="ThresholdTimeInterval">5</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:La" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/La-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:La" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/La-1" id="-1" operation="create">
       <p name="DlLaEnabled">True</p>
       <p name="DlLaMode">BLER</p>
       <p name="SparePara1">x</p>
@@ -2175,23 +2175,23 @@
     <managedObject class="com.nokia.aiosc:CoreList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/NsSysCfg-1/CoreList-1" id="-1" operation="create">
       <p name="CoreListValue">1</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PowerControl" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/PowerControl-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PowerControl" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/PowerControl-1" id="-1" operation="create">
       <p name="ClpcPuschEnabled">True</p>
       <p name="DlPdcchPowerControlEnabled">True</p>
       <p name="TwoPuschAdjStates">ONE_STATE</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:QosProvsioningParams" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/QosProvsioningParams-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:QosProvsioningParams" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/QosProvsioningParams-1" id="-1" operation="create">
       <p name="NumQoSInfoList">1</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:QoSInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/QosProvsioningParams-1/QoSInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:QoSInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/QosProvsioningParams-1/QoSInfo-1" id="-1" operation="create">
       <p name="FiveQi">9</p>
       <p name="PktDelayBdgt">250</p>
       <p name="PktErrLossRate">1</p>
       <p name="Priority">80</p>
       <p name="ResType">NON_GBR</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:IKEv2SAPair" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:IKEv2SAPair" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1" id="-1" operation="create">
       <p name="AdministrativeState">unlocked</p>
       <p name="IdiIndex">0</p>
       <p name="IkeLifeTime">24</p>
@@ -2200,7 +2200,7 @@
       <p name="SparePara1">x</p>
       <p name="UserLabel">IKEv2SAPair</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:IPsecSAPair" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1/IPsecSAPair-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:IPsecSAPair" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1/IPsecSAPair-1" id="-1" operation="create">
       <p name="AdministrativeState">unlocked</p>
       <p name="AntiReplayWindowSize">64</p>
       <p name="InnerIPv4Address">1.1.1.1</p>
@@ -2213,14 +2213,14 @@
       <p name="SpareParam2">0</p>
       <p name="SpareParam3">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SaApplication" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1/IPsecSAPair-1/SaApplication-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SaApplication" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1/IPsecSAPair-1/SaApplication-1" id="-1" operation="create">
       <p name="MsmciApplicationN">OAM</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SecurityGatewayList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1/SecurityGatewayList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SecurityGatewayList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/IKEv2SAPair-1/SecurityGatewayList-1" id="-1" operation="create">
       <p name="SecGwIpAddress">oam5g.iprc.nlt.in</p>
       <p name="Weight">3</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:LocalRoutingPassNetworkList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/LocalRoutingPassNetworkList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:LocalRoutingPassNetworkList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/LocalRoutingPassNetworkList-1" id="-1" operation="create">
       <p name="NetMask">16</p>
       <p name="NetworkIpAddress">1.1.1.1</p>
       <p name="SparePara1">x</p>
@@ -2231,11 +2231,11 @@
     <managedObject class="com.nokia.aiosc:LteNatLocLockFrequency" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/LteNatLocLockFrequency-1" id="-1" operation="create">
       <p name="LteNatLocLockFrequency_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NLSyncTechList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/NLSyncTechList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NLSyncTechList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/NLSyncTechList-1" id="-1" operation="create">
       <p name="NlTechn">UMTS</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRCBRSPR" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/NRCBRSPR-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRCBRSPR" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/NRCBRSPR-1" id="-1" operation="create">
       <p name="ActPalGaaBond">false</p>
       <p name="ActPalGaaBondComplete">True</p>
       <p name="ConnectToSasModeN">connectthroughdomainproxy</p>
@@ -2300,14 +2300,14 @@
       <p name="DesiredPmax">170</p>
       <p name="MaxGrantPwrRed">0</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:NRSASUSERGROUP" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/NRSASUSERGROUP-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:NRSASUSERGROUP" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/NRSASUSERGROUP-1" id="-1" operation="create">
       <p name="GroupType">x</p>
       <p name="NrSasUserGroupId">1</p>
     </managedObject>
     <managedObject class="com.nokia.aiosc:OnePPSConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/OnePPSConfig-1" id="-1" operation="create">
       <p name="OnePPSConfig_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:PTPConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/PTPConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:PTPConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/PTPConfig-1" id="-1" operation="create">
       <p name="AcceptedClockClasses">6</p>
       <p name="DomainNumber">24</p>
       <p name="EnableIPUnicast">false</p>
@@ -2318,13 +2318,13 @@
     <managedObject class="com.nokia.aiosc:RFTrace" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/RFTrace-1" id="-1" operation="create">
       <p name="RFTrace_CP">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Radio" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/Radio-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Radio" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/Radio-1" id="-1" operation="create">
       <p name="AdministrativeState">unlocked</p>
       <p name="AvailabilityStatusn">inTest</p>
       <p name="OperationalState">enabled</p>
       <p name="UserLabel">Radio</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SDM" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/SDM-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SDM" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/SDM-1" id="-1" operation="create">
       <p name="AdministrativeState">unlocked</p>
       <p name="CommitDelayTimer">120</p>
       <p name="CommitDelayTimerUpgrade">600</p>
@@ -2350,11 +2350,11 @@
       <p name="UsageState">Unknown</p>
       <p name="Userlabel">SDM</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SyncReferenceSourceList" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/SyncReferenceSourceList-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SyncReferenceSourceList" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/SyncReferenceSourceList-1" id="-1" operation="create">
       <p name="ClockSourcen">GPS</p>
       <p name="SparePara1">x</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SysConfig" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/SysConfig-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SysConfig" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/SysConfig-1" id="-1" operation="create">
       <p name="DiagNumRetries">10</p>
       <p name="DiagPort">2500</p>
       <p name="DiagServerIpv4Addr">127.0.0.1</p>
@@ -2373,7 +2373,7 @@
       <p name="UserLabel">SysConfig</p>
       <p name="WatchDog">on</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:HWInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/X_Nokia_BSR-1/SysConfig-1/HWInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:HWInfo" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Services-1/X_Nokia_BSR-1/SysConfig-1/HWInfo-1" id="-1" operation="create">
       <p name="Hardware">Nokia</p>
       <p name="MacAddress0">test</p>
       <p name="MacAddress1">test</p>
@@ -2394,7 +2394,7 @@
       <p name="UserId">x</p>
       <p name="WiFiAuthType">WPA3_SAE</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:Time" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Time-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:Time" version="AIOSC25_00_100" distName="PLMN-PLMN/AIOSC-1/Device-1/Time-1" id="-1" operation="create">
       <p name="Enable">primaryAndSecondary</p>
       <p name="LocalTimeZone">Central</p>
     </managedObject>

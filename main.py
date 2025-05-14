@@ -18,7 +18,7 @@
 
 #TO DO
 #need to add initial 3 parts
-#the id and operation have been hardcoded, needs to be update based
+
 
 
 import xml.etree.ElementTree as ET
@@ -131,30 +131,33 @@ def make_xml(etree, docname):
     print("XML file generated successfully.")
 
 def update_dictionary(comp_base, comp_update, rename_dict):
-    for x in comp_update:
-        v = rename_dict.get(x, x) 
-        for y in comp_update[x]:
-            param_rename = rename_dict.get(y, y) 
-            try:
-                up_val = comp_base[v][param_rename]
-                comp_update[x][y] = up_val  
-            except KeyError:
-                pass
+    for key in comp_update:
+        v = rename_dict.get(key, key)
+        if v not in comp_base:
+            continue
+        mo_base = comp_base[v]
+        mo_update = comp_update[key]
 
+        for param in list(mo_update):
+            if param.startswith('_'):  
+                continue
+
+            param_rename = rename_dict.get(param, param)
+            if param_rename in mo_base:
+                mo_update[param] = mo_base[param_rename]  
     return comp_update
 
-rename_dict = {
-    "SparePara1": "UPlaneVLANID"  
-}
-tree_update = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\AIOSC25_drop1_dataModel.xml").getroot()
-tree_base = ET.parse(r"C:\Users\Seshasai chillara\OneDrive\Desktop\nokia\Nokia_AIOSC24_SCF_NIDD4.0_v17.xml").getroot()
+if __name__ == "__main__":
+    rename_dict = {}
+    tree_update = ET.parse(r"AIOSC25_drop1_dataModel.xml").getroot()
+    tree_base = ET.parse(r"Nokia_AIOSC24_SCF_NIDD4.0_v17.xml").getroot()
 
-ns = {'ns':'raml21.xsd'}
+    ns = {'ns':'raml21.xsd'}
 
-comp_base = simplify_xml(tree_base,ns)
-comp_update = simplify_xml(tree_update,ns)
-#print(comp_update)
-#print(comp_base)
+    comp_base = simplify_xml(tree_base,ns)
+    comp_update = simplify_xml(tree_update,ns)
+    #print(comp_update)
+    #print(comp_base)
 
-comp_finalfile = build_full_xml(update_dictionary(comp_base,comp_update,rename_dict))
-make_xml(comp_finalfile,input("please enter file name to be created : "))
+    comp_finalfile = build_full_xml(update_dictionary(comp_base,comp_update,rename_dict))
+    make_xml(comp_finalfile,input("please enter file name to be created : "))
