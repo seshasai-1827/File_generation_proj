@@ -1,13 +1,14 @@
-
-
-
 import xml.etree.ElementTree as ET
 from xml.dom.minidom import parseString
 import dicttoxml
 from collections import OrderedDict
 from xml.dom import minidom
 
-
+#Clarifications:
+'''
+Do the MO attributes (except versionstring) need to be updated
+what needs to be done in relation to the renaming,are only parameters names changing or are the MO's names also changing
+'''
 def make_name(st):
     l = st.split('/',3)
     if len(l) != 4:
@@ -121,14 +122,13 @@ def update_dictionary(comp_base, comp_update, rename_dict):
         for param in list(mo_update):
             if param.startswith('_'):  
                 continue
-
             param_rename = rename_dict.get(param, param)
             if param_rename in mo_base:
                 mo_update[param] = mo_base[param_rename]  
     return comp_update
 
 if __name__ == "__main__":
-    rename_dict = {}
+    rename_dict = {"SparePara1":"UPlaneVLANID"}
     tree_update = ET.parse(r"AIOSC25_drop1_dataModel.xml").getroot()
     tree_base = ET.parse(r"Nokia_AIOSC24_SCF_NIDD4.0_v17.xml").getroot()
 
