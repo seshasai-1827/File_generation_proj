@@ -1,8 +1,8 @@
 import xml.etree.ElementTree as ET
 from xml.dom.minidom import parseString
-import dicttoxml
 from collections import OrderedDict
 from xml.dom import minidom
+import csv
 
 #Clarifications:
 '''
@@ -15,7 +15,9 @@ def make_name(st):
         return False
     return l[-1]
 
-
+def get_version_string(dictionqary):
+    for key, params in dictionqary.items():
+        return params.get('_version', 'UNKNOWN')
 def simplify_xml(root, ns):
     base = OrderedDict()
     base_list = root.findall(".//ns:managedObject", ns)
@@ -51,7 +53,7 @@ def build_full_xml(data_dict):
    #adding first 3 managed objects by hardcoding...
     aiosc = ET.SubElement(cmData, "managedObject", {
     'class': "com.nokia.aiosc:AIOSC",
-    'version': "AIOSC24_00_400",
+    'version': get_version_string(data_dict),
     'distName': "PLMN-PLMN/AIOSC-6000039",
     'operation': "create"
     })
@@ -65,7 +67,7 @@ def build_full_xml(data_dict):
     
     integrate = ET.SubElement(cmData, "managedObject", {
         'class': "com.nokia.integrate:INTEGRATE",
-        'version': "INT_01",
+        'version': get_version_string(data_dict),
         'distName': "PLMN-PLMN/AIOSC-6000039/INTEGRATE-1",
         'id': "104000",
         'operation': "create"
@@ -76,7 +78,7 @@ def build_full_xml(data_dict):
 
     device = ET.SubElement(cmData,"managedObject",{
         'class' : "com.nokia.aiosc:Device",
-        'version': "INT_01",
+        'version': get_version_string(data_dict),
         'distName' : "PLMN-PLMN/AIOSC-6000039",
         'operation' : "create" 
     })
@@ -112,23 +114,78 @@ def make_xml(etree, docname):
     print("XML file generated successfully.")
 
 def update_dictionary(comp_base, comp_update, rename_dict):
+    new_objs = []
     for key in comp_update:
         v = rename_dict.get(key, key)
         if v not in comp_base:
+            mo = comp_update[key]
+            new_objs.append([key, mo.get('_class', 'UNKNOWN'), mo.get('_distName', '')])  
             continue
+
         mo_base = comp_base[v]
         mo_update = comp_update[key]
-
         for param in list(mo_update):
-            if param.startswith('_'):  
+            if param.startswith('_'):
                 continue
-            param_rename = rename_dict.get(param, param)
-            if param_rename in mo_base:
-                mo_update[param] = mo_base[param_rename]  
-    return comp_update
+        param_rename = rename_dict.get(param, param)
+        if param_rename in mo_base:
+            mo_update[param] = mo_base[param_rename]  
+    return comp_update,new_objs
+
+def find_deprparams(comp_base,comp_update):
+    val = 0
+    for x in comp_base:
+        if x not in comp_update:
+            val+=1
+    return val
+import xml.etree.ElementTree as ET
+'''
+def number_mos(root):
+    namespace = {'ns': 'raml21.xsd'}
+    managed_objects = root.findall('.//ns:managedObject', namespace)
+
+    # Print the number of managedObject elements
+    print("Number of managedObject elements:", len(managed_objects))
+'''
+
+def generate_csv_report(comp_base, comp_update, rename_dict, new_objs):
+    deprecated = []
+
+    for key in comp_base:
+        if key not in comp_update:
+            mo = comp_base[key]
+            deprecated.append([key, mo.get('_class', 'UNKNOWN'), mo.get('_distName', '')])
+
+    with open("AIOSC_comparison_report.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+
+       
+        writer.writerow(["Comparison Summary"])
+        writer.writerow(["Metric", "Value"])
+        writer.writerow(["Total in Base Version", len(comp_base)])
+        writer.writerow(["Total in Update Version", len(comp_update)])
+        writer.writerow(["New Objects", len(new_objs)])
+        writer.writerow(["Deprecated Objects", len(deprecated)])
+        writer.writerow([])
+
+        
+        writer.writerow(["New Objects"])
+        writer.writerow(["Key", "Class", "DistName"])
+        writer.writerows(new_objs)
+        writer.writerow([])
+
+        
+        writer.writerow(["Deprecated Objects"])
+        writer.writerow(["Key", "Class", "DistName"])
+        writer.writerows(deprecated)
+
+    print("Unified report written to 'AIOSC_comparison_report.csv'")
+
+
+
 
 if __name__ == "__main__":
-    rename_dict = {"SparePara1":"UPlaneVLANID"}
+    rename_dict = {}
     tree_update = ET.parse(r"AIOSC25_drop1_dataModel.xml").getroot()
     tree_base = ET.parse(r"Nokia_AIOSC24_SCF_NIDD4.0_v17.xml").getroot()
 
@@ -136,8 +193,11 @@ if __name__ == "__main__":
 
     comp_base = simplify_xml(tree_base,ns)
     comp_update = simplify_xml(tree_update,ns)
-    #print(comp_update)
-    #print(comp_base)
-
-    comp_finalfile = build_full_xml(update_dictionary(comp_base,comp_update,rename_dict))
+    update_dict,new_objs = update_dictionary(comp_base,comp_update,rename_dict)
+    comp_finalfile = build_full_xml(update_dict)
+    
     make_xml(comp_finalfile,input("please enter file name to be created : "))
+
+    print("number of managed objects in the generated file        :",len(comp_update))
+    print("number of managed objects in the previous version file :",len(comp_base))
+    generate_csv_report(comp_base,comp_update,rename_dict,new_objs)
