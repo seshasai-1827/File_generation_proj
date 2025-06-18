@@ -733,7 +733,8 @@
 <p name="MeasTriggerThreshold">0</p>
  <p name="MeasTriggerType">Rsrp</p>
  <p name="ReportOnLeave">false</p>
- <p name="SparePara1">123</p>
+ <p name="SparePara1">1
+ 23</p>
  <p name="TimeToTrigger">MS40</p>
     </managedObject>
     <managedObject class="com.nokia.aiosc:A5EventInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A5EventInfo-1" id="104000" operation="create">

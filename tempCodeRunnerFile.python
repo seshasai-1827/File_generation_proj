@@ -1,0 +1,227 @@
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
+from collections import OrderedDict
+import os
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment
+
+
+class ManagedObject:
+    def __init__(self, mo_class, distname, version, mo_id, operation, paramdict):
+        self.mo_class = mo_class
+        self.distname = distname
+        self.version = version
+        self.mo_id = mo_id
+        self.operation = operation
+        self.paramdict = paramdict
+
+
+class Document:
+    def __init__(self, data_dict, xml_tree=None):
+        self.data_dict = data_dict
+        self.version_string = self.get_version_string()
+        self.num_objects = len(data_dict)
+        self.xml_tree = xml_tree
+
+    def get_version_string(self):
+        if self.data_dict:
+            for key, params in self.data_dict.items():
+                return params.get('_version', 'UNKNOWN')
+        return 'UNKNOWN'
+
+
+def make_name(st):
+    l = st.split('/', 2)
+    if len(l) != 3 or l[-1] in ('INTEGRATE-1','Device-1'):
+        return False
+    return l[-1]
+
+
+def simplify_xml(root, ns):
+    base = OrderedDict()
+    for element in root.iterfind(".//ns:managedObject", ns):
+        distName = make_name(element.attrib.get('distName'))
+        key = element.attrib.get('class')
+        if not distName or not key:
+            continue
+
+        if key not in base:
+            base[key] = []
+
+        mo_data = OrderedDict()
+        mo_data['_class'] = key
+        mo_data['_distName'] = distName
+        mo_data['_version'] = element.attrib.get('version', 'UNKNOWN')
+        mo_data['_id'] = element.attrib.get('id', '10400')
+        mo_data['_operation'] = element.attrib.get('operation', 'create')
+
+        for parameters in element.findall("ns:p", ns):
+            if parameters.text is not None:
+                mo_data[parameters.attrib['name']] = parameters.text
+
+        base[key].append(mo_data)
+    return base
+
+
+def build_full_xml(data_dict):
+    NS_URI = "raml21.xsd"
+    ET.register_namespace('', NS_URI)
+    root = ET.Element("raml", {'version': '2.1', 'xmlns': NS_URI})
+    cmData = ET.SubElement(root, "cmData", {
+        'type': 'plan',
+        'scope': 'all',
+        'name': 'AIOSC-Generated-XML.xml'
+    })
+
+    common_version = get_version_string(data_dict)
+
+    for key, mo_list in data_dict.items():
+        for current_params in mo_list:
+            params = current_params.copy()
+            class_attr = params.pop('_class', 'UNKNOWN')
+            dist_attr = params.pop('_distName', f"UNSPECIFIED/{key}")
+            version = params.pop('_version', 'UNKNOWN')
+            mo_id = params.pop('_id', '10400')
+            operation = params.pop('_operation', 'create')
+
+            mo = ET.SubElement(cmData, "managedObject", {
+                'class': class_attr,
+                'version': version,
+                'distName': dist_attr,
+                'id': mo_id,
+                'operation': operation
+            })
+            for pname, val in params.items():
+                ET.SubElement(mo, "p", {'name': pname}).text = val
+
+    return ET.ElementTree(root)
+
+
+def get_version_string(data_dict):
+    if data_dict:
+        for key in data_dict:
+            for mo in data_dict[key]:
+                return mo.get('_version', 'UNKNOWN')
+    return 'UNKNOWN'
+
+
+def make_xml(etree, docname):
+    rough_string = ET.tostring(etree.getroot(), encoding="utf-8")
+    pretty_xml = minidom.parseString(rough_string).toprettyxml(indent="    ")
+    try:
+        with open(f"{docname}.xml", "w", encoding="utf-8") as f:
+            f.write(pretty_xml)
+        print(f"XML file '{docname}.xml' generated successfully.")
+    except IOError as e:
+        print(f"Error writing XML file '{docname}.xml': {e}")
+
+
+def update_dictionary(comp_base, comp_update, rename_dict=None):
+    if rename_dict is None:
+        rename_dict = {}
+
+    added_objs = []
+
+    for upd_class_key, upd_list in comp_update.items():
+        base_class_key = rename_dict.get(upd_class_key, upd_class_key)
+
+        if base_class_key not in comp_base:
+            for upd_mo in upd_list:
+                added_objs.append([
+                    upd_class_key,
+                    upd_mo.get('_class', 'UNKNOWN'),
+                    upd_mo.get('_distName', '')
+                ])
+            continue
+
+        base_list = comp_base[base_class_key]
+        upd_lookup = {mo['_distName']: mo for mo in upd_list}
+        base_lookup = {mo['_distName']: mo for mo in base_list}
+
+        for dist, upd_mo in upd_lookup.items():
+            if dist not in base_lookup:
+                added_objs.append([
+                    upd_class_key,
+                    upd_mo.get('_class', 'UNKNOWN'),
+                    dist
+                ])
+                continue
+
+            base_mo = base_lookup[dist]
+            for param, value in base_mo.items():
+                if param.startswith('_'):
+                    continue
+                renamed_param = rename_dict.get(param, param)
+                if renamed_param not in upd_mo or upd_mo[renamed_param] in ("", None):
+                    upd_mo[renamed_param] = value
+
+        for dist, base_mo in base_lookup.items():
+            if dist in upd_lookup:
+                continue
+
+            mo_new = OrderedDict()
+            for k, v in base_mo.items():
+                if k.startswith('_'):
+                    mo_new[k] = v
+                else:
+                    mo_new[rename_dict.get(k, k)] = v
+
+            upd_list.append(mo_new)
+            added_objs.append([
+                upd_class_key,
+                mo_new.get('_class', 'UNKNOWN'),
+                dist
+            ])
+
+    return comp_update, added_objs
+
+
+def count_total_mos(d):
+    return sum(len(v) for v in d.values())
+
+
+if __name__ == "__main__":
+    rename_dict = {}
+    ns = {'ns': 'raml21.xsd'}
+
+    xml_file_update = "AIOSC25_drop1_dataModel.xml"
+    xml_file_base = "Nokia_AIOSC24_SCF_NIDD4.0_v17.xml"
+
+    print(f"Attempting to load XML files:")
+    print(f"  Base File: '{xml_file_base}'")
+    print(f"  Update File: '{xml_file_update}'")
+
+    try:
+        if not os.path.exists(xml_file_update):
+            raise FileNotFoundError(f"'{xml_file_update}' does not exist.")
+        if not os.path.exists(xml_file_base):
+            raise FileNotFoundError(f"'{xml_file_base}' does not exist.")
+
+        tree_update = ET.parse(xml_file_update).getroot()
+        tree_base = ET.parse(xml_file_base).getroot()
+    except FileNotFoundError as e:
+        print(f"Error: {e} Please ensure the XML files are in the same directory as the script.")
+        exit(1)
+    except ET.ParseError as e:
+        print(f"Error parsing XML file: {e}. Please check if the XML files are well-formed.")
+        exit(1)
+
+    comp_base = simplify_xml(tree_base, ns)
+    comp_update = simplify_xml(tree_update, ns)
+
+    comp_final, added = update_dictionary(comp_base, comp_update, rename_dict)
+
+    tot_base = count_total_mos(comp_base)
+    tot_upd_b = count_total_mos(comp_update)
+    tot_upd_a = count_total_mos(comp_final)
+
+    print("\n--- Sanity Check --------------------------------")
+    print(f"Total in BASE              : {tot_base}")
+    print(f"Total in UPDATE (before)   : {tot_upd_b}")
+    print(f"Objects reported as added  : {len(added)}")
+    print(f"Total in UPDATE (after)    : {tot_upd_a}")
+    print("Expect: after  ==  before  +  added")
+    print("--------------------------------------------------")
+
+    merged_tree = build_full_xml(comp_final)
+    make_xml(merged_tree, "AIOSC25_merged_output")
