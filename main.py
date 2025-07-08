@@ -4,162 +4,88 @@ from collections import OrderedDict
 from datetime import datetime
 import csv
 import copy
-import os # Import os for path checking
+import os
 
-# ─────────────────────── XML → Python helper ────────────────────────
 def make_name(dist):
-    """
-    Extracts the trailing leaf name from a distName string.
-    Returns the leaf name (e.g., "Device-2") or False if the distName
-    does not conform to the expected pattern or is one of the excluded names.
-    """
+    if not dist:
+        return None
     parts = dist.split('/', 2)
-    # Check if the path has at least 3 parts (e.g., PLMN-PLMN/AIOSC-6000039/Device-2)
-    # and if the last part is not an excluded name.
     if len(parts) != 3 or parts[-1] in ("INTEGRATE-1", "Device-1"):
-        return False
+        return None
     return parts[-1]
 
 def simplify_xml(root, ns):
-    """
-    Parses an XML ElementTree root and extracts relevant data into an
-    OrderedDict structure.
-    The structure is {class: OrderedDict{distName_leaf: MO_entry_dict}}.
-    Each MO_entry_dict contains metadata (like _class, _distName)
-    and parameters from 'p' tags.
-    """
     data = OrderedDict()
-    # Iterate through all 'managedObject' elements within the specified namespace
     for mo in root.iterfind(".//ns:managedObject", ns):
-        cls = mo.attrib.get("class") # Get the 'class' attribute
-        leaf = make_name(mo.attrib.get("distName")) # Get the simplified distName (leaf)
-
-        # Skip if class or leaf is missing or invalid
+        cls = mo.attrib.get("class")
+        leaf = make_name(mo.attrib.get("distName"))
         if not cls or not leaf:
             continue
-
         entry = OrderedDict()
-        # Store essential attributes as metadata (prefixed with '_')
-        entry['_class']    = cls
+        entry['_class'] = cls
         entry['_distName'] = mo.attrib.get("distName")
-        entry['_version']  = mo.attrib.get("version", "UNKNOWN")
-        entry['_id']       = mo.attrib.get("id", "10400") # Default ID if not present
-        entry['_operation'] = mo.attrib.get("operation", "create") # Default operation
-
-        # Iterate through 'p' (parameter) elements and store their name and text content
+        entry['_version'] = mo.attrib.get("version", "UNKNOWN")
+        entry['_id'] = mo.attrib.get("id", "10400")
+        entry['_operation'] = mo.attrib.get("operation", "create")
         for p in mo.findall("ns:p", ns):
             if p.text is not None:
                 entry[p.attrib["name"]] = p.text
-
-        # Add the entry to the data dictionary, nested by class and then by leaf name
         data.setdefault(cls, OrderedDict())[leaf] = entry
     return data
 
 def count_total_mos(d):
-    """
-    Counts the total number of managed objects across all classes in the
-    simplified dictionary structure.
-    """
     return sum(len(inner) for inner in d.values())
 
-# ───────────────────────── Merge algorithm ──────────────────────────
 def merge_dicts(base, skeletal):
-    """
-    Merges two simplified XML dictionaries (base and skeletal) according to specific rules:
-    1. Starts with all objects from 'skeletal'.
-    2. For objects common to both 'base' and 'skeletal':
-       Parameters from 'base' overwrite parameters from 'skeletal'.
-    3. Objects present in 'base' but not in 'skeletal' are carried over to the final dictionary.
-
-    Returns:
-        final_dict (OrderedDict): The merged dictionary.
-        new_objs (list): List of (class, distName_leaf) for objects present in 'skeletal'
-                         but not in 'base' (newly introduced).
-        carried_objs (list): List of (class, distName_leaf) for objects present in 'base'
-                             but not in 'skeletal, and thus carried over.
-    """
     new_objs, carried_objs = [], []
-    final_dict = copy.deepcopy(skeletal) # Start with all objects from the skeletal (update) file
-
-    # Process objects present in the skeletal dictionary
+    final_dict = copy.deepcopy(skeletal)
     for cls in skeletal:
-        # Check if the class exists in the base dictionary
         if cls in base:
             for dist in skeletal[cls]:
-                # If an object in skeletal is not in base, it's a NEW object
                 if dist not in base[cls]:
                     new_objs.append((cls, dist))
                 else:
-                    # This is a COMMON object (exists in both base and skeletal)
-                    # For common parameters, base values overwrite skeletal values
                     for p in skeletal[cls][dist]:
-                        # Skip metadata attributes (those starting with '_')
                         if p.startswith('_'):
                             continue
-                        # If the parameter exists in the base object, use its value
                         if p in base[cls][dist]:
                             final_dict[cls][dist][p] = base[cls][dist][p]
         else:
-            # If an entire class is NEW (not in base), all its objects are new
             for dist in skeletal[cls]:
                 new_objs.append((cls, dist))
 
-    # Process objects to be CARRIED from the base dictionary
     for cls in base:
-        # If an entire class from base is not in skeletal, it's considered DEPRECATED
-        # and its objects are NOT carried over (as per the original logic)
         if cls not in skeletal:
             continue
         for dist in base[cls]:
-            # If an object in base is not in skeletal, it's carried over
             if dist not in skeletal[cls]:
                 carried_objs.append((cls, dist))
-                final_dict[cls][dist] = base[cls][dist] # Add the entire object from base
+                final_dict[cls][dist] = base[cls][dist]
 
     return final_dict, new_objs, carried_objs
 
 def find_deprecated(base, final_):
-    """
-    Identifies objects that were present in the base dictionary but are
-    absent in the final merged dictionary. These are considered deprecated.
-
-    Returns:
-        list: A list of (class, distName_leaf) tuples for deprecated objects.
-    """
     depr = []
     for cls, inner in base.items():
         for dist in inner:
-            # An object is deprecated if its class or the object itself
-            # is not found in the final merged dictionary.
             if cls not in final_ or dist not in final_[cls]:
                 depr.append((cls, dist))
     return depr
 
-# ───────────────────────  Build merged XML  ─────────────────────────
 def build_full_xml(data_dict, out_name="AIOSC_Merged"):
-    """
-    Constructs a full XML ElementTree from the merged data dictionary.
-    Includes hard-coded header managed objects and then dynamically adds
-    managed objects from the data_dict.
-    """
-    # Prompt user for version string, with a default "custom"
     vers = input("Enter Version String (e.g., AIOSC25.0_DROP2, default: custom): ").strip() or "custom"
 
     NS_URI = "raml21.xsd"
-    ET.register_namespace('', NS_URI) # Register default namespace
-    root  = ET.Element("raml", {'version': '2.1', 'xmlns': NS_URI})
-    cmD   = ET.SubElement(root, "cmData",
-                          {'type': 'plan', 'scope': 'all'})
+    ET.register_namespace('', NS_URI)
+    root = ET.Element("raml", {'version': '2.1', 'xmlns': NS_URI})
+    cmD = ET.SubElement(root, "cmData", {'type': 'plan', 'scope': 'all'})
 
-    # 1) Hard-coded first 3 managedObjects
-    def hdr(tag_name, attrs, param_dict):
-        """Helper function to create a managedObject with parameters."""
+    def hdr(attrs, param_dict):
         mo = ET.SubElement(cmD, "managedObject", attrs)
         for n, v in param_dict.items():
             ET.SubElement(mo, "p", {'name': n}).text = v
 
-    # First hard-coded AIOSC object
-    hdr("AIOSC", {
+    hdr({
         'class': "com.nokia.aiosc:AIOSC", 'version': vers,
         'distName': "PLMN-PLMN/AIOSC-6000039", 'operation': "create"
     }, {
@@ -171,86 +97,64 @@ def build_full_xml(data_dict, out_name="AIOSC_Merged"):
         "SparePara1_CP": "1",
     })
 
-    # Second hard-coded INTEGRATE object
-    hdr("INTEGRATE", {
+    hdr({
         'class': "com.nokia.integrate:INTEGRATE", 'version': vers,
         'distName': "PLMN-PLMN/AIOSC-6000039/INTEGRATE-1",
         'id': "104000", 'operation': "create"
     }, {
         "plannedSWReleaseVersion": vers,
-        "systemReleaseVersion": vers[:6],  # e.g., AIOSC25
+        "systemReleaseVersion": vers[:6],
         "ipVersion": "0",
     })
 
-    # Third hard-coded Device object
-    hdr("Device", {
+    hdr({
         'class': "com.nokia.aiosc:Device", 'version': vers,
         'distName': "PLMN-PLMN/AIOSC-6000039", 'operation': "create"
     }, {"UserLabel": "AIOSC"})
 
-    # 2) Data-derived MOs from the merged dictionary
-    # These classes are skipped because they are already hard-coded above
     skip_hdr_classes = {
         "com.nokia.aiosc:AIOSC",
         "com.nokia.integrate:INTEGRATE",
         "com.nokia.aiosc:Device",
     }
 
-    # Iterate through the merged data_dict to add remaining managed objects
     for cls, inner in data_dict.items():
         if cls in skip_hdr_classes:
-            continue # Skip classes that were hard-coded
-        for entry in inner.values():
-            # Create a managedObject element with its attributes
+            continue
+        for leaf, entry in inner.items():
+            distname_fixed = f"PLMN-PLMN/AIOSC-6000039/{leaf}" if leaf else entry.get('_distName')
             tag = ET.SubElement(cmD, "managedObject", {
                 'class': entry.get('_class', cls),
                 'version': vers,
-                'distName': entry.get('_distName'),
-                'id': entry.get('_id', '10400'),
+                'distName': distname_fixed,
+                'id': "10400",
                 'operation': entry.get('_operation', 'create')
             })
-            # Add 'p' (parameter) sub-elements based on the entry's parameters
             for pname, pval in entry.items():
-                if pname.startswith('_'): # Skip metadata attributes
+                if pname.startswith('_'):
                     continue
                 ET.SubElement(tag, "p", {'name': pname}).text = pval
 
     return ET.ElementTree(root)
 
-def write_xml(tree, name):
-    """
-    Writes an ElementTree to an XML file with pretty indentation.
-    Includes error handling for file writing.
-    """
+def write_xml(tree, name="AIOSC_Merged"):
     try:
-        # Convert the ElementTree to a pretty-printed string
         txt = minidom.parseString(ET.tostring(tree.getroot(), "utf-8"))\
-                     .toprettyxml(indent="    ") # Use 4 spaces for indentation
-        # Write the XML string to the specified file
+                     .toprettyxml(indent="    ")
         with open(name + ".xml", "w", encoding="utf-8") as f:
             f.write(txt)
         print(f"✓ Successfully wrote {name}.xml")
     except Exception as e:
         print(f"Error writing XML file '{name}.xml': {e}")
 
-# ───────────────────────  CSV Report  ───────────────────────────────
 def csv_report(base, final_, new, carried, depr, name="AIOSC_report.csv"):
-    """
-    Generates a CSV report summarizing the merge operation, including
-    counts for base, final, new, carried, common, and deprecated objects,
-    and a detailed list of objects with their status.
-    """
-    # Convert lists to sets for efficient lookup
     new_set, carried_set, depr_set = map(set, (new, carried, depr))
-
-    # Calculate metrics
-    total_base    = count_total_mos(base)
-    total_final   = count_total_mos(final_)
-    total_new     = len(new_set)
+    total_base = count_total_mos(base)
+    total_final = count_total_mos(final_)
+    total_new = len(new_set)
     total_carried = len(carried_set)
     total_deprecated = len(depr_set)
-    # Common objects are those in final that are neither new nor carried
-    total_common  = total_final - total_new - total_carried
+    total_common = total_final - total_new - total_carried
 
     try:
         with open(name, "w", newline='', encoding="utf-8") as fh:
@@ -269,115 +173,46 @@ def csv_report(base, final_, new, carried, depr, name="AIOSC_report.csv"):
             w.writerow(["Class", "DistName", "Status"])
 
             def get_status(cls, dist):
-                """Helper to determine the status of an object for the report."""
                 if (cls, dist) in new_set:
                     return "NEW"
                 if (cls, dist) in carried_set:
                     return "CARRIED"
-                return "COMMON" # If it's in final_ and not new or carried, it's common
+                return "COMMON"
 
-            # Write details for objects in the final merged dictionary
             for cls, inner in sorted(final_.items()):
                 for dist in sorted(inner):
                     w.writerow([cls, dist, get_status(cls, dist)])
 
-            # Write details for deprecated objects
             for cls, dist in sorted(depr_set):
                 w.writerow([cls, dist, "DEPRECATED"])
         print(f"✓ Successfully wrote {name}")
     except Exception as e:
         print(f"Error writing CSV report '{name}': {e}")
 
-# ───────────────────────────── Main ────────────────────────────────
 if __name__ == "__main__":
     ns = {'ns': 'raml21.xsd'}
-    base_file = ""
-    skeletal_file = ""
+    base_file = input("Enter the path to the BASE XML file: ").strip()
+    skeletal_file = input("Enter the path to the SKELETAL XML file: ").strip()
 
-    # Get file paths from user
-    while not base_file:
-        base_file = input("Enter the path to the BASE XML file (e.g., Nokia_AIOSC24_SCF_NIDD4.0_v17.xml): ").strip()
-        if not os.path.exists(base_file):
-            print(f"Error: File not found at '{base_file}'. Please try again.")
-            base_file = "" # Reset to prompt again
-        elif not base_file.lower().endswith(".xml"):
-            print(f"Error: '{base_file}' does not seem to be an XML file. Please provide an XML file.")
-            base_file = ""
+    base_root = ET.parse(base_file).getroot()
+    skeletal_root = ET.parse(skeletal_file).getroot()
 
-    while not skeletal_file:
-        skeletal_file = input("Enter the path to the SKELETAL XML file (e.g., AIOSC25_drop1_dataModel.xml): ").strip()
-        if not os.path.exists(skeletal_file):
-            print(f"Error: File not found at '{skeletal_file}'. Please try again.")
-            skeletal_file = "" # Reset to prompt again
-        elif not skeletal_file.lower().endswith(".xml"):
-            print(f"Error: '{skeletal_file}' does not seem to be an XML file. Please provide an XML file.")
-            skeletal_file = ""
+    comp_base = simplify_xml(base_root, ns)
+    comp_skeletal = simplify_xml(skeletal_root, ns)
 
-    base_root = None
-    skeletal_root = None
+    final_dict, new_objs, carried_objs = merge_dicts(comp_base, comp_skeletal)
+    deprecated = find_deprecated(comp_base, final_dict)
 
-    # Parse XML files with error handling
-    try:
-        print(f"Parsing base file: {base_file}...")
-        base_root = ET.parse(base_file).getroot()
-        print("Base file parsed successfully.")
-    except FileNotFoundError:
-        print(f"Error: Base XML file not found at '{base_file}'. Please ensure the path is correct.")
-        exit(1)
-    except ET.ParseError as e:
-        print(f"Error parsing base XML file '{base_file}': {e}")
-        print("Please ensure the XML file is well-formed.")
-        exit(1)
-    except Exception as e:
-        print(f"An unexpected error occurred while parsing base XML file '{base_file}': {e}")
-        exit(1)
+    print("\n--- Merge Summary ---")
+    print("BASE      :", count_total_mos(comp_base))
+    print("SKELETAL  :", count_total_mos(comp_skeletal))
+    print("FINAL     :", count_total_mos(final_dict))
+    print("NEW       :", len(new_objs))
+    print("CARRIED   :", len(carried_objs))
+    print("DEPRECATED:", len(deprecated))
+    print("---------------------\n")
 
-    try:
-        print(f"Parsing skeletal file: {skeletal_file}...")
-        skeletal_root = ET.parse(skeletal_file).getroot()
-        print("Skeletal file parsed successfully.")
-    except FileNotFoundError:
-        print(f"Error: Skeletal XML file not found at '{skeletal_file}'. Please ensure the path is correct.")
-        exit(1)
-    except ET.ParseError as e:
-        print(f"Error parsing skeletal XML file '{skeletal_file}': {e}")
-        print("Please ensure the XML file is well-formed.")
-        exit(1)
-    except Exception as e:
-        print(f"An unexpected error occurred while parsing skeletal XML file '{skeletal_file}': {e}")
-        exit(1)
-
-    # If parsing was successful, proceed with simplification and merging
-    if base_root is not None and skeletal_root is not None:
-        try:
-            print("Simplifying base XML data...")
-            comp_base = simplify_xml(base_root, ns)
-            print("Simplifying skeletal XML data...")
-            comp_skeletal = simplify_xml(skeletal_root, ns)
-
-            print("Merging XML data...")
-            final_dict, new_objs, carried_objs = merge_dicts(comp_base, comp_skeletal)
-            print("Finding deprecated objects...")
-            deprecated = find_deprecated(comp_base, final_dict)
-
-            print("\n--- Merge Summary ---")
-            print("BASE      :", count_total_mos(comp_base))
-            print("SKELETAL  :", count_total_mos(comp_skeletal))
-            print("FINAL     :", count_total_mos(final_dict))
-            print("NEW       :", len(new_objs))
-            print("CARRIED   :", len(carried_objs))
-            print("DEPRECATED:", len(deprecated))
-            print("---------------------\n")
-
-            print("Building merged XML tree...")
-            tree = build_full_xml(final_dict, out_name="AIOSC_Merged")
-            write_xml(tree, "AIOSC_Merged")
-            csv_report(comp_base, final_dict, new_objs, carried_objs, deprecated, name="AIOSC_Merge_Report.csv")
-
-        except Exception as e:
-            print(f"An error occurred during data processing or report generation: {e}")
-            import traceback
-            traceback.print_exc() # Print full traceback for debugging
-    else:
-        print("XML parsing failed. Exiting.")
-
+    out_name = input("Enter the output file name (default: AIOSC_Merged): ").strip() or "AIOSC_Merged"
+    tree = build_full_xml(final_dict, out_name)
+    write_xml(tree, out_name)
+    csv_report(comp_base, final_dict, new_objs, carried_objs, deprecated)

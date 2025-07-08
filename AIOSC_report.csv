@@ -1,13 +1,13 @@
 AIOSC Merge Report
-Generated,2025-06-20T14:46:23
+Generated,2025-07-08T19:30:35
 
 Metric,Count
-Objects in BASE (2024),307
-Objects in FINAL (2025 merged),368
-NEW,61
-CARRIED,99
-COMMON,208
-DEPRECATED,0
+Objects in BASE (Original),307
+Objects in FINAL (Merged),368
+NEW (from Skeletal),61
+CARRIED (from Base),99
+COMMON (shared & modified),208
+DEPRECATED (removed from Base),0
 
 Class,DistName,Status
 com.nokia.aiosc:A1EventInfo,Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A1EventInfo-1,COMMON

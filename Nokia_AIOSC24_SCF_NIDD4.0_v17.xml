@@ -17,7 +17,7 @@
    <managedObject class="com.nokia.aiosc:Device" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1" id="104000" operation="create">
    <p name="UserLabel">AIOSC</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DeviceInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/DeviceInfo-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:DeviceInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/DeviceInfo-1" id="104001" operation="create">
       <p name="AdditionalHardwareVersion">AIOSC</p>
       <p name="AdditionalSoftwareVersion">AIO</p>
       <p name="Description">StrandMount</p>
