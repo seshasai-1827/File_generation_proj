@@ -9,7 +9,7 @@
    <p name="SparaPara2_CP">1</p>
    <p name="SparePara1_CP">1</p> 
    </managedObject>
-  <managedObject class="com.nokia.integrate:INTEGRATE" version="INT_01" distName="PLMN-PLMN/AIOSC-6000039/INTEGRATE-1" id="104000" operation="create">
+  <managedObject class="com.nokia.integrate:INTEGRATE" version="INT_01" distName="PLMN-PLMN/AIOSC-6000039/INTEGRATE-1" id="104001" operation="create">
    <p name="plannedSWReleaseVersion">AIOSC24_01_400_35.aio.sig0</p>
    <p name="systemReleaseVersion">AIOSC24</p>
    <p name="ipVersion">0</p>
@@ -17,7 +17,7 @@
    <managedObject class="com.nokia.aiosc:Device" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1" id="104000" operation="create">
    <p name="UserLabel">AIOSC</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:DeviceInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/DeviceInfo-1" id="104001" operation="create">
+    <managedObject class="com.nokia.aiosc:DeviceInfo" version="AIOSC24_00_400" distName="PLMN-PLMN/AIOSC-6000039/Device-1/DeviceInfo-1" id="104000" operation="create">
       <p name="AdditionalHardwareVersion">AIOSC</p>
       <p name="AdditionalSoftwareVersion">AIO</p>
       <p name="Description">StrandMount</p>

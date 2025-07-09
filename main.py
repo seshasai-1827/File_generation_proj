@@ -6,27 +6,37 @@ import csv
 import copy
 import os
 
-def make_name(dist):
+class CommonAttributes():
+    def __init__(self):
+        self.dist_name_base = None
+        self.id_base = None
+
+def make_name(dist,ctx):
+    global dist_name_base
     if not dist:
         return None
     parts = dist.split('/', 2)
     if len(parts) != 3 or parts[-1] in ("INTEGRATE-1", "Device-1"):
         return None
+    if ctx.dist_name_base is None:
+        ctx.dist_name_base = parts[0] + "/" + parts[1]
     return parts[-1]
 
-def simplify_xml(root, ns):
+def simplify_xml(root, ns,ctx):
     data = OrderedDict()
     for mo in root.iterfind(".//ns:managedObject", ns):
         cls = mo.attrib.get("class")
-        leaf = make_name(mo.attrib.get("distName"))
+        leaf = make_name(mo.attrib.get("distName"),ctx)
         if not cls or not leaf:
             continue
         entry = OrderedDict()
         entry['_class'] = cls
-        entry['_distName'] = mo.attrib.get("distName")
-        entry['_version'] = mo.attrib.get("version", "UNKNOWN")
-        entry['_id'] = mo.attrib.get("id", "10400")
+        #entry['_distName'] = mo.attrib.get("distName")
+        #entry['_version'] = mo.attrib.get("version", "UNKNOWN")
+        #entry['_id'] = mo.attrib.get("id", "10400")
         entry['_operation'] = mo.attrib.get("operation", "create")
+        if ctx.id_base == None:
+            ctx.id_base =  mo.attrib.get("id", "10400")       
         for p in mo.findall("ns:p", ns):
             if p.text is not None:
                 entry[p.attrib["name"]] = p.text
@@ -44,6 +54,10 @@ def merge_dicts(base, skeletal):
             for dist in skeletal[cls]:
                 if dist not in base[cls]:
                     new_objs.append((cls, dist))
+                    if base[cls]:
+                        sample = next(iter(base[cls].values()))
+                        #final_dict[cls][dist]['_id'] = sample.get('_id', '10400')
+                        #final_dict[cls][dist]['_distName'] = f"{dist_name_base}/{dist}"
                 else:
                     for p in skeletal[cls][dist]:
                         if p.startswith('_'):
@@ -53,7 +67,13 @@ def merge_dicts(base, skeletal):
         else:
             for dist in skeletal[cls]:
                 new_objs.append((cls, dist))
-
+                if base:
+                    for base_class in base:
+                        if base[base_class]:
+                            sample = next(iter(base[base_class].values()))
+                            #final_dict[cls][dist]['_id'] = sample.get('_id', '10400')
+                            #final_dict[cls][dist]['_distName'] = f"{dist_name_base}/{dist}"
+                            break
     for cls in base:
         if cls not in skeletal:
             continue
@@ -61,7 +81,6 @@ def merge_dicts(base, skeletal):
             if dist not in skeletal[cls]:
                 carried_objs.append((cls, dist))
                 final_dict[cls][dist] = base[cls][dist]
-
     return final_dict, new_objs, carried_objs
 
 def find_deprecated(base, final_):
@@ -72,9 +91,10 @@ def find_deprecated(base, final_):
                 depr.append((cls, dist))
     return depr
 
-def build_full_xml(data_dict, out_name="AIOSC_Merged"):
+def build_full_xml(data_dict,ctx, out_name="AIOSC_Merged"):
+    dist_name_base = ctx.dist_name_base
+    id_base = ctx.id_base
     vers = input("Enter Version String (e.g., AIOSC25.0_DROP2, default: custom): ").strip() or "custom"
-
     NS_URI = "raml21.xsd"
     ET.register_namespace('', NS_URI)
     root = ET.Element("raml", {'version': '2.1', 'xmlns': NS_URI})
@@ -87,7 +107,7 @@ def build_full_xml(data_dict, out_name="AIOSC_Merged"):
 
     hdr({
         'class': "com.nokia.aiosc:AIOSC", 'version': vers,
-        'distName': "PLMN-PLMN/AIOSC-6000039", 'operation': "create"
+        'distName': dist_name_base, 'operation': "create"
     }, {
         "name": "PLMN-PLMN/AIOSC-6000039",
         "AutoConnHWID": "LBNKIASRC243920029",
@@ -99,8 +119,8 @@ def build_full_xml(data_dict, out_name="AIOSC_Merged"):
 
     hdr({
         'class': "com.nokia.integrate:INTEGRATE", 'version': vers,
-        'distName': "PLMN-PLMN/AIOSC-6000039/INTEGRATE-1",
-        'id': "104000", 'operation': "create"
+        'distName': dist_name_base + "/INTEGRATE-1",
+        'id': id_base, 'operation': "create"
     }, {
         "plannedSWReleaseVersion": vers,
         "systemReleaseVersion": vers[:6],
@@ -109,7 +129,8 @@ def build_full_xml(data_dict, out_name="AIOSC_Merged"):
 
     hdr({
         'class': "com.nokia.aiosc:Device", 'version': vers,
-        'distName': "PLMN-PLMN/AIOSC-6000039", 'operation': "create"
+        'distName': dist_name_base+ "/Device-1",'id': id_base,
+        'operation': "create"
     }, {"UserLabel": "AIOSC"})
 
     skip_hdr_classes = {
@@ -122,12 +143,11 @@ def build_full_xml(data_dict, out_name="AIOSC_Merged"):
         if cls in skip_hdr_classes:
             continue
         for leaf, entry in inner.items():
-            distname_fixed = f"PLMN-PLMN/AIOSC-6000039/{leaf}" if leaf else entry.get('_distName')
             tag = ET.SubElement(cmD, "managedObject", {
                 'class': entry.get('_class', cls),
                 'version': vers,
-                'distName': distname_fixed,
-                'id': "10400",
+                'distName': dist_name_base +"/" + leaf,
+                'id': id_base,
                 'operation': entry.get('_operation', 'create')
             })
             for pname, pval in entry.items():
@@ -143,7 +163,7 @@ def write_xml(tree, name="AIOSC_Merged"):
                      .toprettyxml(indent="    ")
         with open(name + ".xml", "w", encoding="utf-8") as f:
             f.write(txt)
-        print(f"✓ Successfully wrote {name}.xml")
+        print(f"\u2713 Successfully wrote {name}.xml")
     except Exception as e:
         print(f"Error writing XML file '{name}.xml': {e}")
 
@@ -185,20 +205,58 @@ def csv_report(base, final_, new, carried, depr, name="AIOSC_report.csv"):
 
             for cls, dist in sorted(depr_set):
                 w.writerow([cls, dist, "DEPRECATED"])
-        print(f"✓ Successfully wrote {name}")
+        print(f"\u2713 Successfully wrote {name}")
     except Exception as e:
         print(f"Error writing CSV report '{name}': {e}")
+
+def log_param_changes(base, skeletal, log_file="param_changes_2025.log"):
+    added, removed = [], []
+
+    for cls in skeletal:
+        for dist in skeletal[cls]:
+            skeletal_entry = skeletal[cls][dist]
+            skeletal_keys = {k for k in skeletal_entry if not k.startswith("_")}
+
+            base_entry = base.get(cls, {}).get(dist)
+            base_keys = {k for k in base_entry if not k.startswith("_")} if base_entry else set()
+
+            new_params = skeletal_keys - base_keys
+            old_params = base_keys - skeletal_keys
+
+            for p in new_params:
+                added.append((cls, dist, p))
+
+            for p in old_params:
+                removed.append((cls, dist, p))
+
+    try:
+        with open(log_file, "w", encoding="utf-8") as f:
+            f.write("Parameter Changes Between 2024 and 2025\n")
+            f.write("========================================\n\n")
+
+            f.write("✅ New Parameters in 2025:\n")
+            for cls, dist, p in added:
+                f.write(f"[NEW] {cls} :: {dist} -> {p}\n")
+
+            f.write("\n❌ Dropped Parameters from 2024:\n")
+            for cls, dist, p in removed:
+                f.write(f"[REMOVED] {cls} :: {dist} -> {p}\n")
+
+        print(f"✓ Logged parameter changes to {log_file}")
+    except Exception as e:
+        print(f"Error writing parameter change log: {e}")
 
 if __name__ == "__main__":
     ns = {'ns': 'raml21.xsd'}
     base_file = input("Enter the path to the BASE XML file: ").strip()
     skeletal_file = input("Enter the path to the SKELETAL XML file: ").strip()
-
+    
     base_root = ET.parse(base_file).getroot()
     skeletal_root = ET.parse(skeletal_file).getroot()
 
-    comp_base = simplify_xml(base_root, ns)
-    comp_skeletal = simplify_xml(skeletal_root, ns)
+    common_attr = CommonAttributes()
+    comp_base = simplify_xml(base_root, ns,common_attr)
+    comp_skeletal = simplify_xml(skeletal_root, ns,common_attr)
 
     final_dict, new_objs, carried_objs = merge_dicts(comp_base, comp_skeletal)
     deprecated = find_deprecated(comp_base, final_dict)
@@ -212,7 +270,9 @@ if __name__ == "__main__":
     print("DEPRECATED:", len(deprecated))
     print("---------------------\n")
 
+    log_param_changes(comp_base, comp_skeletal)
+
     out_name = input("Enter the output file name (default: AIOSC_Merged): ").strip() or "AIOSC_Merged"
-    tree = build_full_xml(final_dict, out_name)
+    tree = build_full_xml(final_dict, common_attr,out_name)
     write_xml(tree, out_name)
     csv_report(comp_base, final_dict, new_objs, carried_objs, deprecated)
