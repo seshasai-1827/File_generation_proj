@@ -209,42 +209,56 @@ def csv_report(base, final_, new, carried, depr, name="AIOSC_report.csv"):
     except Exception as e:
         print(f"Error writing CSV report '{name}': {e}")
 
-def log_param_changes(base, skeletal, log_file="param_changes_2025.log"):
-    added, removed = [], []
+def log_param_changes(base, skeletal, filename="param_changes.log"):
+    added, removed, changed = [], [], []
 
     for cls in skeletal:
+        if cls not in base:
+            continue
         for dist in skeletal[cls]:
+            if dist not in base[cls]:
+                continue
+
             skeletal_entry = skeletal[cls][dist]
-            skeletal_keys = {k for k in skeletal_entry if not k.startswith("_")}
+            base_entry = base[cls][dist]
 
-            base_entry = base.get(cls, {}).get(dist)
-            base_keys = {k for k in base_entry if not k.startswith("_")} if base_entry else set()
+            skeletal_keys = set(k for k in skeletal_entry if not k.startswith('_'))
+            base_keys = set(k for k in base_entry if not k.startswith('_'))
 
-            new_params = skeletal_keys - base_keys
-            old_params = base_keys - skeletal_keys
+            # Parameters added in skeletal
+            for p in skeletal_keys - base_keys:
+                added.append((cls, dist, p, skeletal_entry[p]))
 
-            for p in new_params:
-                added.append((cls, dist, p))
+            # Parameters removed in skeletal
+            for p in base_keys - skeletal_keys:
+                removed.append((cls, dist, p, base_entry[p]))
 
-            for p in old_params:
-                removed.append((cls, dist, p))
+            # Parameters changed in skeletal
+            for p in skeletal_keys & base_keys:
+                if skeletal_entry[p] != base_entry[p]:
+                    changed.append((cls, dist, p, base_entry[p], skeletal_entry[p]))
 
     try:
-        with open(log_file, "w", encoding="utf-8") as f:
-            f.write("Parameter Changes Between 2024 and 2025\n")
-            f.write("========================================\n\n")
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write("📘 Parameter Change Log Between 2024 and 2025\n")
+            f.write(f"Generated: {datetime.now().isoformat(timespec='seconds')}\n\n")
 
-            f.write("✅ New Parameters in 2025:\n")
-            for cls, dist, p in added:
-                f.write(f"[NEW] {cls} :: {dist} -> {p}\n")
+            f.write("✅ Added Parameters (new in 2025):\n")
+            for cls, dist, p, val in added:
+                f.write(f"[ADDED]    {cls} :: {dist} -> {p} = {val}\n")
 
-            f.write("\n❌ Dropped Parameters from 2024:\n")
-            for cls, dist, p in removed:
-                f.write(f"[REMOVED] {cls} :: {dist} -> {p}\n")
+            f.write("\n❌ Removed Parameters (dropped from 2024):\n")
+            for cls, dist, p, val in removed:
+                f.write(f"[REMOVED]  {cls} :: {dist} -> {p} = {val}\n")
 
-        print(f"✓ Logged parameter changes to {log_file}")
+            f.write("\n🔁 Changed Parameter Values:\n")
+            for cls, dist, p, old_val, new_val in changed:
+                f.write(f"[MODIFIED] {cls} :: {dist} -> {p}: '{old_val}' ➜ '{new_val}'\n")
+
+        print(f"✓ Logged parameter changes to {filename}")
     except Exception as e:
-        print(f"Error writing parameter change log: {e}")
+        print(f"Error writing parameter log file '{filename}': {e}")
+
 
 if __name__ == "__main__":
     ns = {'ns': 'raml21.xsd'}
