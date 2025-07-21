@@ -161,382 +161,382 @@
       <p name="ServiceProvider">Cutomer</p>
       <p name="ServiceUser">NokiaUser</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-1" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-1" id="104000" operation="create">
       <p name="FaultIdn">dbDownloadFailure</p>
       <p name="MocIdn">SDM</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-2" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-2" id="104000" operation="create">
       <p name="FaultIdn">securityViolation</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-3" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-3" id="104000" operation="create">
       <p name="FaultIdn">suActivationFailure</p>
       <p name="MocIdn">SDM</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-4" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-4" id="104000" operation="create">
       <p name="FaultIdn">suDownloadFailure</p>
       <p name="MocIdn">SDM</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-5" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-5" id="104000" operation="create">
       <p name="FaultIdn">invalidDatabaseDetected</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-6" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-6" id="104000" operation="create">
       <p name="FaultIdn">gpsServiceUnavailable</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-7" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-7" id="104000" operation="create">
       <p name="FaultIdn">constraintsCheckFailure</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-8" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-8" id="104000" operation="create">
       <p name="FaultIdn">pwdServiceProviderLoginFailure</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-9" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-9" id="104000" operation="create">
       <p name="FaultIdn">nrRfConfigurationFailure</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-10" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-10" id="104000" operation="create">
       <p name="FaultIdn">nrPhaseSynchronisationFailure</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-11" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-11" id="104000" operation="create">
       <p name="FaultIdn">nrRfTemperatureWarning</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-12" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-12" id="104000" operation="create">
       <p name="FaultIdn">nrRfTemperatureCritical</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-13" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-13" id="104000" operation="create">
       <p name="FaultIdn">nrRfTxPowerNotConverged</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-14" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-14" id="104000" operation="create">
       <p name="FaultIdn">nrFreqSynchronisationFailure</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-15" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-15" id="104000" operation="create">
       <p name="FaultIdn">allAMFConnectionDown</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-16" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-16" id="104000" operation="create">
       <p name="FaultIdn">amfConnectionDown</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-17" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-17" id="104000" operation="create">
       <p name="FaultIdn">nrPCICollisionDetected</p>
       <p name="MocIdn">NRCellCU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-18" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-18" id="104000" operation="create">
       <p name="FaultIdn">nrPCIConfusionDetected</p>
       <p name="MocIdn">NRCellCU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-19" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-19" id="104000" operation="create">
       <p name="FaultIdn">ngapConnectionSetupFailure</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-20" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-20" id="104000" operation="create">
       <p name="FaultIdn">nrPCISelectionFailure</p>
       <p name="MocIdn">NRCellCU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-21" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-21" id="104000" operation="create">
       <p name="FaultIdn">cbsdRegistrationFailure</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-22" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-22" id="104000" operation="create">
       <p name="FaultIdn">cbsdSpectrumInquiryFailure</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-23" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-23" id="104000" operation="create">
       <p name="FaultIdn">cbsdCellGrantFailure</p>
       <p name="MocIdn">NRCellCBSD</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-24" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-24" id="104000" operation="create">
       <p name="FaultIdn">cbsdHeartbeatFailure</p>
       <p name="MocIdn">NRCellCBSD</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-25" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-25" id="104000" operation="create">
       <p name="FaultIdn">cbsdSASCommunicationError</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-26" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-26" id="104000" operation="create">
       <p name="FaultIdn">xnapConnectionDown</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-27" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-27" id="104000" operation="create">
       <p name="FaultIdn">gtpuPathFailure</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-28" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-28" id="104000" operation="create">
       <p name="FaultIdn">traceCollectionServerConnectionDown</p>
       <p name="MocIdn">NRCellCU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-29" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-29" id="104000" operation="create">
       <p name="FaultIdn">cbsdGrantSuspended</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-30" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-30" id="104000" operation="create">
       <p name="FaultIdn">cbsdPartialGrantSuspended</p>
       <p name="MocIdn">NRCellCBSD</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-31" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-31" id="104000" operation="create">
       <p name="FaultIdn">cbsdStateChangeFailure</p>
       <p name="MocIdn">NRCellCBSD</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-32" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-32" id="104000" operation="create">
       <p name="FaultIdn">cellConfigurationFailure</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-33" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-33" id="104000" operation="create">
       <p name="FaultIdn">cbsdConfigurationFailure</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-34" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-34" id="104000" operation="create">
       <p name="FaultIdn">spareBSRAlarm1</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-35" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-35" id="104000" operation="create">
       <p name="FaultIdn">spareBSRAlarm2</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-36" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-36" id="104000" operation="create">
       <p name="FaultIdn">spareBSRAlarm3</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-37" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-37" id="104000" operation="create">
       <p name="FaultIdn">spareHgNBAlarm1</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-38" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-38" id="104000" operation="create">
       <p name="FaultIdn">spareHgNBAlarm2</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-39" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-39" id="104000" operation="create">
       <p name="FaultIdn">spareHgNBAlarm3</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-40" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-40" id="104000" operation="create">
       <p name="FaultIdn">spareHgNBAlarm4</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-41" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-41" id="104000" operation="create">
       <p name="FaultIdn">spareNRAlarm1</p>
       <p name="MocIdn">NRCellCU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-42" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-42" id="104000" operation="create">
       <p name="FaultIdn">spareNRAlarm2</p>
       <p name="MocIdn">NRCellCU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-43" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-43" id="104000" operation="create">
       <p name="FaultIdn">spareNRAlarm3</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-44" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-44" id="104000" operation="create">
       <p name="FaultIdn">spareNRAlarm4</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-45" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-45" id="104000" operation="create">
       <p name="FaultIdn">spareCBSDAlarm1</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-46" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-46" id="104000" operation="create">
       <p name="FaultIdn">spareCBSDAlarm2</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-47" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-47" id="104000" operation="create">
       <p name="FaultIdn">spareCBSDAlarm3</p>
       <p name="MocIdn">NRCbsd</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-48" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-48" id="104000" operation="create">
       <p name="FaultIdn">invalidCBSDBandConfiguration</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-49" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-49" id="104000" operation="create">
       <p name="FaultIdn">wifiEnabled</p>
       <p name="MocIdn">WiFi</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-50" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-50" id="104000" operation="create">
       <p name="FaultIdn">defaultWiFiPassword</p>
       <p name="MocIdn">WiFi</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-51" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-51" id="104000" operation="create">
       <p name="FaultIdn">ptpServiceUnavailable</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-52" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-52" id="104000" operation="create">
       <p name="FaultIdn">onePPSServiceUnavailable</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-53" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-53" id="104000" operation="create">
       <p name="FaultIdn">amfConnectionUnstable</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-54" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-54" id="104000" operation="create">
       <p name="FaultIdn">allAMFConnectionUnstable</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-55" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-55" id="104000" operation="create">
       <p name="FaultIdn">gtpuAllPathFailure</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-56" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-56" id="104000" operation="create">
       <p name="FaultIdn">gtuPathUnstable</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-57" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-57" id="104000" operation="create">
       <p name="FaultIdn">gtpuAllPathUnstable</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-58" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-58" id="104000" operation="create">
       <p name="FaultIdn">wifiUserAccountLocked</p>
       <p name="MocIdn">WiFi</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-59" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-59" id="104000" operation="create">
       <p name="FaultIdn">nrDuCellSetupFailed</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-60" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-60" id="104000" operation="create">
       <p name="FaultIdn">nrBandNotSupported</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-61" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-61" id="104000" operation="create">
       <p name="FaultIdn">nrOamCellOperationFailure</p>
       <p name="MocIdn">HgNB</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-62" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-62" id="104000" operation="create">
       <p name="FaultIdn">underTemperature</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-63" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-63" id="104000" operation="create">
       <p name="FaultIdn">tamperDetected</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-64" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-64" id="104000" operation="create">
       <p name="FaultIdn">tunnelConfigFailure</p>
       <p name="MocIdn">IKESAPair</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-65" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-65" id="104000" operation="create">
       <p name="FaultIdn">certificateEnrollmentFailure</p>
       <p name="MocIdn">CertificateEnrollment</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-66" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-66" id="104000" operation="create">
       <p name="FaultIdn">aioscOutOfMemory</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-67" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-67" id="104000" operation="create">
       <p name="FaultIdn">highTemperatureWarning</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-68" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-68" id="104000" operation="create">
       <p name="FaultIdn">spareRadioAlarm1</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-69" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-69" id="104000" operation="create">
       <p name="FaultIdn">spareNRAlarm5</p>
       <p name="MocIdn">NRCellDU</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-70" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-70" id="104000" operation="create">
       <p name="FaultIdn">aioscOutOfService</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-71" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-71" id="104000" operation="create">
       <p name="FaultIdn">nodeDiskFull</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-72" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-72" id="104000" operation="create">
       <p name="FaultIdn">lowNodeAvailableCPU</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-73" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-73" id="104000" operation="create">
       <p name="FaultIdn">nodeReboot</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-74" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-74" id="104000" operation="create">
       <p name="FaultIdn">databaseCorruptionDetected</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-75" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-75" id="104000" operation="create">
       <p name="FaultIdn">gNBOnFreeRunningClock</p>
       <p name="MocIdn">BSR</p>
       <p name="ReportingMechanism">expedited</p>
     </managedObject>
-    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/SupportedAlarm-76" id="104000" operation="create">
+    <managedObject class="com.nokia.aiosc:SupportedAlarm" version="custom" distName="PLMN-PLMN/AIOSC-6000039/Device-1/FaultMgmt-1/SupportedAlarm-76" id="104000" operation="create">
       <p name="FaultIdn">nrRfCalibrationFailure</p>
       <p name="MocIdn">Radio</p>
       <p name="ReportingMechanism">expedited</p>
