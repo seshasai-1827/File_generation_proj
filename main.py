@@ -4,7 +4,6 @@ from collections import OrderedDict
 from datetime import datetime
 import csv
 import copy
-import os
 
 class CommonAttributes():
     def __init__(self):
@@ -31,9 +30,6 @@ def simplify_xml(root, ns,ctx):
             continue
         entry = OrderedDict()
         entry['_class'] = cls
-        #entry['_distName'] = mo.attrib.get("distName")
-        #entry['_version'] = mo.attrib.get("version", "UNKNOWN")
-        #entry['_id'] = mo.attrib.get("id", "10400")
         entry['_operation'] = mo.attrib.get("operation", "create")
         if ctx.id_base == None:
             ctx.id_base =  mo.attrib.get("id", "10400")       
@@ -56,8 +52,6 @@ def merge_dicts(base, skeletal):
                     new_objs.append((cls, dist))
                     if base[cls]:
                         sample = next(iter(base[cls].values()))
-                        #final_dict[cls][dist]['_id'] = sample.get('_id', '10400')
-                        #final_dict[cls][dist]['_distName'] = f"{dist_name_base}/{dist}"
                 else:
                     for p in skeletal[cls][dist]:
                         if p.startswith('_'):
@@ -71,8 +65,6 @@ def merge_dicts(base, skeletal):
                     for base_class in base:
                         if base[base_class]:
                             sample = next(iter(base[base_class].values()))
-                            #final_dict[cls][dist]['_id'] = sample.get('_id', '10400')
-                            #final_dict[cls][dist]['_distName'] = f"{dist_name_base}/{dist}"
                             break
     for cls in base:
         if cls not in skeletal:
@@ -91,7 +83,7 @@ def find_deprecated(base, final_):
                 depr.append((cls, dist))
     return depr
 
-def build_full_xml(data_dict,ctx, out_name="AIOSC_Merged"):
+def build_full_xml(data_dict,ctx,alarm_list, out_name="AIOSC_Merged"):
     dist_name_base = ctx.dist_name_base
     id_base = ctx.id_base
     vers = input("Enter Version String (e.g., AIOSC25.0_DROP2, default: custom): ").strip() or "custom"
@@ -109,7 +101,7 @@ def build_full_xml(data_dict,ctx, out_name="AIOSC_Merged"):
         'class': "com.nokia.aiosc:AIOSC", 'version': vers,
         'distName': dist_name_base, 'operation': "create"
     }, {
-        "name": "PLMN-PLMN/AIOSC-6000039",
+        "name": dist_name_base,
         "AutoConnHWID": "LBNKIASRC243920029",
         "$maintenanceRegionId": "PNP",
         "$maintenanceRegionCId": "1",
@@ -138,7 +130,8 @@ def build_full_xml(data_dict,ctx, out_name="AIOSC_Merged"):
         "com.nokia.integrate:INTEGRATE",
         "com.nokia.aiosc:Device",
     }
-
+    if alarm_list:
+        data_dict["com.nokia.aiosc:SupportedAlarm"] = alarm_list
     for cls, inner in data_dict.items():
         if cls in skip_hdr_classes:
             continue
@@ -160,7 +153,7 @@ def build_full_xml(data_dict,ctx, out_name="AIOSC_Merged"):
 def write_xml(tree, name="AIOSC_Merged"):
     try:
         txt = minidom.parseString(ET.tostring(tree.getroot(), "utf-8"))\
-                     .toprettyxml(indent="    ")
+                     .toprettyxml(indent="  ")
         with open(name + ".xml", "w", encoding="utf-8") as f:
             f.write(txt)
         print(f"\u2713 Successfully wrote {name}.xml")
@@ -225,7 +218,7 @@ def log_param_changes(base, skeletal, filename="param_changes.log"):
             skeletal_keys = set(k for k in skeletal_entry if not k.startswith('_'))
             base_keys = set(k for k in base_entry if not k.startswith('_'))
 
-            # Parameters added in skeletal
+            
             for p in skeletal_keys - base_keys:
                 added.append((cls, dist, p, skeletal_entry[p]))
 
@@ -240,7 +233,7 @@ def log_param_changes(base, skeletal, filename="param_changes.log"):
 
     try:
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("📘 Parameter Change Log Between 2024 and 2025\n")
+            f.write("📘 Parameter Change Log -Added,Removed,Modified\n")
             f.write(f"Generated: {datetime.now().isoformat(timespec='seconds')}\n\n")
 
             f.write("✅ Added Parameters (new in 2025):\n")
@@ -259,11 +252,24 @@ def log_param_changes(base, skeletal, filename="param_changes.log"):
     except Exception as e:
         print(f"Error writing parameter log file '{filename}': {e}")
 
-
+def readcsv(file_path):
+    d = False
+    if file_path:
+        with open(file_path, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            i = 1
+            d = {}
+            for row in reader:
+                leaf =  "SupportedAlarm-"+str(i)
+                d[leaf] = {"_class":"com.nokia.aiosc:SupportedAlarm","_operation":"create","FaultIdn":row[0],"MocIdn":row[1],"ReportingMechanism":row[2]}
+                i+=1
+    return d  
+        
 if __name__ == "__main__":
     ns = {'ns': 'raml21.xsd'}
     base_file = input("Enter the path to the BASE XML file: ").strip()
     skeletal_file = input("Enter the path to the SKELETAL XML file: ").strip()
+    csv_file = input("Enter the file path of the csv file for supported alarms: ").strip()
     
     base_root = ET.parse(base_file).getroot()
     skeletal_root = ET.parse(skeletal_file).getroot()
@@ -287,6 +293,7 @@ if __name__ == "__main__":
     log_param_changes(comp_base, comp_skeletal)
 
     out_name = input("Enter the output file name (default: AIOSC_Merged): ").strip() or "AIOSC_Merged"
-    tree = build_full_xml(final_dict, common_attr,out_name)
+    alarm_list = readcsv(csv_file)
+    tree = build_full_xml(final_dict,common_attr,alarm_list,out_name)
     write_xml(tree, out_name)
     csv_report(comp_base, final_dict, new_objs, carried_objs, deprecated)
