@@ -1,547 +1,547 @@
 📘 Parameter Change Log
-Generated: 2025-07-22T00:45:31
+Generated: 2025-07-22T11:22:47
 
 ✅ New Parameters (in existing or new classes/distributions):
-[ADDED]     com.nokia.aiosc:VLANTermination :: Device-1/Ethernet-1/VLANTermination-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:GPS :: Device-1/FAP-1/GPS-1 -> testId = 1
-[ADDED]     com.nokia.aiosc:ContinuousGPSStatus :: Device-1/FAP-1/GPS-1/ContinuousGPSStatus-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:XtraServerAddress :: Device-1/FAP-1/GPS-1/XtraServerAddress-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> AdditionalText = x
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> AlarmIdentifier = x
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> AlarmRaisedTime = x
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> EventType = communicationsAlarm
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> FaultIDandStatus = test
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> ManagedObjectInstance = 1
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> PerceivedSeverity = cleared
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> ProbableCause = indeterminate
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> ReportingStatus = raised
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> SecurityAlarmDetector = x
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> SequenceNumber = 1
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> ServiceProvider = Cutomer
-[ADDED]     com.nokia.aiosc:CurrentAlarm :: Device-1/FaultMgmt-1/CurrentAlarm-1 -> ServiceUser = NokiaUser
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-45 -> FaultIdn = spareCBSDAlarm1
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-45 -> MocIdn = NRCbsd
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-45 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-46 -> FaultIdn = spareCBSDAlarm2
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-46 -> MocIdn = NRCbsd
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-46 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-47 -> FaultIdn = spareCBSDAlarm3
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-47 -> MocIdn = NRCbsd
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-47 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-48 -> FaultIdn = invalidCBSDBandConfiguration
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-48 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-48 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-49 -> FaultIdn = wifiEnabled
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-49 -> MocIdn = WiFi
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-49 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-50 -> FaultIdn = defaultWiFiPassword
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-50 -> MocIdn = WiFi
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-50 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-51 -> FaultIdn = ptpServiceUnavailable
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-51 -> MocIdn = Radio
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-51 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-52 -> FaultIdn = onePPSServiceUnavailable
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-52 -> MocIdn = Radio
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-52 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-53 -> FaultIdn = amfConnectionUnstable
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-53 -> MocIdn = HgNB
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-53 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-54 -> FaultIdn = allAMFConnectionUnstable
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-54 -> MocIdn = HgNB
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-54 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-55 -> FaultIdn = gtpuAllPathFailure
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-55 -> MocIdn = HgNB
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-55 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-56 -> FaultIdn = gtuPathUnstable
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-56 -> MocIdn = HgNB
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-56 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-57 -> FaultIdn = gtpuAllPathUnstable
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-57 -> MocIdn = HgNB
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-57 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-58 -> FaultIdn = wifiUserAccountLocked
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-58 -> MocIdn = WiFi
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-58 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-59 -> FaultIdn = nrDuCellSetupFailed
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-59 -> MocIdn = NRCellDU
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-59 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-60 -> FaultIdn = nrBandNotSupported
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-60 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-60 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-61 -> FaultIdn = nrOamCellOperationFailure
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-61 -> MocIdn = HgNB
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-61 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-62 -> FaultIdn = underTemperature
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-62 -> MocIdn = Radio
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-62 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-63 -> FaultIdn = tamperDetected
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-63 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-63 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-64 -> FaultIdn = tunnelConfigFailure
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-64 -> MocIdn = IKESAPair
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-64 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-65 -> FaultIdn = certificateEnrollmentFailure
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-65 -> MocIdn = CertificateEnrollment
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-65 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-66 -> FaultIdn = aioscOutOfMemory
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-66 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-66 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-67 -> FaultIdn = highTemperatureWarning
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-67 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-67 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-68 -> FaultIdn = spareRadioAlarm1
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-68 -> MocIdn = Radio
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-68 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-69 -> FaultIdn = spareNRAlarm5
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-69 -> MocIdn = NRCellDU
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-69 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-70 -> FaultIdn = aioscOutOfService
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-70 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-70 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-71 -> FaultIdn = nodeDiskFull
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-71 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-71 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-72 -> FaultIdn = lowNodeAvailableCPU
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-72 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-72 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-73 -> FaultIdn = nodeReboot
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-73 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-73 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-74 -> FaultIdn = databaseCorruptionDetected
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-74 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-74 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-75 -> FaultIdn = gNBOnFreeRunningClock
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-75 -> MocIdn = BSR
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-75 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-76 -> FaultIdn = nrRfCalibrationFailure
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-76 -> MocIdn = Radio
-[ADDED]     com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-76 -> ReportingMechanism = expedited
-[ADDED]     com.nokia.aiosc:IPv4Address :: Device-1/IP-1/Interface-1/IPv4Address-1 -> IPAddress = 1.1.1.1
-[ADDED]     com.nokia.aiosc:IPv4Address :: Device-1/IP-1/Interface-1/IPv4Address-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:IPv4Address :: Device-1/IP-1/Interface-1/IPv4Address-1 -> SubnetMask = 1.1.1.1
-[ADDED]     com.nokia.aiosc:IPv6Address :: Device-1/IP-1/Interface-1/IPv6Address-1 -> SparePara2 = x
-[ADDED]     com.nokia.aiosc:IPv6Address :: Device-1/IP-1/Interface-1/IPv6Address-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ManagementServer :: Device-1/ManagementServer-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRCellCU :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1 -> ObjectInstance = x
-[ADDED]     com.nokia.aiosc:NRCellCU :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1 -> ObjectClass = RNCFunction
-[ADDED]     com.nokia.aiosc:DrxConfigAnrSpecific :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigAnrSpecific-1 -> DrxConfigAnrSpecific_CP = 1
-[ADDED]     com.nokia.aiosc:DrxConfigAnrSpecific :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigAnrSpecific-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:DrxConfigDataSpecific :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigDataSpecific-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:DrxConfigInterRatAnrSpecific :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigInterRatAnrSpecific-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> AdjacentCell = x
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> CellIndividualOffset = DB0
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> EUtranFreqRelationRef = 1
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> Id = 1
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> IsENDCAllowed = NO
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> IsHOAllowedn = yes
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> QOffset = DB0
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:EUtranCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1 -> TCI = 1
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> AllowedMeasBandwidth = mbw6
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> BlackListEntryId = 1
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> BlackListEntryIdleModeNumberOfEntries = 1
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> BlackListEntryNumberOfEntries = 1
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> CellIndividualOffset = DB_24
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> CellReselectionPriority = 7
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> CellReselectionSubPriority = odot6
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> EUtranFrequencyRef = x
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> EutrapresenceAntennaPort1 = false
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> Id = 1
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> PMax = 23
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> QOffsetFreq = DB0
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> QQualMin = 0
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> QRxLevMin = -140
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> TReselectionEutra = 0
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> TReselectionEutraSfHigh = 25
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> TReselectionEutraSfMedium = 25
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> ThreshXHighP = 20
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> ThreshXHighQ = 0
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> ThreshXLowP = 0
-[ADDED]     com.nokia.aiosc:EUtranFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1 -> ThreshXLowQ = 0
-[ADDED]     com.nokia.aiosc:BlackListEntryEUtran :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryEUtran-1 -> BlackListEntryValue = 0
-[ADDED]     com.nokia.aiosc:BlackListEntryEUtran :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryEUtran-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:BlackListEntryIdleModeEUtran :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryIdleModeEUtran-1 -> BlackListEntryIdleModeValue = 1
-[ADDED]     com.nokia.aiosc:BlackListEntryIdleModeEUtran :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryIdleModeEUtran-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:EUtranFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1 -> EarfcnDL = 1
-[ADDED]     com.nokia.aiosc:EUtranFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1 -> Id = Test
-[ADDED]     com.nokia.aiosc:EUtranFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1 -> MultiBandInfoListEutraNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:EUtranFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MultiBandInfoListEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1/MultiBandInfoListEutra-1 -> MultiBandInfoListEutraValue = 1
-[ADDED]     com.nokia.aiosc:MultiBandInfoListEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1/MultiBandInfoListEutra-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:EmergencyAreaId :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EmergencyAreaId-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MeasObject :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MeasEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1 -> MeasObjectEutraNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:MeasEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MeasObjectEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1 -> EutraOffsetRange = DB_24
-[ADDED]     com.nokia.aiosc:MeasObjectEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1 -> MeasObjectEutraId = 1
-[ADDED]     com.nokia.aiosc:MeasObjectEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MeasObjectEutra :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1 -> WidebandRSRQMeas = false
-[ADDED]     com.nokia.aiosc:MeasObjectNr :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:AbsThreshCsiRsConsolidation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshCsiRsConsolidation-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:AbsThreshSsBlocksConsolidation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshSsBlocksConsolidation-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:CellIndividualOffsetVS :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/CellIndividualOffsetVS-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:OffsetMOVS :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/OffsetMOVS-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRCellRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1 -> Id = x
-[ADDED]     com.nokia.aiosc:CellIndividualOffset :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1/CellIndividualOffset-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1 -> BlackListEntryNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NRFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1 -> BlackListEntryIdleModeNumberOfEntries = 1
-[ADDED]     com.nokia.aiosc:NRFreqRelation :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:BlackListEntry :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntry-1 -> BlackListEntryValue = 0
-[ADDED]     com.nokia.aiosc:BlackListEntry :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntry-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:BlackListEntryIdleMode :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntryIdleMode-1 -> BlackListEntryIdleModeValue = 0
-[ADDED]     com.nokia.aiosc:BlackListEntryIdleMode :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntryIdleMode-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:OffsetMO :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/OffsetMO-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1 -> UserLabel = x
-[ADDED]     com.nokia.aiosc:NRFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1 -> ObjectInstance = x
-[ADDED]     com.nokia.aiosc:NRFrequency :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1 -> ObjectClass = x
-[ADDED]     com.nokia.aiosc:MultiFrequencyBandListNR :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/MultiFrequencyBandListNR-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MultiFrequencyBandListNR :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/MultiFrequencyBandListNR-1 -> MultiFrequencyBandListNR_CP = x
-[ADDED]     com.nokia.aiosc:QuantityConfigNR :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1 -> QuantityConfigRefId = 0
-[ADDED]     com.nokia.aiosc:QuantityConfigNR :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CsiRSFilterConfig :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/CsiRSFilterConfig-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:SsbFilterConfig :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/SsbFilterConfig-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:QuantityConfigRSIndex :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1 -> QuantityConfigRSIndex_CP = x
-[ADDED]     com.nokia.aiosc:CsiRSFilterConfigQConfigRSI :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/CsiRSFilterConfigQConfigRSI-1 -> FilterCoefficientRSRP = FC4
-[ADDED]     com.nokia.aiosc:CsiRSFilterConfigQConfigRSI :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/CsiRSFilterConfigQConfigRSI-1 -> FilterCoefficientRSRQ = FC4
-[ADDED]     com.nokia.aiosc:CsiRSFilterConfigQConfigRSI :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/CsiRSFilterConfigQConfigRSI-1 -> FilterCoefficientRSSINR = FC4
-[ADDED]     com.nokia.aiosc:SsbFilterConfigRSIndex :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/SsbFilterConfigRSIndex-1 -> FilterCoefficientRSRPn = FC4
-[ADDED]     com.nokia.aiosc:SsbFilterConfigRSIndex :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/SsbFilterConfigRSIndex-1 -> FilterCoefficientRSRQn = FC4
-[ADDED]     com.nokia.aiosc:SsbFilterConfigRSIndex :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/SsbFilterConfigRSIndex-1 -> FilterCoefficientRSSINRn = FC4
-[ADDED]     com.nokia.aiosc:RRMPolicyRatio2 :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/RRMPolicyRatio2-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ReportConfigInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1 -> SparePara2 = x
-[ADDED]     com.nokia.aiosc:ReportConfigInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ReportCfgNr :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1 -> SparaPara1 = x
-[ADDED]     com.nokia.aiosc:EventReportList :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:A3EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1 -> AnrA3NormalThresholdOffset = -5
-[ADDED]     com.nokia.aiosc:A3EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1 -> AnrIntraNormalPeriod = 3600
-[ADDED]     com.nokia.aiosc:A3EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1 -> AnrA3AggressiveThreshOffset = -20
-[ADDED]     com.nokia.aiosc:A3EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1 -> AnrIntraAggressivePeriod = 60
-[ADDED]     com.nokia.aiosc:A4EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1 -> AnrA4NormalThreshold = 40
-[ADDED]     com.nokia.aiosc:A4EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1 -> AnrA4AggressiveThreshold = 26
-[ADDED]     com.nokia.aiosc:A4EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1 -> AnrInterNormalPeriod = 3600
-[ADDED]     com.nokia.aiosc:A4EventInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1 -> AnrInterAggressivePeriod = 60
-[ADDED]     com.nokia.aiosc:ReportConfigInterRAT :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CellReselectionInfoCommon :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:AbsThreshSsBlocksConsolSib2 :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1/AbsThreshSsBlocksConsolSib2-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:CellReselectionServingFreqInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionServingFreqInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NrMultiBandInfos :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1/NrMultiBandInfos-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:SIntraSearchQ :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SIntraSearchQ-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:SpeedScaleFactors :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SpeedScaleFactors-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:SrbCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SrbCfg-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRCellDU :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1 -> IsMFBISupportEnabled = false
-[ADDED]     com.nokia.aiosc:NRCellDU :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1 -> IsExtN77BandEnabled = false
-[ADDED]     com.nokia.aiosc:CfgCmn :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CfgCmn-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CsiRsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CsiRsCfgInfo-1 -> IsTRSEnable = false
-[ADDED]     com.nokia.aiosc:MultiBandInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NrNsPmaxVal :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1/NrNsPmaxVal-1 -> AdditionalSpectrumEmission = 0
-[ADDED]     com.nokia.aiosc:NrNsPmaxVal :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1/NrNsPmaxVal-1 -> PMax = 10
-[ADDED]     com.nokia.aiosc:SubCarrierCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/SubCarrierCfg-1 -> OffsetToCarrier = 0
-[ADDED]     com.nokia.aiosc:SubCarrierCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/SubCarrierCfg-1 -> SparePara2 = x
-[ADDED]     com.nokia.aiosc:SubCarrierCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/SubCarrierCfg-1 -> SubCarrierSpacingn = KHz30
-[ADDED]     com.nokia.aiosc:DmrsDlCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsDlCfg-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:DmrsUlCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:TransPrecodingDisabledUl :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingDisabledUl-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:TransPrecodingEnabledUl :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingEnabledUl-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:DrxInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DrxInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:L1CfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MibParams :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/MibParams-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:Sib1Params :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1 -> SparaPara1 = x
-[ADDED]     com.nokia.aiosc:CellAccessInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CellAccessInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1 -> CellAccessInfoSpareParam = 0
-[ADDED]     com.nokia.aiosc:CellSelectionInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellSelectionInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ConnEstFailureControl :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/ConnEstFailureControl-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MacCfgCmn :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:DlMuMimoConfig :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/DlMuMimoConfig-1 -> SparePara2 = x
-[ADDED]     com.nokia.aiosc:DlMuMimoConfig :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/DlMuMimoConfig-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MeasGap :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MeasGap-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> NsAddInfoNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> NsIdToActNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> NsIdToDeActNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> NsIdToDelNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> NsModInfoNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> Period = 1
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> ReportType = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> ReslAddInfoNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> ResourceModInfoNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:NsCfgInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NsAddInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1 -> NumUlUePerTti = 1
-[ADDED]     com.nokia.aiosc:NsAddInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1 -> ResType = NS_RES_ISOLATED
-[ADDED]     com.nokia.aiosc:NsiCellResCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1/NsiCellResCfg-1 -> NumDlPrb = 1
-[ADDED]     com.nokia.aiosc:NsiCellResCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1/NsiCellResCfg-1 -> NumUlPrb = 1
-[ADDED]     com.nokia.aiosc:NsiCellResCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1/NsiCellResCfg-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NsIdToAct :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsIdToAct-1 -> NsIdToAct_CP = x
-[ADDED]     com.nokia.aiosc:NsIdToDeAct :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsIdToDeAct-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NsIdToDel :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsIdToDel-1 -> NsIdToDel_CP = x
-[ADDED]     com.nokia.aiosc:NsModInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1 -> NumUlUePerTti = 1
-[ADDED]     com.nokia.aiosc:NsModInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1 -> ResType = NS_RES_ISOLATED
-[ADDED]     com.nokia.aiosc:NsiCellResCfgMod :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1/NsiCellResCfgMod-1 -> NumDlPrb = 1
-[ADDED]     com.nokia.aiosc:NsiCellResCfgMod :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1/NsiCellResCfgMod-1 -> NumUlPrb = 1
-[ADDED]     com.nokia.aiosc:ReslAddInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ReslAddInfo-1 -> NumDlPrb = 1
-[ADDED]     com.nokia.aiosc:ReslAddInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ReslAddInfo-1 -> NumUlPrb = 1
-[ADDED]     com.nokia.aiosc:ReslAddInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ReslAddInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ResourceModInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1 -> NsResId = 1
-[ADDED]     com.nokia.aiosc:ResourceModInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1 -> NumDlPrb = 1
-[ADDED]     com.nokia.aiosc:ResourceModInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1 -> NumUlPrb = 1
-[ADDED]     com.nokia.aiosc:ResourceModInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:RlcCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:SNSSAIList :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SNSSAIList-1 -> SNSSAIList_CP = x
-[ADDED]     com.nokia.aiosc:SiSchedInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SiSchedInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:GrpBPreambleCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1/GrpBPreambleCfg-1 -> GrpBPreambleCfg_CP = x
-[ADDED]     com.nokia.aiosc:UlFreqInfo :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:MultiBandInfoUl :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:NrNsPmaxValUl :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1/NrNsPmaxValUl-1 -> AdditionalSpectrumEmission = 0
-[ADDED]     com.nokia.aiosc:NrNsPmaxValUl :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1/NrNsPmaxValUl-1 -> PMax = 10
-[ADDED]     com.nokia.aiosc:UlTargetCqi :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlTargetCqi-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:UlCfgGrant :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgGrant-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:UrllcCfg :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UrllcCfg-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> EnableDaisyChaining = false
-[ADDED]     com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> AvailabilityStatusn = inTest
-[ADDED]     com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> DiagnoseBSRAdditionalText = x
-[ADDED]     com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> ClusterName_CP = x
-[ADDED]     com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> NRFrameTimingOffset = 0
-[ADDED]     com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> SiteType_CP = x
-[ADDED]     com.nokia.aiosc:GsmExtCellList :: Device-1/Services-1/X_Nokia_BSR-1/GsmExtCellList-1 -> GsmExtCellList_CP = x
-[ADDED]     com.nokia.aiosc:GsmNatLocLockFrequency :: Device-1/Services-1/X_Nokia_BSR-1/GsmNatLocLockFrequency-1 -> GsmNatLocLockFrequency_CP = x
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> AutoNrNbrremoval = false
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> MaxNumReport = 3
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> SucReevalForNrNbr = 5
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> EventBasedANREnabled = false
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> StopAddingUEToAnrProfile = false
-[ADDED]     com.nokia.aiosc:AnrParam :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1 -> ClearPersistence = false
-[ADDED]     com.nokia.aiosc:DrxConfigAnrSpecificX :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1/DrxConfigAnrSpecificX-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CellTrace :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:CellTrace :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1 -> SourceIdn = 1
-[ADDED]     com.nokia.aiosc:EPF1U :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1 -> EPF1U_CP = 1
-[ADDED]     com.nokia.aiosc:EPF1U :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1 -> Id = 0
-[ADDED]     com.nokia.aiosc:EPF1U :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1 -> ObjectClass = x
-[ADDED]     com.nokia.aiosc:EPF1U :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1 -> ObjectInstance = x
-[ADDED]     com.nokia.aiosc:EPNGU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGU-1 -> EPNGU_CP = x
-[ADDED]     com.nokia.aiosc:EPS1U :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPS1U-1 -> EPS1U_CP = 1
-[ADDED]     com.nokia.aiosc:EPX2U :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPX2U-1 -> EPX2U_CP = x
-[ADDED]     com.nokia.aiosc:EutraCuUpConfig :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraCuUpConfig-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> ENBId = 0
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> ENBIdLength = 0
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> EnbNeighbourIpAddr = x
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> ExternalENBFunction_CP = x
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> ExternalEUtranCellNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> Id = 0
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> MCC = 001
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> MNC = 01
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> NoX2HoPresent = false
-[ADDED]     com.nokia.aiosc:ExternalENBFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> CellLocalId = 2
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> ENBId = 0
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> ExternalEUtranCellIndex = 0
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> ExternalEUtranCell_CP = x
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> Id = 0
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> ModeType = TDD
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> Pci = 0
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> PlmnListNumberOfEntries = 0
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ExternalEUtranCell :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1 -> TAC = 0002
-[ADDED]     com.nokia.aiosc:FDD :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/FDD-1 -> EarfcnDL = 38900
-[ADDED]     com.nokia.aiosc:FDD :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/FDD-1 -> EarfcnUL = 38900
-[ADDED]     com.nokia.aiosc:FDD :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/FDD-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:PlmnList :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/PlmnList-1 -> MCC = 311
-[ADDED]     com.nokia.aiosc:PlmnList :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/PlmnList-1 -> MNC = 48
-[ADDED]     com.nokia.aiosc:TDD :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/TDD-1 -> Earfcn = 1
-[ADDED]     com.nokia.aiosc:TDD :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/TDD-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> EnableInstance = false
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> ExternalGNBCUFunction_CP = 1
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> ExternalNRCellCUNumberOfEntries = 6
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> GNBId = 2
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> GNBIdLength = 32
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> NoXnHoPresent = false
-[ADDED]     com.nokia.aiosc:ExternalGNBCUFunction :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1 -> NrNeighbourGnbIpAddr = 2.2.2.2
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> CellLocalId = 1
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> EnableInstance = false
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> ExternalNRCellCU_CP = x
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> ExternalNRCellIndexn = 1
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> MCC = 001
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> MNC = 01
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> ModeTypen = TDD
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> NRCellDetectionType = Configured
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> NRPCI = 444
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> SpareParam1 = x
-[ADDED]     com.nokia.aiosc:ExternalNRCellCU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1 -> Tac = 16777215
-[ADDED]     com.nokia.aiosc:NRDL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1 -> NrArfcn = 3279165
-[ADDED]     com.nokia.aiosc:NRDL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1 -> NrNumRb = 11
-[ADDED]     com.nokia.aiosc:NRDL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1 -> NumFreqBandsNumberOfEntries = 1
-[ADDED]     com.nokia.aiosc:NRDL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NRDL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1 -> SubCarrierSpacingInKhzn = 30
-[ADDED]     com.nokia.aiosc:NumFreqBands :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1/NumFreqBands-1 -> NrFreqBandInd = 48
-[ADDED]     com.nokia.aiosc:NRUL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1 -> NrArfcn = 3279165
-[ADDED]     com.nokia.aiosc:NRUL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1 -> NrNumRb = 11
-[ADDED]     com.nokia.aiosc:NRUL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1 -> NumFreqBandsNumberOfEntries = 1
-[ADDED]     com.nokia.aiosc:NRUL :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NumFreqBandsUl :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1/NumFreqBandsUl-1 -> NrFreqBandInd = 48
-[ADDED]     com.nokia.aiosc:FullIrnti :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/FullIrnti-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NrQosPrioritizationInfo :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/NrQosPrioritizationInfo-1 -> X2WhiteListId = 1
-[ADDED]     com.nokia.aiosc:PriorityAndPciForRRCEstabCause :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/PriorityAndPciForRRCEstabCause-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:ShortIrnti :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ShortIrnti-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:TimerConfig :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:TimerConfig :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1 -> SparePara_CP = x
-[ADDED]     com.nokia.aiosc:F1AP :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/F1AP-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> BWVsPCCCaThr = 10Mbps
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> CASupportedforNSA = false
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> SCellCQIThr = 6
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> UeThresholdforCA = 1
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> ProhibitTimer = 1000
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> UlCASupportedforNSA = false
-[ADDED]     com.nokia.aiosc:XDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1 -> SCellAdditionTrigger = Blind
-[ADDED]     com.nokia.aiosc:CarrierAggregation :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/CarrierAggregation-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:EPF1UXDU :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/EPF1UXDU-1 -> EPF1U_CP = 1
-[ADDED]     com.nokia.aiosc:F1CAlarm :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/F1CAlarm-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:La :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/La-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:NsSysCfg :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/NsSysCfg-1 -> NsSysCfg_CP = x
-[ADDED]     com.nokia.aiosc:CoreList :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/NsSysCfg-1/CoreList-1 -> CoreListValue = 1
-[ADDED]     com.nokia.aiosc:QosProvsioningParams :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/QosProvsioningParams-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:LteExtCellList :: Device-1/Services-1/X_Nokia_BSR-1/LteExtCellList-1 -> LteExtCellList_CP = x
-[ADDED]     com.nokia.aiosc:LteNatLocLockFrequency :: Device-1/Services-1/X_Nokia_BSR-1/LteNatLocLockFrequency-1 -> LteNatLocLockFrequency_CP = x
-[ADDED]     com.nokia.aiosc:ChannelSpacing :: Device-1/Services-1/X_Nokia_BSR-1/NRCBRSPR-1/ChannelSpacing-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:DesiredTddFrameStructure :: Device-1/Services-1/X_Nokia_BSR-1/NRCBRSPR-1/DesiredTddFrameStructure-1 -> DesiredTddFrameStructure_CP = 1
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> AntennaGain = 9
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> AssignedCbsdId = Nokia1_200_223232227.NR
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> CbrsFreqType = PAL
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> CbrsaGroupIdCcg = CBRSA_CCG
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> CbrsaGroupIdIcg = CBRSA_ICG
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> CbsdCategory = B
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> CbsdRegistrationState = Unregistered
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> CbsdSerialNumber = 223232227
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> FccId = 200
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> NrCbsdId = 1
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> Producttype = Outdoor
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> RModDN = RMOD-1
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> SasUserGroupList = 1
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> SparePara1 = SpareParam
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> SparePara2 = SpareParam2
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> Sparepara = Sparepara
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> SupportedSpectrumV2 = 1073741823
-[ADDED]     com.nokia.aiosc:NRCBSD :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1 -> UserId = nokia
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> CbrsFreqPriorityN = toppriority
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> CellDN = CELL-1
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> DesiredChBw = 40MHz
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> GrantChannelType = PAL
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> GrantId = 3550000000_3570000000
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> GrantMaxEirp = 123
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> GrantOperationState = Idle
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> GrantSpectrumFreqHigh = 3700
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> GrantSpectrumFreqLow = 3550
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> NrCbsdCellId = 1
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> SparePara1 = SparePara1
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> SparePara2 = SparePara2
-[ADDED]     com.nokia.aiosc:NRCBSDCELL :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1 -> Sparepara = Sparepara
-[ADDED]     com.nokia.aiosc:ConfigSetForVariChBw :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/ConfigSetForVariChBw-1 -> ConfigSetForVariChBw_CP = 0
-[ADDED]     com.nokia.aiosc:PwrPreference :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/PwrPreference-1 -> ChBw = 20MHz
-[ADDED]     com.nokia.aiosc:PwrPreference :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/PwrPreference-1 -> DesiredPmax = 170
-[ADDED]     com.nokia.aiosc:PwrPreference :: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/PwrPreference-1 -> MaxGrantPwrRed = 0
-[ADDED]     com.nokia.aiosc:OnePPSConfig :: Device-1/Services-1/X_Nokia_BSR-1/OnePPSConfig-1 -> OnePPSConfig_CP = x
-[ADDED]     com.nokia.aiosc:RFTrace :: Device-1/Services-1/X_Nokia_BSR-1/RFTrace-1 -> RFTrace_CP = x
-[ADDED]     com.nokia.aiosc:Radio :: Device-1/Services-1/X_Nokia_BSR-1/Radio-1 -> AvailabilityStatusn = inTest
-[ADDED]     com.nokia.aiosc:SDM :: Device-1/Services-1/X_Nokia_BSR-1/SDM-1 -> CommitDelayTimerUpgrade = 600
-[ADDED]     com.nokia.aiosc:SDM :: Device-1/Services-1/X_Nokia_BSR-1/SDM-1 -> StaticDataFileURL = http://1.1.1.1
-[ADDED]     com.nokia.aiosc:SDM :: Device-1/Services-1/X_Nokia_BSR-1/SDM-1 -> StaticVersion = AIOSC
-[ADDED]     com.nokia.aiosc:SyncReferenceSourceList :: Device-1/Services-1/X_Nokia_BSR-1/SyncReferenceSourceList-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:WiFiConfig :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1 -> EnableWiFi = false
-[ADDED]     com.nokia.aiosc:WiFiConfig :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1 -> ShowAlarmOnEnable = false
-[ADDED]     com.nokia.aiosc:WiFiConfig :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1 -> WiFiChannel = 0
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> BssidMACAddr = 0:0:0:0:0:0
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> HideSsid = false
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> Passphrase = x
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> Password = x
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> ProtectManagementFrame = PmfRequired
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> SparePara1 = x
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> SsidName = x
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> UserId = x
-[ADDED]     com.nokia.aiosc:BSSID :: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1 -> WiFiAuthType = WPA3_SAE
-[ADDED]     com.nokia.aiosc:MNL :: MNL-1 -> PlannedSWReleaseVersion = aio
-[ADDED]     com.nokia.aiosc:MNL :: MNL-1 -> ProductVariant_test = AIO_Strandmount
+  [ADDED]     Class: com.nokia.aiosc:VLANTermination, Object: Device-1/Ethernet-1/VLANTermination-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:GPS, Object: Device-1/FAP-1/GPS-1, Parameter: testId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ContinuousGPSStatus, Object: Device-1/FAP-1/GPS-1/ContinuousGPSStatus-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:XtraServerAddress, Object: Device-1/FAP-1/GPS-1/XtraServerAddress-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: AdditionalText, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: AlarmIdentifier, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: AlarmRaisedTime, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: EventType, Value: 'communicationsAlarm'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: FaultIDandStatus, Value: 'test'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: ManagedObjectInstance, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: PerceivedSeverity, Value: 'cleared'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: ProbableCause, Value: 'indeterminate'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: ReportingStatus, Value: 'raised'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: SecurityAlarmDetector, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: SequenceNumber, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: ServiceProvider, Value: 'Cutomer'
+  [ADDED]     Class: com.nokia.aiosc:CurrentAlarm, Object: Device-1/FaultMgmt-1/CurrentAlarm-1, Parameter: ServiceUser, Value: 'NokiaUser'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-45, Parameter: FaultIdn, Value: 'spareCBSDAlarm1'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-45, Parameter: MocIdn, Value: 'NRCbsd'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-45, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-46, Parameter: FaultIdn, Value: 'spareCBSDAlarm2'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-46, Parameter: MocIdn, Value: 'NRCbsd'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-46, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-47, Parameter: FaultIdn, Value: 'spareCBSDAlarm3'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-47, Parameter: MocIdn, Value: 'NRCbsd'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-47, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-48, Parameter: FaultIdn, Value: 'invalidCBSDBandConfiguration'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-48, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-48, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-49, Parameter: FaultIdn, Value: 'wifiEnabled'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-49, Parameter: MocIdn, Value: 'WiFi'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-49, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-50, Parameter: FaultIdn, Value: 'defaultWiFiPassword'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-50, Parameter: MocIdn, Value: 'WiFi'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-50, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-51, Parameter: FaultIdn, Value: 'ptpServiceUnavailable'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-51, Parameter: MocIdn, Value: 'Radio'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-51, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-52, Parameter: FaultIdn, Value: 'onePPSServiceUnavailable'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-52, Parameter: MocIdn, Value: 'Radio'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-52, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-53, Parameter: FaultIdn, Value: 'amfConnectionUnstable'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-53, Parameter: MocIdn, Value: 'HgNB'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-53, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-54, Parameter: FaultIdn, Value: 'allAMFConnectionUnstable'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-54, Parameter: MocIdn, Value: 'HgNB'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-54, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-55, Parameter: FaultIdn, Value: 'gtpuAllPathFailure'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-55, Parameter: MocIdn, Value: 'HgNB'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-55, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-56, Parameter: FaultIdn, Value: 'gtuPathUnstable'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-56, Parameter: MocIdn, Value: 'HgNB'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-56, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-57, Parameter: FaultIdn, Value: 'gtpuAllPathUnstable'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-57, Parameter: MocIdn, Value: 'HgNB'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-57, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-58, Parameter: FaultIdn, Value: 'wifiUserAccountLocked'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-58, Parameter: MocIdn, Value: 'WiFi'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-58, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-59, Parameter: FaultIdn, Value: 'nrDuCellSetupFailed'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-59, Parameter: MocIdn, Value: 'NRCellDU'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-59, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-60, Parameter: FaultIdn, Value: 'nrBandNotSupported'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-60, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-60, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-61, Parameter: FaultIdn, Value: 'nrOamCellOperationFailure'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-61, Parameter: MocIdn, Value: 'HgNB'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-61, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-62, Parameter: FaultIdn, Value: 'underTemperature'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-62, Parameter: MocIdn, Value: 'Radio'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-62, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-63, Parameter: FaultIdn, Value: 'tamperDetected'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-63, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-63, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-64, Parameter: FaultIdn, Value: 'tunnelConfigFailure'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-64, Parameter: MocIdn, Value: 'IKESAPair'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-64, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-65, Parameter: FaultIdn, Value: 'certificateEnrollmentFailure'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-65, Parameter: MocIdn, Value: 'CertificateEnrollment'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-65, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-66, Parameter: FaultIdn, Value: 'aioscOutOfMemory'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-66, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-66, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-67, Parameter: FaultIdn, Value: 'highTemperatureWarning'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-67, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-67, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-68, Parameter: FaultIdn, Value: 'spareRadioAlarm1'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-68, Parameter: MocIdn, Value: 'Radio'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-68, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-69, Parameter: FaultIdn, Value: 'spareNRAlarm5'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-69, Parameter: MocIdn, Value: 'NRCellDU'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-69, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-70, Parameter: FaultIdn, Value: 'aioscOutOfService'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-70, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-70, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-71, Parameter: FaultIdn, Value: 'nodeDiskFull'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-71, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-71, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-72, Parameter: FaultIdn, Value: 'lowNodeAvailableCPU'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-72, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-72, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-73, Parameter: FaultIdn, Value: 'nodeReboot'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-73, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-73, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-74, Parameter: FaultIdn, Value: 'databaseCorruptionDetected'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-74, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-74, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-75, Parameter: FaultIdn, Value: 'gNBOnFreeRunningClock'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-75, Parameter: MocIdn, Value: 'BSR'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-75, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-76, Parameter: FaultIdn, Value: 'nrRfCalibrationFailure'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-76, Parameter: MocIdn, Value: 'Radio'
+  [ADDED]     Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-76, Parameter: ReportingMechanism, Value: 'expedited'
+  [ADDED]     Class: com.nokia.aiosc:IPv4Address, Object: Device-1/IP-1/Interface-1/IPv4Address-1, Parameter: IPAddress, Value: '1.1.1.1'
+  [ADDED]     Class: com.nokia.aiosc:IPv4Address, Object: Device-1/IP-1/Interface-1/IPv4Address-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:IPv4Address, Object: Device-1/IP-1/Interface-1/IPv4Address-1, Parameter: SubnetMask, Value: '1.1.1.1'
+  [ADDED]     Class: com.nokia.aiosc:IPv6Address, Object: Device-1/IP-1/Interface-1/IPv6Address-1, Parameter: SparePara2, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:IPv6Address, Object: Device-1/IP-1/Interface-1/IPv6Address-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ManagementServer, Object: Device-1/ManagementServer-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRCellCU, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1, Parameter: ObjectInstance, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRCellCU, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1, Parameter: ObjectClass, Value: 'RNCFunction'
+  [ADDED]     Class: com.nokia.aiosc:DrxConfigAnrSpecific, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigAnrSpecific-1, Parameter: DrxConfigAnrSpecific_CP, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:DrxConfigAnrSpecific, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigAnrSpecific-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DrxConfigDataSpecific, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigDataSpecific-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DrxConfigInterRatAnrSpecific, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/DrxConfig-1/DrxConfigInterRatAnrSpecific-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: AdjacentCell, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: CellIndividualOffset, Value: 'DB0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: EUtranFreqRelationRef, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: Id, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: IsENDCAllowed, Value: 'NO'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: IsHOAllowedn, Value: 'yes'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: QOffset, Value: 'DB0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EUtranCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranCellRelation-1, Parameter: TCI, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: AllowedMeasBandwidth, Value: 'mbw6'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: BlackListEntryId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: BlackListEntryIdleModeNumberOfEntries, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: BlackListEntryNumberOfEntries, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: CellIndividualOffset, Value: 'DB_24'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: CellReselectionPriority, Value: '7'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: CellReselectionSubPriority, Value: 'odot6'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: EUtranFrequencyRef, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: EutrapresenceAntennaPort1, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: Id, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: PMax, Value: '23'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: QOffsetFreq, Value: 'DB0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: QQualMin, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: QRxLevMin, Value: '-140'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: TReselectionEutra, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: TReselectionEutraSfHigh, Value: '25'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: TReselectionEutraSfMedium, Value: '25'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: ThreshXHighP, Value: '20'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: ThreshXHighQ, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: ThreshXLowP, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1, Parameter: ThreshXLowQ, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntryEUtran, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryEUtran-1, Parameter: BlackListEntryValue, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntryEUtran, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryEUtran-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntryIdleModeEUtran, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryIdleModeEUtran-1, Parameter: BlackListEntryIdleModeValue, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntryIdleModeEUtran, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFreqRelation-1/BlackListEntryIdleModeEUtran-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1, Parameter: EarfcnDL, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1, Parameter: Id, Value: 'Test'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1, Parameter: MultiBandInfoListEutraNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:EUtranFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MultiBandInfoListEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1/MultiBandInfoListEutra-1, Parameter: MultiBandInfoListEutraValue, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:MultiBandInfoListEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EUtranFrequency-1/MultiBandInfoListEutra-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EmergencyAreaId, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/EmergencyAreaId-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MeasObject, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MeasEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1, Parameter: MeasObjectEutraNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:MeasEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MeasObjectEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1, Parameter: EutraOffsetRange, Value: 'DB_24'
+  [ADDED]     Class: com.nokia.aiosc:MeasObjectEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1, Parameter: MeasObjectEutraId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:MeasObjectEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MeasObjectEutra, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasEutra-1/MeasObjectEutra-1, Parameter: WidebandRSRQMeas, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:MeasObjectNr, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:AbsThreshCsiRsConsolidation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshCsiRsConsolidation-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:AbsThreshSsBlocksConsolidation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/AbsThreshSsBlocksConsolidation-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellIndividualOffsetVS, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/CellIndividualOffsetVS-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:OffsetMOVS, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/MeasObject-1/MeasObjectNr-1/OffsetMOVS-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRCellRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1, Parameter: Id, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellIndividualOffset, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRCellRelation-1/CellIndividualOffset-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1, Parameter: BlackListEntryNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NRFreqRelation, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1, Parameter: BlackListEntryIdleModeNumberOfEntries, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntry, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntry-1, Parameter: BlackListEntryValue, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntry, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntry-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntryIdleMode, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntryIdleMode-1, Parameter: BlackListEntryIdleModeValue, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:BlackListEntryIdleMode, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/BlackListEntryIdleMode-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:OffsetMO, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFreqRelation-1/OffsetMO-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1, Parameter: ObjectInstance, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1, Parameter: ObjectClass, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRFrequency, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1, Parameter: UserLabel, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MultiFrequencyBandListNR, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/MultiFrequencyBandListNR-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MultiFrequencyBandListNR, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/NRFrequency-1/MultiFrequencyBandListNR-1, Parameter: MultiFrequencyBandListNR_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:QuantityConfigNR, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1, Parameter: QuantityConfigRefId, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:QuantityConfigNR, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CsiRSFilterConfig, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/CsiRSFilterConfig-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SsbFilterConfig, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigCell-1/SsbFilterConfig-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:QuantityConfigRSIndex, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1, Parameter: QuantityConfigRSIndex_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CsiRSFilterConfigQConfigRSI, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/CsiRSFilterConfigQConfigRSI-1, Parameter: FilterCoefficientRSRP, Value: 'FC4'
+  [ADDED]     Class: com.nokia.aiosc:CsiRSFilterConfigQConfigRSI, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/CsiRSFilterConfigQConfigRSI-1, Parameter: FilterCoefficientRSRQ, Value: 'FC4'
+  [ADDED]     Class: com.nokia.aiosc:CsiRSFilterConfigQConfigRSI, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/CsiRSFilterConfigQConfigRSI-1, Parameter: FilterCoefficientRSSINR, Value: 'FC4'
+  [ADDED]     Class: com.nokia.aiosc:SsbFilterConfigRSIndex, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/SsbFilterConfigRSIndex-1, Parameter: FilterCoefficientRSRPn, Value: 'FC4'
+  [ADDED]     Class: com.nokia.aiosc:SsbFilterConfigRSIndex, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/SsbFilterConfigRSIndex-1, Parameter: FilterCoefficientRSRQn, Value: 'FC4'
+  [ADDED]     Class: com.nokia.aiosc:SsbFilterConfigRSIndex, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/QuantityConfigInfo-1/QuantityConfigNR-1/QuantityConfigRSIndex-1/SsbFilterConfigRSIndex-1, Parameter: FilterCoefficientRSSINRn, Value: 'FC4'
+  [ADDED]     Class: com.nokia.aiosc:RRMPolicyRatio2, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/RRMPolicyRatio2-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ReportConfigInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1, Parameter: SparePara2, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ReportConfigInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ReportCfgNr, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1, Parameter: SparaPara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EventReportList, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:A3EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1, Parameter: AnrIntraAggressivePeriod, Value: '60'
+  [ADDED]     Class: com.nokia.aiosc:A3EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1, Parameter: AnrA3NormalThresholdOffset, Value: '-5'
+  [ADDED]     Class: com.nokia.aiosc:A3EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1, Parameter: AnrIntraNormalPeriod, Value: '3600'
+  [ADDED]     Class: com.nokia.aiosc:A3EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A3EventInfo-1, Parameter: AnrA3AggressiveThreshOffset, Value: '-20'
+  [ADDED]     Class: com.nokia.aiosc:A4EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1, Parameter: AnrInterAggressivePeriod, Value: '60'
+  [ADDED]     Class: com.nokia.aiosc:A4EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1, Parameter: AnrInterNormalPeriod, Value: '3600'
+  [ADDED]     Class: com.nokia.aiosc:A4EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1, Parameter: AnrA4AggressiveThreshold, Value: '26'
+  [ADDED]     Class: com.nokia.aiosc:A4EventInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportCfgNr-1/EventTrigger-1/EventTriggerConfig-1/EventReportList-1/Event-1/A4EventInfo-1, Parameter: AnrA4NormalThreshold, Value: '40'
+  [ADDED]     Class: com.nokia.aiosc:ReportConfigInterRAT, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/ReportConfigInfo-1/ReportConfigInterRAT-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellReselectionInfoCommon, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:AbsThreshSsBlocksConsolSib2, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionInfoCommon-1/AbsThreshSsBlocksConsolSib2-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellReselectionServingFreqInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/CellReselectionServingFreqInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NrMultiBandInfos, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/FrequencyBands-1/NrMultiBandInfos-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SIntraSearchQ, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SIntraSearchQ-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SpeedScaleFactors, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/Sib2ConfigInfo-1/IntraFreqCellReselectionInfo-1/SpeedScaleFactors-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SrbCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/CU-1/NRCellCU-1/SrbCfg-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRCellDU, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1, Parameter: IsExtN77BandEnabled, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:NRCellDU, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1, Parameter: IsMFBISupportEnabled, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:CfgCmn, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CfgCmn-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CsiRsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/CsiRsCfgInfo-1, Parameter: IsTRSEnable, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:MultiBandInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NrNsPmaxVal, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1/NrNsPmaxVal-1, Parameter: AdditionalSpectrumEmission, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NrNsPmaxVal, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/MultiBandInfo-1/NrNsPmaxVal-1, Parameter: PMax, Value: '10'
+  [ADDED]     Class: com.nokia.aiosc:SubCarrierCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/SubCarrierCfg-1, Parameter: OffsetToCarrier, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:SubCarrierCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/SubCarrierCfg-1, Parameter: SparePara2, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SubCarrierCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DlCfgCmn-1/DlFreqInfo-1/SubCarrierCfg-1, Parameter: SubCarrierSpacingn, Value: 'KHz30'
+  [ADDED]     Class: com.nokia.aiosc:DmrsDlCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsDlCfg-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DmrsUlCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:TransPrecodingDisabledUl, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingDisabledUl-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:TransPrecodingEnabledUl, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DmrsUlCfg-1/TransPrecodingEnabledUl-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DrxInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/DrxInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:L1CfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MibParams, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/MibParams-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:Sib1Params, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1, Parameter: SparaPara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellAccessInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellAccessInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellAccessInfo-1, Parameter: CellAccessInfoSpareParam, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:CellSelectionInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/CellSelectionInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ConnEstFailureControl, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/L1CfgInfo-1/Sib1Params-1/ConnEstFailureControl-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MacCfgCmn, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DlMuMimoConfig, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/DlMuMimoConfig-1, Parameter: SparePara2, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DlMuMimoConfig, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MacCfgCmn-1/DlMuMimoConfig-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MeasGap, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/MeasGap-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: NsAddInfoNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: NsIdToActNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: NsIdToDeActNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: NsIdToDelNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: NsModInfoNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: Period, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: ReportType, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: ReslAddInfoNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: ResourceModInfoNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NsCfgInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsAddInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1, Parameter: NumUlUePerTti, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NsAddInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1, Parameter: ResType, Value: 'NS_RES_ISOLATED'
+  [ADDED]     Class: com.nokia.aiosc:NsiCellResCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1/NsiCellResCfg-1, Parameter: NumDlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NsiCellResCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1/NsiCellResCfg-1, Parameter: NumUlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NsiCellResCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsAddInfo-1/NsiCellResCfg-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsIdToAct, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsIdToAct-1, Parameter: NsIdToAct_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsIdToDeAct, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsIdToDeAct-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsIdToDel, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsIdToDel-1, Parameter: NsIdToDel_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsModInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1, Parameter: NumUlUePerTti, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NsModInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1, Parameter: ResType, Value: 'NS_RES_ISOLATED'
+  [ADDED]     Class: com.nokia.aiosc:NsiCellResCfgMod, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1/NsiCellResCfgMod-1, Parameter: NumDlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NsiCellResCfgMod, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/NsModInfo-1/NsiCellResCfgMod-1, Parameter: NumUlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ReslAddInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ReslAddInfo-1, Parameter: NumDlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ReslAddInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ReslAddInfo-1, Parameter: NumUlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ReslAddInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ReslAddInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ResourceModInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1, Parameter: NsResId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ResourceModInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1, Parameter: NumDlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ResourceModInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1, Parameter: NumUlPrb, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ResourceModInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/NsCfgInfo-1/ResourceModInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:RlcCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/RlcCfg-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SNSSAIList, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SNSSAIList-1, Parameter: SNSSAIList_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:SiSchedInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SiSchedInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:GrpBPreambleCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlBwpCfg-1/RachCfgInfo-1/GrpBPreambleCfg-1, Parameter: GrpBPreambleCfg_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:UlFreqInfo, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:MultiBandInfoUl, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NrNsPmaxValUl, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1/NrNsPmaxValUl-1, Parameter: AdditionalSpectrumEmission, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:NrNsPmaxValUl, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlFreqInfo-1/MultiBandInfoUl-1/NrNsPmaxValUl-1, Parameter: PMax, Value: '10'
+  [ADDED]     Class: com.nokia.aiosc:UlTargetCqi, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgCmn-1/UlTargetCqi-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:UlCfgGrant, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UlCfgGrant-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:UrllcCfg, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/UrllcCfg-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: NRFrameTimingOffset, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: DiagnoseBSRAdditionalText, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: AvailabilityStatusn, Value: 'inTest'
+  [ADDED]     Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: EnableDaisyChaining, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: ClusterName_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: SiteType_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:GsmExtCellList, Object: Device-1/Services-1/X_Nokia_BSR-1/GsmExtCellList-1, Parameter: GsmExtCellList_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:GsmNatLocLockFrequency, Object: Device-1/Services-1/X_Nokia_BSR-1/GsmNatLocLockFrequency-1, Parameter: GsmNatLocLockFrequency_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: ClearPersistence, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: SucReevalForNrNbr, Value: '5'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: MaxNumReport, Value: '3'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: EventBasedANREnabled, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: StopAddingUEToAnrProfile, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:AnrParam, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1, Parameter: AutoNrNbrremoval, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:DrxConfigAnrSpecificX, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/AnrParam-1/DrxConfigAnrSpecificX-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellTrace, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CellTrace, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1, Parameter: SourceIdn, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EPF1U, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1, Parameter: EPF1U_CP, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EPF1U, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1, Parameter: Id, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:EPF1U, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1, Parameter: ObjectClass, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EPF1U, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPF1U-1, Parameter: ObjectInstance, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EPNGU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPNGU-1, Parameter: EPNGU_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EPS1U, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPS1U-1, Parameter: EPS1U_CP, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:EPX2U, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EPX2U-1, Parameter: EPX2U_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EutraCuUpConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/EutraCuUpConfig-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: ENBId, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: ENBIdLength, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: EnbNeighbourIpAddr, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: ExternalENBFunction_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: ExternalEUtranCellNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: Id, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: MCC, Value: '001'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: MNC, Value: '01'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: NoX2HoPresent, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:ExternalENBFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: CellLocalId, Value: '2'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: ENBId, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: ExternalEUtranCellIndex, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: ExternalEUtranCell_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: Id, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: ModeType, Value: 'TDD'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: Pci, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: PlmnListNumberOfEntries, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalEUtranCell, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1, Parameter: TAC, Value: '0002'
+  [ADDED]     Class: com.nokia.aiosc:FDD, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/FDD-1, Parameter: EarfcnDL, Value: '38900'
+  [ADDED]     Class: com.nokia.aiosc:FDD, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/FDD-1, Parameter: EarfcnUL, Value: '38900'
+  [ADDED]     Class: com.nokia.aiosc:FDD, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/FDD-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:PlmnList, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/PlmnList-1, Parameter: MCC, Value: '311'
+  [ADDED]     Class: com.nokia.aiosc:PlmnList, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/PlmnList-1, Parameter: MNC, Value: '48'
+  [ADDED]     Class: com.nokia.aiosc:TDD, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/TDD-1, Parameter: Earfcn, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:TDD, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalENBFunction-1/ExternalEUtranCell-1/TDD-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: EnableInstance, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: ExternalGNBCUFunction_CP, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: ExternalNRCellCUNumberOfEntries, Value: '6'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: GNBId, Value: '2'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: GNBIdLength, Value: '32'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: NoXnHoPresent, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:ExternalGNBCUFunction, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1, Parameter: NrNeighbourGnbIpAddr, Value: '2.2.2.2'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: CellLocalId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: EnableInstance, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: ExternalNRCellCU_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: ExternalNRCellIndexn, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: MCC, Value: '001'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: MNC, Value: '01'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: ModeTypen, Value: 'TDD'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: NRCellDetectionType, Value: 'Configured'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: NRPCI, Value: '444'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: SpareParam1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ExternalNRCellCU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1, Parameter: Tac, Value: '16777215'
+  [ADDED]     Class: com.nokia.aiosc:NRDL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1, Parameter: NrArfcn, Value: '3279165'
+  [ADDED]     Class: com.nokia.aiosc:NRDL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1, Parameter: NrNumRb, Value: '11'
+  [ADDED]     Class: com.nokia.aiosc:NRDL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1, Parameter: NumFreqBandsNumberOfEntries, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NRDL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NRDL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1, Parameter: SubCarrierSpacingInKhzn, Value: '30'
+  [ADDED]     Class: com.nokia.aiosc:NumFreqBands, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRDL-1/NumFreqBands-1, Parameter: NrFreqBandInd, Value: '48'
+  [ADDED]     Class: com.nokia.aiosc:NRUL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1, Parameter: NrArfcn, Value: '3279165'
+  [ADDED]     Class: com.nokia.aiosc:NRUL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1, Parameter: NrNumRb, Value: '11'
+  [ADDED]     Class: com.nokia.aiosc:NRUL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1, Parameter: NumFreqBandsNumberOfEntries, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NRUL, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NumFreqBandsUl, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ExternalGNBCUFunction-1/ExternalNRCellCU-1/NRUL-1/NumFreqBandsUl-1, Parameter: NrFreqBandInd, Value: '48'
+  [ADDED]     Class: com.nokia.aiosc:FullIrnti, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/FullIrnti-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NrQosPrioritizationInfo, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/NrQosPrioritizationInfo-1, Parameter: X2WhiteListId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:PriorityAndPciForRRCEstabCause, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/PriorityAndPciForRRCEstabCause-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ShortIrnti, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/ShortIrnti-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:TimerConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1, Parameter: SparePara_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:TimerConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:F1AP, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/TimerConfig-1/F1AP-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: UlCASupportedforNSA, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: CASupportedforNSA, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: SCellCQIThr, Value: '6'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: ProhibitTimer, Value: '1000'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: BWVsPCCCaThr, Value: '10Mbps'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: SCellAdditionTrigger, Value: 'Blind'
+  [ADDED]     Class: com.nokia.aiosc:XDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1, Parameter: UeThresholdforCA, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:CarrierAggregation, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/CarrierAggregation-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:EPF1UXDU, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/EPF1UXDU-1, Parameter: EPF1U_CP, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:F1CAlarm, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/F1CAlarm-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:La, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/La-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:NsSysCfg, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/NsSysCfg-1, Parameter: NsSysCfg_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:CoreList, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/NsSysCfg-1/CoreList-1, Parameter: CoreListValue, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:QosProvsioningParams, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XDU-1/QosProvsioningParams-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:LteExtCellList, Object: Device-1/Services-1/X_Nokia_BSR-1/LteExtCellList-1, Parameter: LteExtCellList_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:LteNatLocLockFrequency, Object: Device-1/Services-1/X_Nokia_BSR-1/LteNatLocLockFrequency-1, Parameter: LteNatLocLockFrequency_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:ChannelSpacing, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBRSPR-1/ChannelSpacing-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:DesiredTddFrameStructure, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBRSPR-1/DesiredTddFrameStructure-1, Parameter: DesiredTddFrameStructure_CP, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: AntennaGain, Value: '9'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: AssignedCbsdId, Value: 'Nokia1_200_223232227.NR'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: CbrsFreqType, Value: 'PAL'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: CbrsaGroupIdCcg, Value: 'CBRSA_CCG'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: CbrsaGroupIdIcg, Value: 'CBRSA_ICG'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: CbsdCategory, Value: 'B'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: CbsdRegistrationState, Value: 'Unregistered'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: CbsdSerialNumber, Value: '223232227'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: FccId, Value: '200'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: NrCbsdId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: Producttype, Value: 'Outdoor'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: RModDN, Value: 'RMOD-1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: SasUserGroupList, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: SparePara1, Value: 'SpareParam'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: SparePara2, Value: 'SpareParam2'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: Sparepara, Value: 'Sparepara'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: SupportedSpectrumV2, Value: '1073741823'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSD, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1, Parameter: UserId, Value: 'nokia'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: CbrsFreqPriorityN, Value: 'toppriority'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: CellDN, Value: 'CELL-1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: DesiredChBw, Value: '40MHz'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: GrantChannelType, Value: 'PAL'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: GrantId, Value: '3550000000_3570000000'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: GrantMaxEirp, Value: '123'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: GrantOperationState, Value: 'Idle'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: GrantSpectrumFreqHigh, Value: '3700'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: GrantSpectrumFreqLow, Value: '3550'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: NrCbsdCellId, Value: '1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: SparePara1, Value: 'SparePara1'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: SparePara2, Value: 'SparePara2'
+  [ADDED]     Class: com.nokia.aiosc:NRCBSDCELL, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1, Parameter: Sparepara, Value: 'Sparepara'
+  [ADDED]     Class: com.nokia.aiosc:ConfigSetForVariChBw, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/ConfigSetForVariChBw-1, Parameter: ConfigSetForVariChBw_CP, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:PwrPreference, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/PwrPreference-1, Parameter: ChBw, Value: '20MHz'
+  [ADDED]     Class: com.nokia.aiosc:PwrPreference, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/PwrPreference-1, Parameter: DesiredPmax, Value: '170'
+  [ADDED]     Class: com.nokia.aiosc:PwrPreference, Object: Device-1/Services-1/X_Nokia_BSR-1/NRCBSD-1/NRCBSDCELL-1/PwrPreference-1, Parameter: MaxGrantPwrRed, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:OnePPSConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/OnePPSConfig-1, Parameter: OnePPSConfig_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:RFTrace, Object: Device-1/Services-1/X_Nokia_BSR-1/RFTrace-1, Parameter: RFTrace_CP, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:Radio, Object: Device-1/Services-1/X_Nokia_BSR-1/Radio-1, Parameter: AvailabilityStatusn, Value: 'inTest'
+  [ADDED]     Class: com.nokia.aiosc:SDM, Object: Device-1/Services-1/X_Nokia_BSR-1/SDM-1, Parameter: StaticDataFileURL, Value: 'http://1.1.1.1'
+  [ADDED]     Class: com.nokia.aiosc:SDM, Object: Device-1/Services-1/X_Nokia_BSR-1/SDM-1, Parameter: StaticVersion, Value: 'AIOSC'
+  [ADDED]     Class: com.nokia.aiosc:SDM, Object: Device-1/Services-1/X_Nokia_BSR-1/SDM-1, Parameter: CommitDelayTimerUpgrade, Value: '600'
+  [ADDED]     Class: com.nokia.aiosc:SyncReferenceSourceList, Object: Device-1/Services-1/X_Nokia_BSR-1/SyncReferenceSourceList-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:WiFiConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1, Parameter: EnableWiFi, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:WiFiConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1, Parameter: ShowAlarmOnEnable, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:WiFiConfig, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1, Parameter: WiFiChannel, Value: '0'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: BssidMACAddr, Value: '0:0:0:0:0:0'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: HideSsid, Value: 'false'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: Passphrase, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: Password, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: ProtectManagementFrame, Value: 'PmfRequired'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: SparePara1, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: SsidName, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: UserId, Value: 'x'
+  [ADDED]     Class: com.nokia.aiosc:BSSID, Object: Device-1/Services-1/X_Nokia_BSR-1/WiFiConfig-1/BSSID-1, Parameter: WiFiAuthType, Value: 'WPA3_SAE'
+  [ADDED]     Class: com.nokia.aiosc:MNL, Object: MNL-1, Parameter: PlannedSWReleaseVersion, Value: 'aio'
+  [ADDED]     Class: com.nokia.aiosc:MNL, Object: MNL-1, Parameter: ProductVariant_test, Value: 'AIO_Strandmount'
 
-❌ Removed Parameters (dropped in 2025):
-[REMOVED]   com.nokia.aiosc:SNSSAIList :: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SNSSAIList-1 -> SNSSAIListValue = 0
-[REMOVED]   com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> NRFrameTimingOffsetn = 0
-[REMOVED]   com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> BSRType = Strandmount
-[REMOVED]   com.nokia.aiosc:X_Nokia_BSR :: Device-1/Services-1/X_Nokia_BSR-1 -> EnableIPSEC = false
-[REMOVED]   com.nokia.aiosc:CellTrace :: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1 -> SourceId = 1
+❌ Removed Parameters (no longer present in final configuration):
+  [REMOVED]   Class: com.nokia.aiosc:SNSSAIList, Object: Device-1/Services-1/FAPService-1/CellConfig-1/NR-1/DU-1/NRCellDU-1/SNSSAIList-1, Parameter: SNSSAIListValue, Original Value: '0'
+  [REMOVED]   Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: NRFrameTimingOffsetn, Original Value: '0'
+  [REMOVED]   Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: BSRType, Original Value: 'Strandmount'
+  [REMOVED]   Class: com.nokia.aiosc:X_Nokia_BSR, Object: Device-1/Services-1/X_Nokia_BSR-1, Parameter: EnableIPSEC, Original Value: 'false'
+  [REMOVED]   Class: com.nokia.aiosc:CellTrace, Object: Device-1/Services-1/X_Nokia_BSR-1/HgNB-1/XCU-1/CellTrace-1, Parameter: SourceId, Original Value: '1'
 
 🔁 Modified Parameters (value changed):
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-1 -> MocIdn: 'BSR' -> 'SDM'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-1 -> FaultIdn: 'securityViolation' -> 'dbDownloadFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-2 -> MocIdn: 'SDM' -> 'BSR'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-2 -> FaultIdn: 'dbDownloadFailure' -> 'securityViolation'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-5 -> MocIdn: 'Radio' -> 'BSR'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-5 -> FaultIdn: 'gpsServiceUnavailable' -> 'invalidDatabaseDetected'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-6 -> FaultIdn: 'nrPhaseSynchronisationFailure' -> 'gpsServiceUnavailable'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-7 -> MocIdn: 'Radio' -> 'BSR'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-7 -> FaultIdn: 'nrFreqSynchronisationFailure' -> 'constraintsCheckFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-8 -> FaultIdn: 'invalidDatabaseDetected' -> 'pwdServiceProviderLoginFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-9 -> MocIdn: 'BSR' -> 'NRCellDU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-9 -> FaultIdn: 'constraintsCheckFailure' -> 'nrRfConfigurationFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-10 -> MocIdn: 'BSR' -> 'Radio'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-10 -> FaultIdn: 'pwdServiceProviderLoginFailure' -> 'nrPhaseSynchronisationFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-11 -> FaultIdn: 'nrRfConfigurationFailure' -> 'nrRfTemperatureWarning'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-12 -> FaultIdn: 'nrRfTemperatureWarning' -> 'nrRfTemperatureCritical'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-13 -> FaultIdn: 'nrRfTemperatureCritical' -> 'nrRfTxPowerNotConverged'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-14 -> MocIdn: 'NRCellDU' -> 'Radio'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-14 -> FaultIdn: 'nrRfTxPowerNotConverged' -> 'nrFreqSynchronisationFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-15 -> MocIdn: 'NRCellDU' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-15 -> FaultIdn: 'cellConfigurationFailure' -> 'allAMFConnectionDown'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-16 -> MocIdn: 'NRCellDU' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-16 -> FaultIdn: 'spareNRAlarm3' -> 'amfConnectionDown'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-17 -> MocIdn: 'NRCellDU' -> 'NRCellCU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-17 -> FaultIdn: 'spareNRAlarm4' -> 'nrPCICollisionDetected'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-18 -> MocIdn: 'NRCellDU' -> 'NRCellCU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-18 -> FaultIdn: 'nrDuCellSetupFailed' -> 'nrPCIConfusionDetected'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-19 -> MocIdn: 'NRCellDU' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-19 -> FaultIdn: 'spareNRAlarm5' -> 'ngapConnectionSetupFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-20 -> MocIdn: 'BSR' -> 'NRCellCU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-20 -> FaultIdn: 'ipsecConfigurationAlarm' -> 'nrPCISelectionFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-21 -> MocIdn: 'BSR' -> 'NRCbsd'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-21 -> FaultIdn: 'ipsecTunnelAlarm' -> 'cbsdRegistrationFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-22 -> MocIdn: 'NRCellCU' -> 'NRCbsd'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-22 -> FaultIdn: 'allAMFConnectionDown' -> 'cbsdSpectrumInquiryFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-23 -> MocIdn: 'NRCellCU' -> 'NRCellCBSD'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-23 -> FaultIdn: 'amfConnectionDown' -> 'cbsdCellGrantFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-24 -> MocIdn: 'NRCellCU' -> 'NRCellCBSD'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-24 -> FaultIdn: 'nrPCICollisionDetected' -> 'cbsdHeartbeatFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-25 -> MocIdn: 'NRCellCU' -> 'NRCbsd'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-25 -> FaultIdn: 'nrPCICollisionDetected' -> 'cbsdSASCommunicationError'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-26 -> MocIdn: 'NRCellCU' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-26 -> FaultIdn: 'nrPCIConfusionDetected' -> 'xnapConnectionDown'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-27 -> MocIdn: 'NRCellCU' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-27 -> FaultIdn: 'ngapConnectionSetupFailure' -> 'gtpuPathFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-28 -> FaultIdn: 'nrPCISelectionFailure' -> 'traceCollectionServerConnectionDown'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-29 -> MocIdn: 'NRCellCU' -> 'NRCbsd'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-29 -> FaultIdn: 'xnapConnectionDown' -> 'cbsdGrantSuspended'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-30 -> MocIdn: 'NRCellCU' -> 'NRCellCBSD'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-30 -> FaultIdn: 'gtpuPathFailure' -> 'cbsdPartialGrantSuspended'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-31 -> MocIdn: 'NRCellCU' -> 'NRCellCBSD'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-31 -> FaultIdn: 'traceCollectionServerConnectionDown' -> 'cbsdStateChangeFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-32 -> MocIdn: 'NRCellCU' -> 'NRCellDU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-32 -> FaultIdn: 'amfConnectionUnstable' -> 'cellConfigurationFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-33 -> MocIdn: 'NRCellCU' -> 'NRCbsd'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-33 -> FaultIdn: 'allAMFConnectionUnstable' -> 'cbsdConfigurationFailure'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-34 -> MocIdn: 'NRCellCU' -> 'BSR'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-34 -> FaultIdn: 'gtpuAllPathFailure' -> 'spareBSRAlarm1'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-35 -> MocIdn: 'NRCellCU' -> 'BSR'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-35 -> FaultIdn: 'gtuPathUnstable' -> 'spareBSRAlarm2'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-36 -> MocIdn: 'NRCellCU' -> 'BSR'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-36 -> FaultIdn: 'gtpuAllPathUnstable' -> 'spareBSRAlarm3'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-37 -> MocIdn: 'WiFi' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-37 -> FaultIdn: 'wifiEnabled' -> 'spareHgNBAlarm1'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-38 -> MocIdn: 'WiFi' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-38 -> FaultIdn: 'defaultWiFiPassword' -> 'spareHgNBAlarm2'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-39 -> MocIdn: 'WiFi' -> 'HgNB'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-39 -> FaultIdn: 'wifiUserAccountLocked' -> 'spareHgNBAlarm3'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-40 -> FaultIdn: 'nrOamCellOperationFailure' -> 'spareHgNBAlarm4'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-41 -> MocIdn: 'BSR' -> 'NRCellCU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-41 -> FaultIdn: 'highTemperatureWarning' -> 'spareNRAlarm1'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-42 -> MocIdn: 'BSR' -> 'NRCellCU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-42 -> FaultIdn: 'aioscOutOfMemory' -> 'spareNRAlarm2'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-43 -> MocIdn: 'CertificateEnrollment' -> 'NRCellDU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-43 -> FaultIdn: 'certificateEnrollmentFailure' -> 'spareNRAlarm3'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-44 -> MocIdn: 'IKESAPair' -> 'NRCellDU'
-[MODIFIED]  com.nokia.aiosc:SupportedAlarm :: Device-1/FaultMgmt-1/SupportedAlarm-44 -> FaultIdn: 'tunnelConfigFailure' -> 'spareNRAlarm4'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-1, Parameter: FaultIdn, Old Value: 'securityViolation', New Value: 'dbDownloadFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-1, Parameter: MocIdn, Old Value: 'BSR', New Value: 'SDM'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-2, Parameter: FaultIdn, Old Value: 'dbDownloadFailure', New Value: 'securityViolation'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-2, Parameter: MocIdn, Old Value: 'SDM', New Value: 'BSR'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-5, Parameter: FaultIdn, Old Value: 'gpsServiceUnavailable', New Value: 'invalidDatabaseDetected'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-5, Parameter: MocIdn, Old Value: 'Radio', New Value: 'BSR'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-6, Parameter: FaultIdn, Old Value: 'nrPhaseSynchronisationFailure', New Value: 'gpsServiceUnavailable'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-7, Parameter: FaultIdn, Old Value: 'nrFreqSynchronisationFailure', New Value: 'constraintsCheckFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-7, Parameter: MocIdn, Old Value: 'Radio', New Value: 'BSR'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-8, Parameter: FaultIdn, Old Value: 'invalidDatabaseDetected', New Value: 'pwdServiceProviderLoginFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-9, Parameter: FaultIdn, Old Value: 'constraintsCheckFailure', New Value: 'nrRfConfigurationFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-9, Parameter: MocIdn, Old Value: 'BSR', New Value: 'NRCellDU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-10, Parameter: FaultIdn, Old Value: 'pwdServiceProviderLoginFailure', New Value: 'nrPhaseSynchronisationFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-10, Parameter: MocIdn, Old Value: 'BSR', New Value: 'Radio'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-11, Parameter: FaultIdn, Old Value: 'nrRfConfigurationFailure', New Value: 'nrRfTemperatureWarning'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-12, Parameter: FaultIdn, Old Value: 'nrRfTemperatureWarning', New Value: 'nrRfTemperatureCritical'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-13, Parameter: FaultIdn, Old Value: 'nrRfTemperatureCritical', New Value: 'nrRfTxPowerNotConverged'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-14, Parameter: FaultIdn, Old Value: 'nrRfTxPowerNotConverged', New Value: 'nrFreqSynchronisationFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-14, Parameter: MocIdn, Old Value: 'NRCellDU', New Value: 'Radio'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-15, Parameter: FaultIdn, Old Value: 'cellConfigurationFailure', New Value: 'allAMFConnectionDown'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-15, Parameter: MocIdn, Old Value: 'NRCellDU', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-16, Parameter: FaultIdn, Old Value: 'spareNRAlarm3', New Value: 'amfConnectionDown'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-16, Parameter: MocIdn, Old Value: 'NRCellDU', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-17, Parameter: FaultIdn, Old Value: 'spareNRAlarm4', New Value: 'nrPCICollisionDetected'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-17, Parameter: MocIdn, Old Value: 'NRCellDU', New Value: 'NRCellCU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-18, Parameter: FaultIdn, Old Value: 'nrDuCellSetupFailed', New Value: 'nrPCIConfusionDetected'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-18, Parameter: MocIdn, Old Value: 'NRCellDU', New Value: 'NRCellCU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-19, Parameter: FaultIdn, Old Value: 'spareNRAlarm5', New Value: 'ngapConnectionSetupFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-19, Parameter: MocIdn, Old Value: 'NRCellDU', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-20, Parameter: FaultIdn, Old Value: 'ipsecConfigurationAlarm', New Value: 'nrPCISelectionFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-20, Parameter: MocIdn, Old Value: 'BSR', New Value: 'NRCellCU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-21, Parameter: FaultIdn, Old Value: 'ipsecTunnelAlarm', New Value: 'cbsdRegistrationFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-21, Parameter: MocIdn, Old Value: 'BSR', New Value: 'NRCbsd'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-22, Parameter: FaultIdn, Old Value: 'allAMFConnectionDown', New Value: 'cbsdSpectrumInquiryFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-22, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCbsd'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-23, Parameter: FaultIdn, Old Value: 'amfConnectionDown', New Value: 'cbsdCellGrantFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-23, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCellCBSD'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-24, Parameter: FaultIdn, Old Value: 'nrPCICollisionDetected', New Value: 'cbsdHeartbeatFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-24, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCellCBSD'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-25, Parameter: FaultIdn, Old Value: 'nrPCICollisionDetected', New Value: 'cbsdSASCommunicationError'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-25, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCbsd'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-26, Parameter: FaultIdn, Old Value: 'nrPCIConfusionDetected', New Value: 'xnapConnectionDown'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-26, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-27, Parameter: FaultIdn, Old Value: 'ngapConnectionSetupFailure', New Value: 'gtpuPathFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-27, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-28, Parameter: FaultIdn, Old Value: 'nrPCISelectionFailure', New Value: 'traceCollectionServerConnectionDown'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-29, Parameter: FaultIdn, Old Value: 'xnapConnectionDown', New Value: 'cbsdGrantSuspended'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-29, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCbsd'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-30, Parameter: FaultIdn, Old Value: 'gtpuPathFailure', New Value: 'cbsdPartialGrantSuspended'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-30, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCellCBSD'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-31, Parameter: FaultIdn, Old Value: 'traceCollectionServerConnectionDown', New Value: 'cbsdStateChangeFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-31, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCellCBSD'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-32, Parameter: FaultIdn, Old Value: 'amfConnectionUnstable', New Value: 'cellConfigurationFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-32, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCellDU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-33, Parameter: FaultIdn, Old Value: 'allAMFConnectionUnstable', New Value: 'cbsdConfigurationFailure'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-33, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'NRCbsd'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-34, Parameter: FaultIdn, Old Value: 'gtpuAllPathFailure', New Value: 'spareBSRAlarm1'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-34, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'BSR'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-35, Parameter: FaultIdn, Old Value: 'gtuPathUnstable', New Value: 'spareBSRAlarm2'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-35, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'BSR'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-36, Parameter: FaultIdn, Old Value: 'gtpuAllPathUnstable', New Value: 'spareBSRAlarm3'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-36, Parameter: MocIdn, Old Value: 'NRCellCU', New Value: 'BSR'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-37, Parameter: FaultIdn, Old Value: 'wifiEnabled', New Value: 'spareHgNBAlarm1'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-37, Parameter: MocIdn, Old Value: 'WiFi', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-38, Parameter: FaultIdn, Old Value: 'defaultWiFiPassword', New Value: 'spareHgNBAlarm2'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-38, Parameter: MocIdn, Old Value: 'WiFi', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-39, Parameter: FaultIdn, Old Value: 'wifiUserAccountLocked', New Value: 'spareHgNBAlarm3'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-39, Parameter: MocIdn, Old Value: 'WiFi', New Value: 'HgNB'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-40, Parameter: FaultIdn, Old Value: 'nrOamCellOperationFailure', New Value: 'spareHgNBAlarm4'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-41, Parameter: FaultIdn, Old Value: 'highTemperatureWarning', New Value: 'spareNRAlarm1'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-41, Parameter: MocIdn, Old Value: 'BSR', New Value: 'NRCellCU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-42, Parameter: FaultIdn, Old Value: 'aioscOutOfMemory', New Value: 'spareNRAlarm2'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-42, Parameter: MocIdn, Old Value: 'BSR', New Value: 'NRCellCU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-43, Parameter: FaultIdn, Old Value: 'certificateEnrollmentFailure', New Value: 'spareNRAlarm3'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-43, Parameter: MocIdn, Old Value: 'CertificateEnrollment', New Value: 'NRCellDU'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-44, Parameter: FaultIdn, Old Value: 'tunnelConfigFailure', New Value: 'spareNRAlarm4'
+  [MODIFIED]  Class: com.nokia.aiosc:SupportedAlarm, Object: Device-1/FaultMgmt-1/SupportedAlarm-44, Parameter: MocIdn, Old Value: 'IKESAPair', New Value: 'NRCellDU'
