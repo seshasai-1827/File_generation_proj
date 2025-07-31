@@ -762,8 +762,7 @@ if __name__ == "__main__":
                     break
                 else:
                     print("Invalid input. Please type 'help' or 'exit'.")
-        elif script_successful: # Only if no error occurred and script_successful is True
-            print("All operations completed successfully. Exiting the AIOSC XML Merge Tool. Goodbye!")
-        # No 'else' needed here, as the conditions cover all outcomes: error with help, success, or
-        # an edge case where last_error_type is None but script_successful is also False (shouldn't happen
-        # with correct raises).
+        # Check if an exception was raised and caught (meaning last_error_type was set)
+        # If not, it means the script completed successfully without hitting an error
+        elif 'e' not in locals(): # This checks if the exception variable 'e' was created in the try block
+            print("No errors detected. Script finished.")
