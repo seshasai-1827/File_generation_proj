@@ -11,38 +11,16 @@ import re # Import regex module for filename validation
 class CommonAttributes:
     """
     A class to hold common attributes extracted from the XML,
-    such as the base distribution name and ID.
+    such as the base distname(NEID) and ID.
     """
     def __init__(self):
         self.dist_name_base = None
         self.id_base = None
 
-def make_name(dist, ctx):
-    """
-    Extracts the leaf name from a full distinguished name (distName).
-    Also sets the base distName for the context if not already set.
-
-    Args:
-        dist (str): The full distinguished name (e.g., "AIOSC-1/Device-1/Moc-1").
-        ctx (CommonAttributes): The context object to store base attributes.
-
-    Returns:
-        str: The leaf name (e.g., "Moc-1") or None if invalid.
-    """
-    if not dist:
-        return None
-    parts = dist.split('/', 2)
-    # Exclude base objects like INTEGRATE-1 or Device-1 from being considered as leaves
-    if len(parts) != 3 or parts[-1] in ("INTEGRATE-1", "Device-1"):
-        return None
-    if ctx.dist_name_base is None:
-        ctx.dist_name_base = parts[0] + "/" + parts[1]
-    return parts[-1]
-
 def simplify_xml(root, ns, ctx):
     """
     Parses the XML tree and extracts managed objects and their parameters
-    into a simplified dictionary structure.
+    into a simplified nested dictionary structure.
 
     Args:
         root (xml.etree.ElementTree.Element): The root element of the XML tree.
@@ -70,6 +48,28 @@ def simplify_xml(root, ns, ctx):
         data.setdefault(cls, OrderedDict())[leaf] = entry
     return data
 
+def make_name(dist, ctx):
+    """
+    Extracts the leaf name from a full distinguished name (distName).
+    Also sets the base distName for the context if not already set.
+
+    Args:
+        dist (str): The full distinguished name (e.g., "AIOSC-1/Device-1/Moc-1").
+        ctx (CommonAttributes): The context object to store base attributes.
+
+    Returns:
+        str: The leaf name (e.g., "Moc-1") or None if invalid.
+    """
+    if not dist:
+        return None
+    parts = dist.split('/', 2)
+    # Exclude base objects like AIOSC-1,INTEGRATE-1 or Device-1 from being considered as leaves
+    if len(parts) != 3 or parts[-1] in ("INTEGRATE-1", "Device-1"):
+        return None
+    if ctx.dist_name_base is None:
+        ctx.dist_name_base = parts[0] + "/" + parts[1]
+    return parts[-1]#return the dist_name excluding the NEID
+
 def count_total_mos(d):
     """
     Counts the total number of managed objects in a simplified dictionary.
@@ -80,7 +80,7 @@ def count_total_mos(d):
     Returns:
         int: Total count of managed objects.
     """
-    return sum(len(inner) for inner in d.values())
+    return sum(len(cls) for cls in d.values())
 
 def merge_dicts(base, skeletal, alarm_list):
     """
@@ -119,10 +119,7 @@ def merge_dicts(base, skeletal, alarm_list):
     # Add objects from base that are not in skeletal (carried over)
     for cls in base:
         if cls not in skeletal:
-            # If an entire class is new in base, carry all its objects
-            for dist in base[cls]:
-                carried_objs.append((cls, dist))
-                final_dict.setdefault(cls, OrderedDict())[dist] = base[cls][dist]
+            pass#skip deprecated class MO's
         else:
             for dist in base[cls]:
                 if dist not in skeletal[cls]:
@@ -130,8 +127,8 @@ def merge_dicts(base, skeletal, alarm_list):
                     carried_objs.append((cls, dist))
                     final_dict[cls][dist] = base[cls][dist]
 
-    # Add supported alarms from the CSV if available
     if alarm_list:
+        #replace current supported alarms with the new list if provided
         final_dict["com.nokia.aiosc:SupportedAlarm"] = alarm_list
     return final_dict, common_objs, carried_objs
 
@@ -257,7 +254,7 @@ def write_xml(tree, name="AIOSC_Merged"):
     """
     try:
         # Use minidom for pretty printing; tostring produces bytes, so decode
-        txt = minidom.parseString(ET.tostring(tree.getroot(), "utf-8")).toprettyxml(indent="    ")
+        txt = minidom.parseString(ET.tostring(tree.getroot(), "utf-8")).toprettyxml(indent="  ")
         with open(name + ".xml", "w", encoding="utf-8") as f:
             f.write(txt)
         print(f"\u2713 Successfully wrote {name}.xml")
@@ -402,24 +399,24 @@ def log_param_changes(base_dict, final_dict, filename="param_changes.log"):
 
             f.write("✅ New Parameters (in existing or new classes/distributions):\n")
             if not added:
-                f.write("  No parameters added.\n")
+                f.write("    No parameters added.\n")
             for item in added:
                 cls, dist, p, val = item
-                f.write(f"  [ADDED]     Class: {cls}, Object: {dist}, Parameter: {p}, Value: '{val}'\n")
+                f.write(f"    [ADDED]      Class: {cls}, Object: {dist}, Parameter: {p}, Value: '{val}'\n")
 
             f.write("\n❌ Removed Parameters (no longer present in final configuration):\n")
             if not removed:
-                f.write("  No parameters removed.\n")
+                f.write("    No parameters removed.\n")
             for item in removed:
                 cls, dist, p, val = item
-                f.write(f"  [REMOVED]   Class: {cls}, Object: {dist}, Parameter: {p}, Original Value: '{val}'\n")
+                f.write(f"    [REMOVED]    Class: {cls}, Object: {dist}, Parameter: {p}, Original Value: '{val}'\n")
 
             f.write("\n🔁 Modified Parameters (value changed):\n")
             if not changed:
-                f.write("  No parameters modified.\n")
+                f.write("    No parameters modified.\n")
             for item in changed:
                 cls, dist, p, old_val, new_val = item
-                f.write(f"  [MODIFIED]  Class: {cls}, Object: {dist}, Parameter: {p}, Old Value: '{old_val}', New Value: '{new_val}'\n")
+                f.write(f"    [MODIFIED]   Class: {cls}, Object: {dist}, Parameter: {p}, Old Value: '{old_val}', New Value: '{new_val}'\n")
 
         print(f"✅ Logged parameter changes to {filename}")
     except Exception as e:
@@ -457,6 +454,8 @@ def readcsv(file_path):
                 if len(row) < 3:
                     print(f"Warning: Skipping invalid row in CSV: {row} - Expected at least 3 columns (FaultIdn, MocIdn, ReportingMechanism).")
                     continue
+                if row[0][0] == "#":
+                    continue
                 leaf = f"Device-1/FaultMgmt-1/SupportedAlarm-{i}"
                 d[leaf] = {
                     "_class": "com.nokia.aiosc:SupportedAlarm",
@@ -468,10 +467,10 @@ def readcsv(file_path):
                 i += 1
     except UnicodeDecodeError as e:
         print(f"Error: Failed to read CSV file '{file_path}' due to encoding issues. Please ensure it's UTF-8 encoded: {e}")
-        raise # Re-raise to be caught by main error handler
+        raise # Re-raise to be caught by main error handler for CSVReadError
     except Exception as e:
         print(f"Error: An unexpected error occurred while parsing CSV file '{file_path}': {e}")
-        raise # Re-raise to be caught by main error handler
+        raise # Re-raise to be caught by main error handler for CSVReadError
     return d
 
 def is_valid_filename(filename):
@@ -508,7 +507,6 @@ def is_valid_filename(filename):
             return False
     return True
 
-
 def help_menu(error_type=None):
     """
     Provides context-sensitive help and instructions based on the type of error encountered.
@@ -519,55 +517,62 @@ def help_menu(error_type=None):
                                     "CSVReadError", "FileWriteError", "OutputFilenameError", "GeneralError".
     """
     print("\n--- 🆘 HELP MENU 🆘 ---")
+    
     if error_type == "FileNotFound":
         print("💡 **File Not Found Error**: The path you provided for an XML or CSV file does not exist or is incorrect.")
-        print("   * **Instructions**:")
-        print("     1. **Verify the path**: Double-check the spelling and ensure the full path is correct.")
-        print("     2. **Check file existence**: Confirm that the file actually resides at the specified location.")
-        print("     3. **Absolute vs. Relative Paths**: If the file is in the same directory as this script, you can simply type its name (e.g., '`base.xml`'). Otherwise, provide the **full absolute path** (e.g., '`C:\\Users\\YourName\\Documents\\base.xml`' on Windows or '`/home/yourname/data/base.xml`' on Linux/macOS).")
-        print("     4. **Permissions**: Ensure you have read permissions for the file and its containing directory.")
+        print("    * **Instructions**:")
+        print("      1. **Verify the path**: Double-check the spelling and ensure the full path is correct.")
+        print("      2. **Check file existence**: Confirm that the file actually resides at the specified location.")
+        print("      3. **Absolute vs. Relative Paths**: If the file is in the same directory as this script, you can simply type its name (e.g., '`base.xml`'). Otherwise, provide the **full absolute path** (e.g., '`C:\\Users\\YourName\\Documents\\base.xml`' on Windows or '`/home/yourname/data/base.xml`' on Linux/macOS).")
+        print("      4. **Permissions**: Ensure you have read permissions for the file and its containing directory.")
+    
     elif error_type == "XMLParseError":
         print("⚠️ **XML Parsing Error**: The XML file you provided is malformed, corrupted, or does not conform to expected XML standards.")
-        print("   * **Instructions**:")
-        print("     1. **Open the XML file**: Use a robust text editor (like VS Code, Notepad++, Sublime Text) or an XML validator tool.")
-        print("     2. **Check for well-formedness**: All XML tags must be correctly opened and closed (e.g., `<tag>` and `</tag>`). Tags must be properly nested.")
-        print("     3. **Look for unescaped characters**: Special characters within XML content must be escaped: `<` as `&lt;`, `>` as `&gt;`, `&` as `&amp;`, `'` as `&apos;`, `\"` as `&quot;`.")
-        print("     4. **Validate XML structure**: Ensure the XML adheres to the expected schema (`raml21.xsd`). Missing root elements or incorrect attribute syntax are common culprits.")
-        print("     5. **Encoding issues**: Confirm the file is saved with a compatible encoding, preferably **UTF-8**, to avoid character parsing problems.")
+        print("    * **Instructions**:")
+        print("      1. **Open the XML file**: Use a robust text editor (like VS Code, Notepad++, Sublime Text) or an XML validator tool.")
+        print("      2. **Check for well-formedness**: All XML tags must be correctly opened and closed (e.g., `<tag>` and `</tag>`). Tags must be properly nested.")
+        print("      3. **Look for unescaped characters**: Special characters within XML content must be escaped: `<` as `&lt;`, `>` as `&gt;`, `&` as `&amp;`, `'` as `&apos;`, `\"` as `&quot;`.")
+        print("      4. **Validate XML structure**: Ensure the XML adheres to the expected schema (`raml21.xsd`). Missing root elements or incorrect attribute syntax are common culprits.")
+        print("      5. **Encoding issues**: Confirm the file is saved with a compatible encoding, preferably **UTF-8**, to avoid character parsing problems.")
+    
     elif error_type == "CSVReadError":
         print("❌ **CSV Reading Error**: There was an issue processing the CSV file intended for supported alarms.")
-        print("   * **Instructions**:")
-        print("     1. **Verify CSV column format**: Each row in the CSV must contain at least **3 columns** in the following order: `FaultIdn`, `MocIdn`, and `ReportingMechanism`.")
-        print("     2. **Check delimiters**: Ensure the CSV uses a **comma (`,`)** as the primary delimiter between values.")
-        print("     3. **Empty rows or malformed data**: Remove any entirely empty rows or rows that have an inconsistent number of columns (less than 3).")
-        print("     4. **File encoding**: Confirm the CSV is saved as **UTF-8** to prevent character decoding errors.")
-        print("     5. **No header row expected**: This script expects raw data starting from the first line; do not include a header row in the CSV.")
+        print("    * **Instructions**:")
+        print("      1. **Verify CSV column format**: Each row in the CSV must contain at least **3 columns** in the following order: `FaultIdn`, `MocIdn`, and `ReportingMechanism`.")
+        print("      2. **Check delimiters**: Ensure the CSV uses a **comma (`,`)** as the primary delimiter between values.")
+        print("      3. **Empty rows or malformed data**: Remove any entirely empty rows or rows that have an inconsistent number of columns (less than 3).")
+        print("      4. **File encoding**: Confirm the CSV is saved as **UTF-8** to prevent character decoding errors.")
+        print("      5. **No header row expected**: This script expects raw data starting from the first line; do not include a header row in the CSV.")
+    
     elif error_type == "OutputFilenameError":
         print("🚫 **Invalid Output Filename**: The name you provided for the output file contains disallowed characters or formatting.")
-        print("   * **Instructions**:")
-        print("     1. **Avoid special characters**: Do not use characters like `\\`, `/`, `:`, `*`, `?`, `\"`, `<`, `>`, `|` in the filename.")
-        print("     2. **No leading/trailing spaces**: Filenames should not start or end with spaces.")
-        print("     3. **Avoid reserved names**: Do not use names like `CON`, `PRN`, `AUX`, `NUL`, `COM1-9`, `LPT1-9` (especially on Windows).")
-        print("     4. **Simple names**: Stick to letters, numbers, hyphens (`-`), underscores (`_`), and periods (`.`) for the extension. For example, '`MyMergedXML`' or '`merged_data_v2`'.")
+        print("    * **Instructions**:")
+        print("      1. **Avoid special characters**: Do not use characters like `\\`, `/`, `:`, `*`, `?`, `\"`, `<`, `>`, `|` in the filename.")
+        print("      2. **No leading/trailing spaces**: Filenames should not start or end with spaces.")
+        print("      3. **Avoid reserved names**: Do not use names like `CON`, `PRN`, `AUX`, `NUL`, `COM1-9`, `LPT1-9` (especially on Windows).")
+        print("      4. **Simple names**: Stick to letters, numbers, hyphens (`-`), underscores (`_`), and periods (`.`) for the extension. For example, '`MyMergedXML`' or '`merged_data_v2`'.")
+    
     elif error_type == "FileWriteError":
         print("🚫 **File Write Error**: The script encountered an issue when attempting to create or write to an output file (merged XML or CSV report), *after* the filename was deemed valid.")
-        print("   * **Instructions**:")
-        print("     1. **Check disk space**: Ensure you have sufficient free space on your storage drive.")
-        print("     2. **Verify directory permissions**: Make sure the script has **write permissions** in the directory where you are trying to save the output files.")
-        print("     3. **File already open**: Ensure the target output file isn't currently open in another program (e.g., text editor, Excel), which can prevent writing.")
-        print("     4. **Antivirus/Security software**: Temporarily check if any antivirus or security software is blocking file write operations for this script.")
+        print("    * **Instructions**:")
+        print("      1. **Check disk space**: Ensure you have sufficient free space on your storage drive.")
+        print("      2. **Verify directory permissions**: Make sure the script has **write permissions** in the directory where you are trying to save the output files.")
+        print("      3. **File already open**: Ensure the target output file isn't currently open in another program (e.g., text editor, Excel), which can prevent writing.")
+        print("      4. **Antivirus/Security software**: Temporarily check if any antivirus or security software is blocking file write operations for this script.")
+    
     else: # General catch-all for uncategorized errors
         print("❓ **General Error**: An unexpected issue occurred during script execution.")
-        print("   * **Instructions**:")
-        print("     1. **Review previous messages**: Look at the specific error message printed just before this help menu for more clues.")
-        print("     2. **Validate all inputs**: Double-check the validity and format of all input files (XMLs and CSV, if used).")
-        print("     3. **Re-run the script**: Sometimes, transient issues can be resolved by simply trying again.")
-        print("     4. **Contact support**: If the issue persists, provide the full console output, including the error message, along with your input files to the script maintainer for further assistance.")
+        print("    * **Instructions**:")
+        print("      1. **Review previous messages**: Look at the specific error message printed just before this help menu for more clues.")
+        print("      2. **Validate all inputs**: Double-check the validity and format of all input files (XMLs and CSV, if used).")
+        print("      3. **Re-run the script**: Sometimes, transient issues can be resolved by simply trying again.")
+        
     print("--- 🏁 END HELP MENU 🏁 ---")
 
 if __name__ == "__main__":
     ns = {'ns': 'raml21.xsd'}
     last_error_type = None # Tracks the type of the last significant error for targeted help
+    script_successful = False # Flag to indicate successful completion
 
     try:
         print("--- AIOSC XML Merge Tool ---")
@@ -587,8 +592,10 @@ if __name__ == "__main__":
                 continue
             if not base_file.lower().endswith(".xml"):
                 print(f"Error: BASE file '{base_file}' does not have an XML extension. Please re-enter the path.")
-                last_error_type = "XMLParseError" # Likely a format issue
+                last_error_type = "XMLParseError"
+                help_menu(last_error_type)
                 continue
+            last_error_type = None # Reset error type on successful validation
             break # Valid path
 
         # --- Input File Path Validation Loop for SKELETAL XML ---
@@ -607,26 +614,32 @@ if __name__ == "__main__":
             if not skeletal_file.lower().endswith(".xml"):
                 print(f"Error: SKELETAL file '{skeletal_file}' does not have an XML extension. Please re-enter the path.")
                 last_error_type = "XMLParseError"
+                help_menu(last_error_type)
                 continue
+            last_error_type = None # Reset error type on successful validation
             break # Valid path
 
         # --- Input File Path Validation Loop for CSV (optional) ---
+        csv_file = None # Initialize as None
         while True:
-            csv_file = input("Enter the file path for supported alarms (.csv) (default: None): ").strip()
-            if not csv_file: # User chose not to provide a CSV
+            csv_input = input("Enter the file path for supported alarms (.csv) (default: None): ").strip()
+            if not csv_input: # User chose not to provide a CSV
                 print("No CSV file provided for supported alarms. Skipping.")
+                last_error_type = None # Ensure no previous CSV error persists if skipped
                 break
-            if not os.path.isfile(csv_file):
-                print(f"Error: CSV file '{csv_file}' not found. Please re-enter the path or leave blank to skip.")
+            if not os.path.isfile(csv_input):
+                print(f"Error: CSV file '{csv_input}' not found. Please re-enter the path or leave blank to skip.")
                 last_error_type = "FileNotFound"
                 help_menu(last_error_type)
                 continue
-            if not csv_file.lower().endswith(".csv"):
-                print(f"Error: CSV file '{csv_file}' does not have a CSV extension. Please re-enter the path or leave blank to skip.")
-                last_error_type = "CSVReadError" # Likely a format issue
+            if not csv_input.lower().endswith(".csv"):
+                print(f"Error: CSV file '{csv_input}' does not have a CSV extension. Please re-enter the path or leave blank to skip.")
+                last_error_type = "CSVReadError"
                 help_menu(last_error_type)
                 continue
-            break # Valid path
+            csv_file = csv_input # Assign if valid
+            last_error_type = None # Reset error type on successful validation
+            break # Valid path or skipped
 
         # --- XML Parsing ---
         try:
@@ -667,6 +680,7 @@ if __name__ == "__main__":
                 alarm_list = readcsv(csv_file)
             except Exception as e:
                 # readcsv already prints specific errors, but we catch here to set error type and prompt help
+                print(f"Error reading CSV file '{csv_file}': {e}") # Explicitly print error from readcsv
                 last_error_type = "CSVReadError"
                 raise # Re-raise to trigger the finally block for help
 
@@ -676,20 +690,20 @@ if __name__ == "__main__":
         new_objs, deprecated = find_diff(comp_base, final_dict)
         
         print("\n--- Merge Summary ---")
-        print(f"Objects in BASE (Original)    : {count_total_mos(comp_base)}")
-        print(f"Objects in SKELETAL           : {count_total_mos(comp_skeletal)}")
-        print(f"Objects in FINAL (Merged)     : {count_total_mos(final_dict)}")
-        print(f"NEW Objects (from Skeletal)   : {len(new_objs)}")
-        print(f"CARRIED Objects (from Base)   : {len(carried_objs)}")
-        print(f"COMMON Objects (shared)       : {len(common_objs)}")
-        print(f"DEPRECATED Objects (removed)  : {len(deprecated)}")
+        print(f"Objects in BASE (Original)      : {count_total_mos(comp_base)}")
+        print(f"Objects in SKELETAL             : {count_total_mos(comp_skeletal)}")
+        print(f"Objects in FINAL (Merged)       : {count_total_mos(final_dict)}")
+        print(f"NEW Objects (from Skeletal)     : {len(new_objs)}")
+        print(f"CARRIED Objects (from Base)     : {len(carried_objs)}")
+        print(f"COMMON Objects (shared)         : {len(common_objs)}")
+        print(f"DEPRECATED Objects (removed)    : {len(deprecated)}")
         print("---------------------\n")
 
-        # --- Output Generation ---
-        # Log parameter changes
+        
         try:
             log_param_changes(comp_base, final_dict)
-        except Exception: # log_param_changes prints specific error, just re-raise for help
+        except Exception as e: # Catch and print the specific error
+            print(f"Error logging parameter changes: {e}")
             last_error_type = "FileWriteError" # Keep general as it's a write issue
             raise
 
@@ -701,38 +715,44 @@ if __name__ == "__main__":
                 last_error_type = "OutputFilenameError"
                 help_menu(last_error_type)
                 continue
+            last_error_type = None # Reset error type on successful validation
             break # Valid filename
 
         print(f"Building final XML structure for '{out_name}.xml'...")
         tree = build_full_xml(final_dict, common_attr, out_name)
         
-        # Write merged XML
         try:
             write_xml(tree, out_name)
-        except Exception: # write_xml prints specific error, just re-raise for help
+        except Exception as e: # Catch and print the specific error
+            print(f"Error writing merged XML file: {e}")
             last_error_type = "FileWriteError" # Keep general as it's a write issue (permissions, file open, etc.)
             raise
 
-        # Generate CSV report
         try:
             # We use the same 'out_name' as a base for the report, but append "_report.csv"
             # The 'is_valid_filename' check for 'out_name' should cover this implicitly
             csv_report(comp_base, final_dict, new_objs, carried_objs, deprecated, common_objs, f"{out_name}_report.csv")
-        except Exception: # csv_report prints specific error, just re-raise for help
+        except Exception as e: # Catch and print the specific error
+            print(f"Error generating CSV report: {e}")
             last_error_type = "FileWriteError" # Keep general as it's a write issue
             raise
 
+        script_successful = True # Set flag if everything completed without raising an exception
 
     except FileNotFoundError as e:
         print(f"Fatal Error: {e}")
+        if last_error_type is None:
+            last_error_type = "FileNotFound"
     except ET.ParseError as e:
         print(f"Fatal XML Parsing Error: {e}")
+        if last_error_type is None:
+            last_error_type = "XMLParseError"
     except Exception as e:
         print(f"An unexpected critical error occurred: {e}")
         if last_error_type is None:
             last_error_type = "GeneralError"
     finally:
-        if last_error_type:
+        if last_error_type: # An error occurred, offer help
             while True:
                 user_input = input("\nType 'help' for troubleshooting guidance, or 'exit' to quit: ").strip().lower()
                 if user_input == "help":
@@ -742,7 +762,8 @@ if __name__ == "__main__":
                     break
                 else:
                     print("Invalid input. Please type 'help' or 'exit'.")
-        # Check if an exception was raised and caught (meaning last_error_type was set)
-        # If not, it means the script completed successfully without hitting an error
-        elif 'e' not in locals(): # This checks if the exception variable 'e' was created in the try block
-            print("No errors detected. Script finished.")
+        elif script_successful: # Only if no error occurred and script_successful is True
+            print("All operations completed successfully. Exiting the AIOSC XML Merge Tool. Goodbye!")
+        # No 'else' needed here, as the conditions cover all outcomes: error with help, success, or
+        # an edge case where last_error_type is None but script_successful is also False (shouldn't happen
+        # with correct raises).

@@ -11,7 +11,7 @@ import re # Import regex module for filename validation
 class CommonAttributes:
     """
     A class to hold common attributes extracted from the XML,
-    such as the base distribution name and ID.
+    such as the base distribution name(NEID) and ID.
     """
     def __init__(self):
         self.dist_name_base = None
@@ -32,17 +32,17 @@ def make_name(dist, ctx):
     if not dist:
         return None
     parts = dist.split('/', 2)
-    # Exclude base objects like INTEGRATE-1 or Device-1 from being considered as leaves
-    if len(parts) != 3 or parts[-1] in ("INTEGRATE-1", "Device-1"):
+    # Exclude base objects like AIOSC-1,INTEGRATE-1 or Device-1 from being considered as leaves
+    if len(parts) != 3 or parts[-1] in ("INTEGRATE-1", "Device-1", "AIOSC-1"): # Added AIOSC-1 here
         return None
     if ctx.dist_name_base is None:
         ctx.dist_name_base = parts[0] + "/" + parts[1]
-    return parts[-1]
+    return parts[-1]#return the dist_name excluding the NEID
 
 def simplify_xml(root, ns, ctx):
     """
     Parses the XML tree and extracts managed objects and their parameters
-    into a simplified dictionary structure.
+    into a simplified nested dictionary structure.
 
     Args:
         root (xml.etree.ElementTree.Element): The root element of the XML tree.
@@ -56,9 +56,24 @@ def simplify_xml(root, ns, ctx):
     data = OrderedDict()
     for mo in root.iterfind(".//ns:managedObject", ns):
         cls = mo.attrib.get("class")
-        leaf = make_name(mo.attrib.get("distName"), ctx)
-        if not cls or not leaf:
+        dist_name_full = mo.attrib.get("distName") # Get full distName
+        leaf = make_name(dist_name_full, ctx) # Pass full distName to make_name
+        
+        # Capture AIOSC-1 if it's the top-level element and ensure its distName is handled
+        if cls == "com.nokia.aiosc:AIOSC":
+            # If the class is AIOSC, it's typically the root of the hierarchy
+            # and its "leaf" name is just the NEID portion (e.g., "AIOSC-1")
+            # We need to ensure we capture its distName_base correctly.
+            if ctx.dist_name_base is None:
+                ctx.dist_name_base = dist_name_full # This sets AIOSC-1/Device-1/ or similar
+            # For AIOSC-1, its 'leaf' is its full distName as it is the top-level
+            # However, for internal simplification, we can represent it by its full name
+            # or a special marker, but typically it doesn't have a "leaf" like other objects.
+            # Let's use its full distName as the 'leaf' for the dictionary if it's AIOSC
+            leaf = dist_name_full
+        elif not cls or not leaf: # For other objects, if leaf is None, skip
             continue
+
         entry = OrderedDict()
         entry['_class'] = cls
         entry['_operation'] = mo.attrib.get("operation", "create")
@@ -80,7 +95,8 @@ def count_total_mos(d):
     Returns:
         int: Total count of managed objects.
     """
-    return sum(len(inner) for inner in d.values())
+    # FIX: Correct iteration for counting managed objects
+    return sum(len(inner_dict) for inner_dict in d.values())
 
 def merge_dicts(base, skeletal, alarm_list):
     """
@@ -119,10 +135,7 @@ def merge_dicts(base, skeletal, alarm_list):
     # Add objects from base that are not in skeletal (carried over)
     for cls in base:
         if cls not in skeletal:
-            # If an entire class is new in base, carry all its objects
-            for dist in base[cls]:
-                carried_objs.append((cls, dist))
-                final_dict.setdefault(cls, OrderedDict())[dist] = base[cls][dist]
+            pass#skip deprecated class MO's
         else:
             for dist in base[cls]:
                 if dist not in skeletal[cls]:
@@ -130,14 +143,15 @@ def merge_dicts(base, skeletal, alarm_list):
                     carried_objs.append((cls, dist))
                     final_dict[cls][dist] = base[cls][dist]
 
-    # Add supported alarms from the CSV if available
     if alarm_list:
+        #replace current supported alarms with the new list if provided
         final_dict["com.nokia.aiosc:SupportedAlarm"] = alarm_list
     return final_dict, common_objs, carried_objs
 
 def find_diff(base, final_):
     """
     Identifies new and deprecated managed objects between two dictionaries.
+    Ensures that if an entire class is removed, all its objects are marked deprecated.
 
     Args:
         base (OrderedDict): The original base dictionary.
@@ -151,280 +165,32 @@ def find_diff(base, final_):
     depr, new = [], []
 
     # Find deprecated objects (in base but not in final_)
-    for cls, inner in base.items():
-        for dist in inner:
-            if cls not in final_ or dist not in final_[cls]:
-                depr.append((cls, dist))
+    for cls_b, inner_b in base.items():
+        print(cls_b)
+        if cls_b not in final_:
+            # Entire class is deprecated
+            for dist_b in inner_b:
+                depr.append((cls_b, dist_b))
+        else:
+            # Class exists in final, check for deprecated objects within it
+            for dist_b in inner_b:
+                if dist_b not in final_[cls_b]:
+                    depr.append((cls_b, dist_b))
 
     # Find new objects (in final_ but not in base)
-    for cls, inner in final_.items():
-        for dist in inner:
-            if cls not in base or dist not in base[cls]:
-                new.append((cls, dist))
+    for cls_f, inner_f in final_.items():
+        if cls_f not in base:
+            # Entire class is new
+            for dist_f in inner_f:
+                new.append((cls_f, dist_f))
+        else:
+            # Class exists in base, check for new objects within it
+            for dist_f in inner_f:
+                if dist_f not in base[cls_f]:
+                    new.append((cls_f, dist_f))
     return new, depr
 
-def build_full_xml(data_dict, ctx, out_name="AIOSC_Merged"):
-    """
-    Builds a full XML ElementTree from the merged data dictionary.
 
-    Args:
-        data_dict (OrderedDict): The merged data dictionary.
-        ctx (CommonAttributes): The context object containing base attributes.
-        out_name (str): The desired output file name (used for version string prompt).
-
-    Returns:
-        xml.etree.ElementTree.ElementTree: The complete XML ElementTree.
-    """
-    dist_name_base = ctx.dist_name_base
-    id_base = ctx.id_base
-    vers = input("Enter Version String (e.g., AIOSC25.0_DROP2, default: custom): ").strip() or "custom"
-    NS_URI = "raml21.xsd"
-    ET.register_namespace('', NS_URI) # Register default namespace
-    root = ET.Element("raml", {'version': '2.1', 'xmlns': NS_URI})
-    cmD = ET.SubElement(root, "cmData", {'type': 'plan', 'scope': 'all'})
-
-    def hdr(attrs, param_dict):
-        """Helper to create managedObject and its parameters."""
-        mo = ET.SubElement(cmD, "managedObject", attrs)
-        for n, v in param_dict.items():
-            ET.SubElement(mo, "p", {'name': n}).text = v
-
-    # Add standard header managed objects
-    hdr({
-        'class': "com.nokia.aiosc:AIOSC", 'version': vers,
-        'distName': dist_name_base, 'operation': "create"
-    }, {
-        "name": dist_name_base,
-        "AutoConnHWID": "LBNKIASRC243920029",
-        "$maintenanceRegionId": "PNP",
-        "$maintenanceRegionCId": "1",
-        "SparaPara2_CP": "1",
-        "SparePara1_CP": "1",
-    })
-
-    hdr({
-        'class': "com.nokia.integrate:INTEGRATE", 'version': vers,
-        'distName': dist_name_base + "/INTEGRATE-1",
-        'id': id_base, 'operation': "create"
-    }, {
-        "plannedSWReleaseVersion": vers,
-        "systemReleaseVersion": vers[:6],
-        "ipVersion": "0",
-    })
-
-    hdr({
-        'class': "com.nokia.aiosc:Device", 'version': vers,
-        'distName': dist_name_base + "/Device-1", 'id': id_base,
-        'operation': "create"
-    }, {"UserLabel": "AIOSC"})
-
-    # Classes that are handled by specific header functions, so skip in general loop
-    skip_hdr_classes = {
-        "com.nokia.aiosc:AIOSC",
-        "com.nokia.integrate:INTEGRATE",
-        "com.nokia.aiosc:Device",
-    }
-
-    # Add all other managed objects from the merged data
-    for cls, inner in data_dict.items():
-        if cls in skip_hdr_classes:
-            continue
-        for leaf, entry in inner.items():
-            tag = ET.SubElement(cmD, "managedObject", {
-                'class': entry.get('_class', cls),
-                'version': vers,
-                'distName': dist_name_base + "/" + leaf,
-                'id': id_base,
-                'operation': entry.get('_operation', 'create')
-            })
-            for pname, pval in entry.items():
-                if pname.startswith('_'): # Skip internal attributes
-                    continue
-                ET.SubElement(tag, "p", {'name': pname}).text = pval
-
-    return ET.ElementTree(root)
-
-def write_xml(tree, name="AIOSC_Merged"):
-    """
-    Writes the XML ElementTree to a file with pretty printing.
-
-    Args:
-        tree (xml.etree.ElementTree.ElementTree): The XML tree to write.
-        name (str): The desired output file name (without extension).
-
-    Raises:
-        Exception: If there's an error during file writing (e.g., permissions).
-    """
-    try:
-        # Use minidom for pretty printing; tostring produces bytes, so decode
-        txt = minidom.parseString(ET.tostring(tree.getroot(), "utf-8")).toprettyxml(indent="    ")
-        with open(name + ".xml", "w", encoding="utf-8") as f:
-            f.write(txt)
-        print(f"\u2713 Successfully wrote {name}.xml")
-    except Exception as e:
-        print(f"Error writing XML file '{name}.xml': {e}")
-        raise # Re-raise to be caught by main error handler
-
-def csv_report(base, final_, new, carried, depr, common, name="AIOSC_report.csv"):
-    """
-    Generates a CSV report summarizing the merge operation.
-
-    Args:
-        base (OrderedDict): The simplified data from the base XML file.
-        final_ (OrderedDict): The final merged dictionary.
-        new (list): List of new objects.
-        carried (list): List of carried objects.
-        depr (list): List of deprecated objects.
-        common (list): List of common objects.
-        name (str): The desired output CSV file name.
-
-    Raises:
-        Exception: If there's an error during file writing.
-    """
-    new_set, carried_set, depr_set, common_set = map(set, (new, carried, depr, common))
-    total_base = count_total_mos(base)
-    total_final = count_total_mos(final_)
-    total_new = len(new_set)
-    total_carried = len(carried_set)
-    total_deprecated = len(depr_set)
-    total_common = len(common_set)
-
-    try:
-        with open(name, "w", newline='', encoding="utf-8") as fh:
-            w = csv.writer(fh)
-            w.writerow(["AIOSC Merge Report"])
-            w.writerow(["Generated", datetime.now().isoformat(timespec='seconds')])
-            w.writerow([]) # Blank row for readability
-            w.writerow(["Metric", "Count"])
-            w.writerow(["Objects in BASE (Original)", total_base])
-            w.writerow(["Objects in FINAL (Merged)", total_final])
-            w.writerow(["NEW (from Skeletal)", total_new])
-            w.writerow(["CARRIED (from Base)", total_carried])
-            w.writerow(["COMMON (shared & modified)", total_common])
-            w.writerow(["DEPRECATED (removed from Base)", total_deprecated])
-            w.writerow([]) # Blank row for readability
-            w.writerow(["Class", "DistName", "Status"])
-
-            def get_status(cls, dist):
-                """Determines the status of an object for the report."""
-                if (cls, dist) in new_set:
-                    return "NEW"
-                if (cls, dist) in carried_set:
-                    return "CARRIED"
-                if (cls, dist) in common_set:
-                    return "COMMON"
-                return "UNKNOWN"
-
-            # Write status for objects in the final merged dictionary
-            for cls, inner in sorted(final_.items()):
-                for dist in sorted(inner):
-                    w.writerow([cls, dist, get_status(cls, dist)])
-
-            # Write status for deprecated objects
-            for cls, dist in sorted(depr_set):
-                w.writerow([cls, dist, "DEPRECATED"])
-        print(f"\u2713 Successfully wrote {name}")
-    except Exception as e:
-        print(f"Error writing CSV report '{name}': {e}")
-        raise # Re-raise to be caught by main error handler
-
-def log_param_changes(base_dict, final_dict, filename="param_changes.log"):
-    """
-    Generates a log file detailing parameter additions, removals, and modifications
-    between the base and final dictionaries.
-
-    Args:
-        base_dict (OrderedDict): The simplified data from the base XML file.
-        final_dict (OrderedDict): The final merged dictionary.
-        filename (str): The desired output log file name.
-
-    Raises:
-        Exception: If there's an error during file writing.
-    """
-    added, removed, changed = [], [], []
-
-    # Iterate through the final dictionary to find new and changed parameters/objects
-    for cls in final_dict:
-        if cls not in base_dict:
-            # Entirely new class added in skeletal
-            for dist in final_dict[cls]:
-                for p_name, p_val in final_dict[cls][dist].items():
-                    if not p_name.startswith('_'):
-                        added.append((cls, dist, p_name, p_val))
-            continue
-
-        for dist in final_dict[cls]:
-            if dist not in base_dict[cls]:
-                # New distribution in an existing class
-                for p_name, p_val in final_dict[cls][dist].items():
-                    if not p_name.startswith('_'):
-                        added.append((cls, dist, p_name, p_val))
-                continue
-
-            # Compare parameters for existing class and distribution
-            skeletal_entry = final_dict[cls][dist]
-            base_entry = base_dict[cls][dist]
-            skeletal_keys = set(k for k in skeletal_entry if not k.startswith('_'))
-            base_keys = set(k for k in base_entry if not k.startswith('_'))
-
-            # Parameters added to an existing object
-            for p_name in skeletal_keys - base_keys:
-                added.append((cls, dist, p_name, skeletal_entry[p_name]))
-            # Parameters removed from an existing object
-            for p_name in base_keys - skeletal_keys:
-                removed.append((cls, dist, p_name, base_entry[p_name]))
-            # Parameters whose values have changed
-            for p_name in skeletal_keys.intersection(base_keys):
-                if skeletal_entry[p_name] != base_entry[p_name]:
-                    changed.append((cls, dist, p_name, base_entry[p_name], skeletal_entry[p_name]))
-
-    # Iterate through the base dictionary to find removed classes/distributions
-    for cls in base_dict:
-        if cls not in final_dict:
-            # Entire class removed
-            for dist in base_dict[cls]:
-                for p_name, p_val in base_dict[cls][dist].items():
-                    if not p_name.startswith('_'):
-                        removed.append((cls, dist, p_name, p_val))
-        else:
-            for dist in base_dict[cls]:
-                if dist not in final_dict[cls]:
-                    # Specific distribution removed within an existing class
-                    for p_name, p_val in base_dict[cls][dist].items():
-                        if not p_name.startswith('_'):
-                            removed.append((cls, dist, p_name, p_val))
-
-    # Write to file
-    try:
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write("📘 Parameter Change Log\n")
-            f.write(f"Generated: {datetime.now().isoformat(timespec='seconds')}\n\n")
-
-            f.write("✅ New Parameters (in existing or new classes/distributions):\n")
-            if not added:
-                f.write("  No parameters added.\n")
-            for item in added:
-                cls, dist, p, val = item
-                f.write(f"  [ADDED]     Class: {cls}, Object: {dist}, Parameter: {p}, Value: '{val}'\n")
-
-            f.write("\n❌ Removed Parameters (no longer present in final configuration):\n")
-            if not removed:
-                f.write("  No parameters removed.\n")
-            for item in removed:
-                cls, dist, p, val = item
-                f.write(f"  [REMOVED]   Class: {cls}, Object: {dist}, Parameter: {p}, Original Value: '{val}'\n")
-
-            f.write("\n🔁 Modified Parameters (value changed):\n")
-            if not changed:
-                f.write("  No parameters modified.\n")
-            for item in changed:
-                cls, dist, p, old_val, new_val = item
-                f.write(f"  [MODIFIED]  Class: {cls}, Object: {dist}, Parameter: {p}, Old Value: '{old_val}', New Value: '{new_val}'\n")
-
-        print(f"✅ Logged parameter changes to {filename}")
-    except Exception as e:
-        print(f"❌ Error writing parameter log file '{filename}': {e}")
-        raise # Re-raise to be caught by main error handler
 
 def readcsv(file_path):
     """
@@ -457,6 +223,8 @@ def readcsv(file_path):
                 if len(row) < 3:
                     print(f"Warning: Skipping invalid row in CSV: {row} - Expected at least 3 columns (FaultIdn, MocIdn, ReportingMechanism).")
                     continue
+                # The leaf name should reflect its place in the hierarchy, e.g., under FaultMgmt-1
+                # The assumption is that these are direct children of FaultMgmt-1 under Device-1
                 leaf = f"Device-1/FaultMgmt-1/SupportedAlarm-{i}"
                 d[leaf] = {
                     "_class": "com.nokia.aiosc:SupportedAlarm",
@@ -519,6 +287,7 @@ def help_menu(error_type=None):
                                     "CSVReadError", "FileWriteError", "OutputFilenameError", "GeneralError".
     """
     print("\n--- 🆘 HELP MENU 🆘 ---")
+    
     if error_type == "FileNotFound":
         print("💡 **File Not Found Error**: The path you provided for an XML or CSV file does not exist or is incorrect.")
         print("   * **Instructions**:")
@@ -526,6 +295,7 @@ def help_menu(error_type=None):
         print("     2. **Check file existence**: Confirm that the file actually resides at the specified location.")
         print("     3. **Absolute vs. Relative Paths**: If the file is in the same directory as this script, you can simply type its name (e.g., '`base.xml`'). Otherwise, provide the **full absolute path** (e.g., '`C:\\Users\\YourName\\Documents\\base.xml`' on Windows or '`/home/yourname/data/base.xml`' on Linux/macOS).")
         print("     4. **Permissions**: Ensure you have read permissions for the file and its containing directory.")
+    
     elif error_type == "XMLParseError":
         print("⚠️ **XML Parsing Error**: The XML file you provided is malformed, corrupted, or does not conform to expected XML standards.")
         print("   * **Instructions**:")
@@ -534,6 +304,7 @@ def help_menu(error_type=None):
         print("     3. **Look for unescaped characters**: Special characters within XML content must be escaped: `<` as `&lt;`, `>` as `&gt;`, `&` as `&amp;`, `'` as `&apos;`, `\"` as `&quot;`.")
         print("     4. **Validate XML structure**: Ensure the XML adheres to the expected schema (`raml21.xsd`). Missing root elements or incorrect attribute syntax are common culprits.")
         print("     5. **Encoding issues**: Confirm the file is saved with a compatible encoding, preferably **UTF-8**, to avoid character parsing problems.")
+    
     elif error_type == "CSVReadError":
         print("❌ **CSV Reading Error**: There was an issue processing the CSV file intended for supported alarms.")
         print("   * **Instructions**:")
@@ -542,6 +313,7 @@ def help_menu(error_type=None):
         print("     3. **Empty rows or malformed data**: Remove any entirely empty rows or rows that have an inconsistent number of columns (less than 3).")
         print("     4. **File encoding**: Confirm the CSV is saved as **UTF-8** to prevent character decoding errors.")
         print("     5. **No header row expected**: This script expects raw data starting from the first line; do not include a header row in the CSV.")
+    
     elif error_type == "OutputFilenameError":
         print("🚫 **Invalid Output Filename**: The name you provided for the output file contains disallowed characters or formatting.")
         print("   * **Instructions**:")
@@ -549,6 +321,7 @@ def help_menu(error_type=None):
         print("     2. **No leading/trailing spaces**: Filenames should not start or end with spaces.")
         print("     3. **Avoid reserved names**: Do not use names like `CON`, `PRN`, `AUX`, `NUL`, `COM1-9`, `LPT1-9` (especially on Windows).")
         print("     4. **Simple names**: Stick to letters, numbers, hyphens (`-`), underscores (`_`), and periods (`.`) for the extension. For example, '`MyMergedXML`' or '`merged_data_v2`'.")
+    
     elif error_type == "FileWriteError":
         print("🚫 **File Write Error**: The script encountered an issue when attempting to create or write to an output file (merged XML or CSV report), *after* the filename was deemed valid.")
         print("   * **Instructions**:")
@@ -556,13 +329,14 @@ def help_menu(error_type=None):
         print("     2. **Verify directory permissions**: Make sure the script has **write permissions** in the directory where you are trying to save the output files.")
         print("     3. **File already open**: Ensure the target output file isn't currently open in another program (e.g., text editor, Excel), which can prevent writing.")
         print("     4. **Antivirus/Security software**: Temporarily check if any antivirus or security software is blocking file write operations for this script.")
+    
     else: # General catch-all for uncategorized errors
         print("❓ **General Error**: An unexpected issue occurred during script execution.")
         print("   * **Instructions**:")
         print("     1. **Review previous messages**: Look at the specific error message printed just before this help menu for more clues.")
         print("     2. **Validate all inputs**: Double-check the validity and format of all input files (XMLs and CSV, if used).")
         print("     3. **Re-run the script**: Sometimes, transient issues can be resolved by simply trying again.")
-        print("     4. **Contact support**: If the issue persists, provide the full console output, including the error message, along with your input files to the script maintainer for further assistance.")
+        
     print("--- 🏁 END HELP MENU 🏁 ---")
 
 if __name__ == "__main__":
@@ -588,7 +362,7 @@ if __name__ == "__main__":
             if not base_file.lower().endswith(".xml"):
                 print(f"Error: BASE file '{base_file}' does not have an XML extension. Please re-enter the path.")
                 last_error_type = "XMLParseError" # Likely a format issue
-                help_menu(last_error_type)
+                help_menu(last_error_type) # Added help_menu call here
                 continue
             break # Valid path
 
@@ -608,7 +382,7 @@ if __name__ == "__main__":
             if not skeletal_file.lower().endswith(".xml"):
                 print(f"Error: SKELETAL file '{skeletal_file}' does not have an XML extension. Please re-enter the path.")
                 last_error_type = "XMLParseError"
-                help_menu(last_error_type)
+                help_menu(last_error_type) # Added help_menu call here
                 continue
             break # Valid path
 
@@ -676,6 +450,7 @@ if __name__ == "__main__":
         print("Merging XML data...")
         final_dict, common_objs, carried_objs = merge_dicts(comp_base, comp_skeletal, alarm_list)
         new_objs, deprecated = find_diff(comp_base, final_dict)
+        print(deprecated)
         
         print("\n--- Merge Summary ---")
         print(f"Objects in BASE (Original)    : {count_total_mos(comp_base)}")
@@ -689,6 +464,7 @@ if __name__ == "__main__":
 
         # --- Output Generation ---
         # Log parameter changes
+        '''
         try:
             log_param_changes(comp_base, final_dict)
         except Exception: # log_param_changes prints specific error, just re-raise for help
@@ -725,7 +501,7 @@ if __name__ == "__main__":
             raise
 
         print("\n🎉 Merge operation completed successfully! 🎉")
-
+'''
     except FileNotFoundError as e:
         print(f"Fatal Error: {e}")
     except ET.ParseError as e:
